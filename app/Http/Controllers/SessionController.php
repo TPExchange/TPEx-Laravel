@@ -1,0 +1,60 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Validation\ValidationException;
+use TPEx\TPEx\TokenLevel;
+
+use function tpex\tpex\create_token;
+
+class SessionController extends Controller
+{
+    public function create()
+    {
+        return view("auth.login");
+    }
+
+    public function store()
+    {
+        // Validate
+        $validatedAttributes = request()->validate([
+            "username" => ["required"],
+            "password" => ["required"]
+        ]);
+
+        // Attempt to log in
+        if (! Auth::attempt($validatedAttributes))
+        {
+            throw ValidationException::withMessages([
+                "password" => "Incorrect login details"
+            ]);
+        }
+
+        // Regenerate session token
+        request()->session()->regenerate();
+
+        // Generate Access Token If Missing
+        if(is_null(Auth::user()->access_token)) {
+            $remote = new \TPEx\TPEx\Remote("https://tpex-staging.cyclic3.dev", "3H/xEZPV2FTRHrWtkUpIKA"); // Create connection
+            $token = $remote->create_token($validatedAttributes["username"], TokenLevel::ProxyOne);
+            Auth::user()->update(["access_token"=>$token]);
+        }
+
+        // Update Admin Status On Login
+        // TO-DO
+
+        // Redirect
+        return redirect("/");
+    }
+
+    public function destroy()
+    {
+        // Log user out
+        Auth::logout();
+
+        // Redirect
+        return redirect("/");
+    }
+}
