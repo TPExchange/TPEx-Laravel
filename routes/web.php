@@ -13,10 +13,10 @@ use App\Models\User;
 use \Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Validation\ValidationException;
-use Tpex\Tpex\State;
+use TPEx\TPEx\State;
 
-use function tpex\tpex\format_millicoins;
-use function tpex\tpex\parse_millicoins;
+use function TPEx\TPEx\format_millicoins;
+use function TPEx\TPEx\parse_millicoins;
 
 Route::get('/', function () {
     return view('welcome');
@@ -34,7 +34,7 @@ Route::get("/items/{game_id}/sell", [ItemController::class, "sell"])->middleware
 
 Route::get("/inventory", function () {
     $username = strtolower(Auth::user()->username);
-    $remote = new TPEx\TPEx\Remote("https://tpex-staging.cyclic3.dev", Auth::user()->access_token); // Create connection
+    $remote = new TPEx\TPEx\Remote(env("TPEX_URL"), Auth::user()->access_token); // Create connection
     $state = $remote->fastsync(); // Fetch state
     $inventory = $state->player_assets($username);
     $coins = $state->player_balance($username);

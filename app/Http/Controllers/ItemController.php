@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Auth;
 class ItemController extends Controller
 {
     public function index() {
-        $remote = new \TPEx\TPEx\Remote("https://tpex-staging.cyclic3.dev", Auth::user()->access_token); // Create connection
+        $remote = new \TPEx\TPEx\Remote(env("TPEX_URL"), Auth::user()->access_token); // Create connection
         $state = $remote->fastsync(); // Get state
         $buy_orders = $state->buy_orders();
         $sell_orders = $state->sell_orders();
@@ -17,7 +17,7 @@ class ItemController extends Controller
     }
 
     public function buy($game_id) {
-        $remote = new \TPEx\TPEx\Remote("https://tpex-staging.cyclic3.dev", Auth::user()->access_token); // Create connection
+        $remote = new \TPEx\TPEx\Remote(env("TPEX_URL"), Auth::user()->access_token); // Create connection
         $state = $remote->fastsync(); // Get state
         $name = ucwords(str_replace("_", " ", $game_id));
         $orders = $state->raw["order"];
@@ -32,13 +32,13 @@ class ItemController extends Controller
             }
         }
 
-    
+
         return view('items.buy-item', ["orders"=>$orders, "name"=>$name]);
     }
 
 
     public function sell($game_id) {
-        $remote = new \TPEx\TPEx\Remote("https://tpex-staging.cyclic3.dev", Auth::user()->access_token); // Create connection
+        $remote = new \TPEx\TPEx\Remote(env("TPEX_URL"), Auth::user()->access_token); // Create connection
         $state = $remote->fastsync(); // Get state
         $name = ucwords(str_replace("_", " ", $game_id));
         $orders = $state->raw["order"];
@@ -53,7 +53,7 @@ class ItemController extends Controller
             }
         }
 
-    
+
         return view('items.sell-item', ["orders"=>$orders, "name"=>$name]);
     }
 }
