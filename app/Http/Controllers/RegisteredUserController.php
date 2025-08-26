@@ -6,8 +6,8 @@ use Illuminate\Http\Request;
 use Illuminate\Validation\Rules\Password;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
-use tpex\tpex\TokenLevel;
-use tpex\tpex\State;
+use Tpex\Tpex\TokenLevel;
+use Tpex\Tpex\State;
 
 use function tpex\tpex\create_token;
 

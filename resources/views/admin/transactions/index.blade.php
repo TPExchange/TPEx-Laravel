@@ -1,14 +1,12 @@
 <x-layout>
     @php
-        $path = database_path() . "/trades.list";
-        $log = file_get_contents($path);
-        $transactions = explode("\n", $log);
-        $latestid = (json_decode(end($transactions))->id);
-        $newid = $latestid + 1;
+        $remote = new TPEx\TPEx\Remote("https://tpex-staging.cyclic3.dev", Auth::user()->access_token); // Create connection
+        $transactions = $remote->raw_state();
+        $transactions = explode("\n", $transactions);
+        array_pop($transactions);
         if (request("order") != "oldest") {
             $transactions = array_reverse($transactions);
         }
-
     @endphp
 
     <x-page-title>Transaction Log</x-page-title>
@@ -43,28 +41,26 @@
         
         <div class="flex flex-col bg-neutral-100 px-5">
 
-            @foreach ($transactions as $transaction)
+            @foreach ($transactions as $object)
                 @php
-                    $object = json_decode($transaction);
-                    $type =  array_keys(get_object_vars($object->action))[0];
-                    $details = get_object_vars($object->action->$type);
+                    $object = json_decode($object);
+                    $type = array_keys(get_object_vars($object->action))[0];
                 @endphp
                 @if ((!request("filter")) || (request("filter") == $type))
                     @php
-                        $object = json_decode($transaction);
-                        $type =  array_keys(get_object_vars($object->action))[0];
-                        $details = get_object_vars($object->action->$type);
+                        $details = ($object->action->$type);
                     @endphp
 
                     <x-link-panel class="flex gap-5 font-mono text-lg" href="/admin/transactions/{{ $object->id }}">
                             <div class="bg-neutral-200 px-2 py-1 rounded-md">ID: {{ $object->id }}</div>
                             <div class="bg-neutral-200 px-2 py-1 rounded-md">TYPE: {{ $type }}</div>
-                            @foreach (array_keys($details) as $detail)
+                            @foreach (array_keys(get_object_vars($details)) as $detail)
                                 @php
-                                    if (is_array($details[$detail])) {
-                                        $contents = implode( ", ", $details[$detail]);
-                                    } elseif (is_string($details[$detail]) || is_int($details[$detail])) {
-                                        $contents = $details[$detail];
+                                    if (is_array($details->$detail)) {
+                                        dd($details);
+                                        $contents = implode( ", ", $details->$detail);
+                                    } elseif (is_string($details->$detail) || is_int($details->$detail)) {
+                                        $contents = $details->$detail;
                                     } else {
                                         $contents = "";
                                     }
@@ -77,9 +73,6 @@
                                 
                             @endforeach
                         </a>
-
-                        {{-- <a href="#" class="ml-auto"><i class="fa fa-pencil text-gray-600 hover:text-black"></i></a> --}}
-                        
                     </x-panel>
                 @endif
             @endforeach

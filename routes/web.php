@@ -11,7 +11,9 @@ use App\Models\Item;
 use App\Models\SellOrder;
 use App\Models\User;
 use \Illuminate\Support\Facades\Auth;
-use tpex\tpex\State;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Validation\ValidationException;
+use Tpex\Tpex\State;
 
 use function tpex\tpex\format_millicoins;
 use function tpex\tpex\parse_millicoins;
@@ -99,11 +101,50 @@ Route::post("/admin/manage-users", function () {
     }
 })->middleware("auth");
 
-// Withdrawals
+// Deposits/Withdrawals
 Route::get("/admin/deposits-withdrawals", function () {
     $user = Auth::user();
     if ($user->isAdmin()) {
         return view("admin.deposits_withdrawals");
+    } else {
+        abort("403");
+    }
+})->middleware("auth");
+
+
+// Deposits Form
+
+Route::get("/admin/deposits", function () {
+    $user = Auth::user();
+    if($user->isAdmin()) {
+        $players = User::all();
+        $items = explode("\n", file_get_contents("../database/items.txt"));
+        return view("admin.deposits", ["players"=>$players,"items"=>$items]);
+    } else {
+        abort("403");
+    }
+})->middleware("auth");
+
+Route::post("/admin/deposits", function () {
+    $user = Auth::user();
+    if($user->isAdmin()) {
+        $players = DB::table('users')->pluck('username')->toArray();
+        $items = explode("\n", file_get_contents("../database/items.txt"));
+
+        // Extract request data
+        $player = request("player");
+        $item = request("item");
+        $quantity = request("quantity");
+        $quantityConfirm = request("quantityConfirm");
+        $banker = $user->username;
+
+        if (!(in_array($player, $players) && in_array($item, $items) && ($quantity == $quantityConfirm))) {
+            throw ValidationException::withMessages(['field_name' => 'Invalid deposit']);
+        }
+
+        $remote = new TPEx\TPEx\Remote("https://tpex-staging.cyclic3.dev", Auth::user()->access_token); // Create connection
+        
+        return redirect("/");
     } else {
         abort("403");
     }

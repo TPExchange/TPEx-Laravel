@@ -3,7 +3,7 @@
 
 
     <section class="mt-5">
-        <form method="POST" action="/" class="flex flex-col bg-gray-200 rounded-lg w-lg m-auto py-3 px-10">
+        <form method="POST" action="/" class="flex flex-col bg-neutral-100 rounded-lg w-lg m-auto py-3 px-10">
             @csrf
 
             <h3 class="text-center text-xl">Place A Sell Order</h3>

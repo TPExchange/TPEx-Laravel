@@ -1,9 +1,11 @@
 <x-layout>
     @php
-        $path = database_path() . "/trades.list"; // Path to log
-        $log = file_get_contents($path); // Load log JSON
-        $transactions = explode("\n", $log); // Convert to array on line breaks
-        $transaction = $transactions[$id - 1]; // -1 accounts for zero indexing ($id passed in via routes controller)
+
+        $remote = new TPEx\TPEx\Remote("https://tpex-staging.cyclic3.dev", Auth::user()->access_token); // Create connection
+        $transactions = $remote->raw_state();
+        $transactions = explode("\n", $transactions);
+        array_pop($transactions);
+        $transaction = $transactions[$id - 1];
         $object = json_decode($transaction);
         $type =  array_keys(get_object_vars($object->action))[0];
         $details = get_object_vars($object->action->$type);

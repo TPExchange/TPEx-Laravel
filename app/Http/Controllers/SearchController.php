@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use tpex\tpex\State;
+use Tpex\Tpex\State;
 
 class SearchController extends Controller
 {
@@ -25,7 +25,8 @@ class SearchController extends Controller
         $search_term = request("q");
         $remote = new \TPEx\TPEx\Remote("https://tpex-staging.cyclic3.dev", Auth::user()->access_token); // Create connection
         $state = $remote->fastsync(); // Get state
-        $orders = $state->raw["order"];
+        
+        $orders = $state["order"];
         $buy_orders = $orders["buy_orders"];
         $sell_orders = $orders["sell_orders"];
 

@@ -10,9 +10,8 @@ class ItemController extends Controller
     public function index() {
         $remote = new \TPEx\TPEx\Remote("https://tpex-staging.cyclic3.dev", Auth::user()->access_token); // Create connection
         $state = $remote->fastsync(); // Get state
-        $orders = $state->raw["order"];
-        $buy_orders = $orders["buy_orders"];
-        $sell_orders = $orders["sell_orders"];
+        $buy_orders = $state->buy_orders();
+        $sell_orders = $state->sell_orders();
 
         return view('items.index', ["buy_orders"=>$buy_orders, "sell_orders"=>$sell_orders]);
     }
