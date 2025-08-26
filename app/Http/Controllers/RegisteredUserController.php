@@ -6,10 +6,10 @@ use Illuminate\Http\Request;
 use Illuminate\Validation\Rules\Password;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
-use tpex\tpex\TokenLevel;
-use tpex\tpex\State;
+use TPEx\TPEx\TokenLevel;
+use TPEx\TPEx\State;
 
-use function tpex\tpex\create_token;
+use function TPEx\TPEx\create_token;
 
 class RegisteredUserController extends Controller
 {
@@ -24,7 +24,7 @@ class RegisteredUserController extends Controller
             "password" => ["required", Password::min(5)->letters()->numbers(), "confirmed"]
         ]);
 
-        $remote = new \TPEx\TPEx\Remote("https://tpex-staging.cyclic3.dev", "3H/xEZPV2FTRHrWtkUpIKA"); // Create connection
+        $remote = new \TPEx\TPEx\Remote(env("TPEX_URL"), "3H/xEZPV2FTRHrWtkUpIKA"); // Create connection
         $validatedAttributes["access_token"] = $remote->create_token($validatedAttributes["username"], TokenLevel::ProxyOne);
         // Create User
         $user = User::create(

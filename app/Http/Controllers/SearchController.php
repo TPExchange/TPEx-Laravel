@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use tpex\tpex\State;
+use TPEx\TPEx\State;
 
 class SearchController extends Controller
 {
@@ -18,12 +18,12 @@ class SearchController extends Controller
             }
         }
         return $search_results;
-    }   
+    }
 
     public function items() {
         // UPDATE THIS
         $search_term = request("q");
-        $remote = new \TPEx\TPEx\Remote("https://tpex-staging.cyclic3.dev", Auth::user()->access_token); // Create connection
+        $remote = new \TPEx\TPEx\Remote(env("TPEX_URL"), Auth::user()->access_token); // Create connection
         $state = $remote->fastsync(); // Get state
         $orders = $state->raw["order"];
         $buy_orders = $orders["buy_orders"];
@@ -47,7 +47,7 @@ class SearchController extends Controller
         // UPDATE THIS
         $search_term = request("q");
         $username = Auth::user()->username;
-        $remote = new \TPEx\TPEx\Remote("https://tpex-staging.cyclic3.dev", Auth::user()->access_token); // Create connection
+        $remote = new \TPEx\TPEx\Remote(env("TPEX_URL"), Auth::user()->access_token); // Create connection
         $state = $remote->fastsync(); // Fetch state
         $inventory = $state->player_assets($username);
         $coins = $state->player_balance($username);

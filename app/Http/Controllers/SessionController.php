@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Validation\ValidationException;
 use TPEx\TPEx\TokenLevel;
 
-use function tpex\tpex\create_token;
+use function TPEx\TPEx\create_token;
 
 class SessionController extends Controller
 {
@@ -37,7 +37,7 @@ class SessionController extends Controller
 
         // Generate Access Token If Missing
         if(is_null(Auth::user()->access_token)) {
-            $remote = new \TPEx\TPEx\Remote("https://tpex-staging.cyclic3.dev", "3H/xEZPV2FTRHrWtkUpIKA"); // Create connection
+            $remote = new \TPEx\TPEx\Remote(env("TPEX_URL"), env("TPEX_TOKEN")); // Create connection
             $token = $remote->create_token($validatedAttributes["username"], TokenLevel::ProxyOne);
             Auth::user()->update(["access_token"=>$token]);
         }
