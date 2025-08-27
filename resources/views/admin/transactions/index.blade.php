@@ -18,7 +18,7 @@
                 <select name="filter" onchange="this.form.submit()" class="border border-gray-400 rounded-lg">
                     <option value="">Select Filter</option>
                     @php
-                        $typesArray = ["Deposit","CancelOrder", "WithdrawalRequested", "WithdrawalCompleted", "Deleted", "UpdateBankers", "UpdateBankPrices", "UpdateRestricted", "SellOrder", "BuyOrder", "BuyCoins", "SellCoins"];
+                        $typesArray = ["Deposit","CancelOrder", "RequestWithdrawal", "CompleteWithdrawal", "Deleted", "UpdateBankers", "UpdateBankPrices", "UpdateRestricted", "SellOrder", "BuyOrder", "BuyCoins", "SellCoins"];
                         asort($typesArray);
                     @endphp
                     @foreach ($typesArray as $type)
@@ -57,7 +57,6 @@
                             @foreach (array_keys(get_object_vars($details)) as $detail)
                                 @php
                                     if (is_array($details->$detail)) {
-                                        dd($details);
                                         $contents = implode( ", ", $details->$detail);
                                     } elseif (is_string($details->$detail) || is_int($details->$detail)) {
                                         $contents = $details->$detail;

@@ -1,1584 +1,1415 @@
-Acacia Boat
-Acacia Boat with Chest
-Acacia Button
-Acacia Door
-Acacia Fence
-Acacia Fence Gate
-Acacia Hanging Sign
-Acacia Leaves
-Acacia Log
-Acacia Planks
-Acacia Pressure Plate
-Acacia Sapling
-Acacia Sign
-Acacia Slab
-Acacia Stairs
-Acacia Trapdoor
-Acacia Wood
-Activator Rail
-Allium
-Amethyst Cluster
-Amethyst Shard
-Ancient Debris
-Andesite
-Andesite Slab
-Andesite Stairs
-Andesite Wall
-Angler Pottery Sherd
-Anvil
-Apple
-Archer Pottery Sherd
-Armadillo Scute
-Armor Stand
-Arms Up Pottery Sherd
-Arrow
-Arrow of Fire Resistance (00:22)
-Arrow of Fire Resistance (01:00)
-Arrow of Harming (Instant Damage II)
-Arrow of Harming (Instant Damage)
-Arrow of Healing (Instant Health II)
-Arrow of Healing (Instant Health)
-Arrow of Infestation (Infested 00:22)
-Arrow of Invisibility (00:22)
-Arrow of Invisibility (01:00)
-Arrow of Leaping (Jump Boost 00:22)
-Arrow of Leaping (Jump Boost 01:00)
-Arrow of Leaping (Jump Boost II 00:11)
-Arrow of Night Vision (00:22)
-Arrow of Night Vision (01:00)
-Arrow of Oozing (00:22)
-Arrow of Poison (00:05)
-Arrow of Poison (00:11)
-Arrow of Poison (Poison II 00:02)
-Arrow of Regeneration (00:05)
-Arrow of Regeneration (00:11)
-Arrow of Regeneration (Regeneration II 00:02)
-Arrow of Slow Falling (00:11)
-Arrow of Slow Falling (00:30)
-Arrow of Slowness (00:11)
-Arrow of Slowness (00:30)
-Arrow of Slowness (Slowness IV 00:02)
-Arrow of Splashing
-Arrow of Strength (00:22)
-Arrow of Strength (01:00)
-Arrow of Strength (Strength II 00:11)
-Arrow of Swiftness (Speed 00:22)
-Arrow of Swiftness (Speed 01:00)
-Arrow of Swiftness (Speed II 00:11)
-Arrow of Water Breathing (00:22)
-Arrow of Water Breathing (01:00)
-Arrow of Weakness (00:11)
-Arrow of Weakness (00:30)
-Arrow of Weaving (00:22)
-Arrow of Wind Charging (Wind Charged 00:22)
-Arrow of the Turtle Master (Slowness IV & Resistance III 00:02)
-Arrow of the Turtle Master (Slowness IV & Resistance III 00:05)
-Arrow of the Turtle Master (Slowness VI & Resistance IV 00:02)
-Awkward Lingering Potion
-Awkward Potion
-Awkward Splash Potion
-Axolotl Bucket
-Azalea
-Azalea Leaves
-Azure Bluet
-Baked Potato
-Bamboo
-Bamboo Button
-Bamboo Chest Raft
-Bamboo Door
-Bamboo Fence
-Bamboo Fence Gate
-Bamboo Hanging Sign
-Bamboo Mosaic
-Bamboo Mosaic Slab
-Bamboo Mosaic Stairs
-Bamboo Planks
-Bamboo Pressure Plate
-Bamboo Raft
-Bamboo Sign
-Bamboo Slab
-Bamboo Stairs
-Bamboo Trapdoor
-Barrel
-Basalt
-Beacon
-Bee Nest
-Beehive
-Beetroot
-Beetroot Seeds
-Beetroot Soup
-Bell
-Big Dripleaf
-Birch Boat
-Birch Boat with Chest
-Birch Button
-Birch Door
-Birch Fence
-Birch Fence Gate
-Birch Hanging Sign
-Birch Leaves
-Birch Log
-Birch Planks
-Birch Pressure Plate
-Birch Sapling
-Birch Sign
-Birch Slab
-Birch Stairs
-Birch Trapdoor
-Birch Wood
-Black Banner
-Black Bed
-Black Bundle
-Black Candle
-Black Carpet
-Black Concrete
-Black Concrete Powder
-Black Dye
-Black Glazed Terracotta
-Black Shulker Box
-Black Stained Glass
-Black Stained Glass Pane
-Black Terracotta
-Black Wool
-Blackstone
-Blackstone Slab
-Blackstone Stairs
-Blackstone Wall
-Blade Pottery Sherd
-Blast Furnace
-Blaze Powder
-Blaze Rod
-Block of Amethyst
-Block of Bamboo
-Block of Coal
-Block of Diamond
-Block of Emerald
-Block of Gold
-Block of Iron
-Block of Lapis Lazuli
-Block of Netherite
-Block of Quartz
-Block of Raw Copper
-Block of Raw Gold
-Block of Raw Iron
-Block of Redstone
-Block of Resin
-Block of Stripped Bamboo
-Blue Banner
-Blue Bed
-Blue Bundle
-Blue Candle
-Blue Carpet
-Blue Concrete
-Blue Concrete Powder
-Blue Dye
-Blue Glazed Terracotta
-Blue Ice
-Blue Orchid
-Blue Shulker Box
-Blue Stained Glass
-Blue Stained Glass Pane
-Blue Terracotta
-Blue Wool
-Bolt Armor Trim Smithing Template
-Bone
-Bone Block
-Bone Meal
-Book
-Book and Quill
-Bookshelf
-Bordure Indented Banner Pattern
-Bottle o' Enchanting
-Bow
-Bowl
-Brain Coral
-Brain Coral Block
-Brain Coral Fan
-Bread
-Breeze Rod
-Brewer Pottery Sherd
-Brewing Stand
-Brick
-Brick Slab
-Brick Stairs
-Brick Wall
-Bricks
-Brown Banner
-Brown Bed
-Brown Bundle
-Brown Candle
-Brown Carpet
-Brown Concrete
-Brown Concrete Powder
-Brown Dye
-Brown Glazed Terracotta
-Brown Mushroom
-Brown Mushroom Block
-Brown Shulker Box
-Brown Stained Glass
-Brown Stained Glass Pane
-Brown Terracotta
-Brown Wool
-Brush
-Bubble Coral
-Bubble Coral Block
-Bubble Coral Fan
-Bucket
-Budding Amethyst
-Bundle
-Burn Pottery Sherd
-Cactus
-Cake
-Calcite
-Calibrated Sculk Sensor
-Campfire
-Candle
-Carrot
-Carrot On A Stick
-Cartography Table
-Carved Pumpkin
-Cauldron
-Chain
-Chainmail Boots
-Chainmail Chestplate
-Chainmail Helmet
-Chainmail Leggings
-Charcoal
-Cherry Boat
-Cherry Boat with Chest
-Cherry Button
-Cherry Door
-Cherry Fence
-Cherry Fence Gate
-Cherry Hanging Sign
-Cherry Leaves
-Cherry Log
-Cherry Planks
-Cherry Pressure Plate
-Cherry Sapling
-Cherry Sign
-Cherry Slab
-Cherry Stairs
-Cherry Trapdoor
-Cherry Wood
-Chest
-Chipped Anvil
-Chiseled Bookshelf
-Chiseled Deepslate
-Chiseled Nether Bricks
-Chiseled Polished Blackstone
-Chiseled Quartz Block
-Chiseled Red Sandstone
-Chiseled Resin Bricks
-Chiseled Sandstone
-Chiseled Stone Bricks
-Chiseled Tuff
-Chiseled Tuff Bricks
-Chorus Flower
-Chorus Fruit
-Chorus Plant
-Clay
-Clay Ball
-Clock
-Closed Eyeblossom
-Coal
-Coal Ore
-Coarse Dirt
-Coast Armor Trim Smithing Template
-Cobbled Deepslate
-Cobbled Deepslate Slab
-Cobbled Deepslate Stairs
-Cobbled Deepslate Wall
-Cobblestone
-Cobblestone Slab
-Cobblestone Stairs
-Cobblestone Wall
-Cobweb
-Cocoa Beans
-Cod Bucket
-Compass
-Composter
-Conduit
-Cooked Chicken
-Cooked Cod
-Cooked Mutton
-Cooked Porkchop
-Cooked Rabbit
-Cooked Salmon
-Cookie
-Copper Ingot
-Copper Ore
-Cornflower
-Cracked Deepslate Bricks
-Cracked Deepslate Tiles
-Cracked Nether Bricks
-Cracked Polished Blackstone Bricks
-Cracked Stone Bricks
-Crafter
-Crafting Table
-Creaking Heart
-Creeper Charge Banner Pattern
-Creeper Head
-Crimson Button
-Crimson Door
-Crimson Fence
-Crimson Fence Gate
-Crimson Fungus
-Crimson Hanging Sign
-Crimson Hyphae
-Crimson Nylium
-Crimson Planks
-Crimson Pressure Plate
-Crimson Roots
-Crimson Sign
-Crimson Slab
-Crimson Stairs
-Crimson Stem
-Crimson Trapdoor
-Crossbow
-Crying Obsidian
-Cut Red Sandstone
-Cut Red Sandstone Slab
-Cut Sandstone
-Cut Sandstone Slab
-Cyan Banner
-Cyan Bed
-Cyan Bundle
-Cyan Candle
-Cyan Carpet
-Cyan Concrete
-Cyan Concrete Powder
-Cyan Dye
-Cyan Glazed Terracotta
-Cyan Shulker Box
-Cyan Stained Glass
-Cyan Stained Glass Pane
-Cyan Terracotta
-Cyan Wool
-Damaged Anvil
-Dandelion
-Danger Pottery Sherd
-Dark Oak Boat
-Dark Oak Boat with Chest
-Dark Oak Button
-Dark Oak Door
-Dark Oak Fence
-Dark Oak Fence Gate
-Dark Oak Hanging Sign
-Dark Oak Leaves
-Dark Oak Log
-Dark Oak Planks
-Dark Oak Pressure Plate
-Dark Oak Sapling
-Dark Oak Sign
-Dark Oak Slab
-Dark Oak Stairs
-Dark Oak Trapdoor
-Dark Oak Wood
-Dark Prismarine
-Dark Prismarine Slab
-Dark Prismarine Stairs
-Daylight Detector
-Dead Brain Coral
-Dead Brain Coral Block
-Dead Brain Coral Fan
-Dead Bubble Coral
-Dead Bubble Coral Block
-Dead Bubble Coral Fan
-Dead Bush
-Dead Fire Coral
-Dead Fire Coral Block
-Dead Fire Coral Fan
-Dead Horn Coral
-Dead Horn Coral Block
-Dead Horn Coral Fan
-Dead Tube Coral
-Dead Tube Coral Block
-Dead Tube Coral Fan
-Decorated Pot
-Deepslate
-Deepslate Brick Slab
-Deepslate Brick Stairs
-Deepslate Brick Wall
-Deepslate Bricks
-Deepslate Coal Ore
-Deepslate Copper Ore
-Deepslate Diamond Ore
-Deepslate Emerald Ore
-Deepslate Gold Ore
-Deepslate Iron Ore
-Deepslate Lapis Ore
-Deepslate Redstone Ore
-Deepslate Tile Slab
-Deepslate Tile Stairs
-Deepslate Tile Wall
-Deepslate Tiles
-Detector Rail
-Diamond
-Diamond Axe
-Diamond Boots
-Diamond Chestplate
-Diamond Helmet
-Diamond Hoe
-Diamond Horse Armor
-Diamond Leggings
-Diamond Ore
-Diamond Pickaxe
-Diamond Shovel
-Diamond Sword
-Diorite
-Diorite Slab
-Diorite Stairs
-Diorite Wall
-Dirt
-Disc Fragment 5
-Dispenser
-Dragon Egg
-Dragon Head
-Dragon's Breath
-Dried Kelp
-Dried Kelp Block
-Dripstone Block
-Dropper
-Dune Armor Trim Smithing Template
-Echo Shard
-Egg
-Elytra
-Emerald
-Emerald Ore
-Empty Map
-Enchanted Book of Aqua Affinity
-Enchanted Book of Bane of Arthropods I
-Enchanted Book of Bane of Arthropods II
-Enchanted Book of Bane of Arthropods III
-Enchanted Book of Bane of Arthropods IV
-Enchanted Book of Bane of Arthropods V
-Enchanted Book of Blast Protection I
-Enchanted Book of Blast Protection II
-Enchanted Book of Blast Protection III
-Enchanted Book of Blast Protection IV
-Enchanted Book of Breach I
-Enchanted Book of Breach II
-Enchanted Book of Breach III
-Enchanted Book of Breach IV
-Enchanted Book of Channeling
-Enchanted Book of Curse of Binding
-Enchanted Book of Curse of Vanishing
-Enchanted Book of Density I
-Enchanted Book of Density II
-Enchanted Book of Density III
-Enchanted Book of Density IV
-Enchanted Book of Density V
-Enchanted Book of Depth Strider I
-Enchanted Book of Depth Strider II
-Enchanted Book of Depth Strider III
-Enchanted Book of Efficiency I
-Enchanted Book of Efficiency II
-Enchanted Book of Efficiency III
-Enchanted Book of Efficiency IV
-Enchanted Book of Efficiency V
-Enchanted Book of Feather Falling I
-Enchanted Book of Feather Falling II
-Enchanted Book of Feather Falling III
-Enchanted Book of Feather Falling IV
-Enchanted Book of Fire Aspect I
-Enchanted Book of Fire Aspect II
-Enchanted Book of Fire Protection I
-Enchanted Book of Fire Protection II
-Enchanted Book of Fire Protection III
-Enchanted Book of Fire Protection IV
-Enchanted Book of Flame
-Enchanted Book of Fortune I
-Enchanted Book of Fortune II
-Enchanted Book of Fortune III
-Enchanted Book of Frost Walker I
-Enchanted Book of Frost Walker II
-Enchanted Book of Impaling I
-Enchanted Book of Impaling II
-Enchanted Book of Impaling III
-Enchanted Book of Impaling IV
-Enchanted Book of Impaling V
-Enchanted Book of Infinity
-Enchanted Book of Knockback I
-Enchanted Book of Knockback II
-Enchanted Book of Looting I
-Enchanted Book of Looting II
-Enchanted Book of Looting III
-Enchanted Book of Loyalty I
-Enchanted Book of Loyalty II
-Enchanted Book of Loyalty III
-Enchanted Book of Luck of the Sea I
-Enchanted Book of Luck of the Sea II
-Enchanted Book of Luck of the Sea III
-Enchanted Book of Lure I
-Enchanted Book of Lure II
-Enchanted Book of Lure III
-Enchanted Book of Mending
-Enchanted Book of Multishot
-Enchanted Book of Piercing I
-Enchanted Book of Piercing II
-Enchanted Book of Piercing III
-Enchanted Book of Piercing IV
-Enchanted Book of Power I
-Enchanted Book of Power II
-Enchanted Book of Power III
-Enchanted Book of Power IV
-Enchanted Book of Power V
-Enchanted Book of Projectile Protection I
-Enchanted Book of Projectile Protection II
-Enchanted Book of Projectile Protection III
-Enchanted Book of Projectile Protection IV
-Enchanted Book of Protection I
-Enchanted Book of Protection II
-Enchanted Book of Protection III
-Enchanted Book of Protection IV
-Enchanted Book of Punch I
-Enchanted Book of Punch II
-Enchanted Book of Quick Charge I
-Enchanted Book of Quick Charge II
-Enchanted Book of Quick Charge III
-Enchanted Book of Respiration I
-Enchanted Book of Respiration II
-Enchanted Book of Respiration III
-Enchanted Book of Riptide I
-Enchanted Book of Riptide II
-Enchanted Book of Riptide III
-Enchanted Book of Sharpness I
-Enchanted Book of Sharpness II
-Enchanted Book of Sharpness III
-Enchanted Book of Sharpness IV
-Enchanted Book of Sharpness V
-Enchanted Book of Silk Touch
-Enchanted Book of Smite I
-Enchanted Book of Smite II
-Enchanted Book of Smite III
-Enchanted Book of Smite IV
-Enchanted Book of Smite V
-Enchanted Book of Soul Speed I
-Enchanted Book of Soul Speed II
-Enchanted Book of Soul Speed III
-Enchanted Book of Sweeping Edge I
-Enchanted Book of Sweeping Edge II
-Enchanted Book of Sweeping Edge III
-Enchanted Book of Swift Sneak I
-Enchanted Book of Swift Sneak II
-Enchanted Book of Swift Sneak III
-Enchanted Book of Thorns I
-Enchanted Book of Thorns II
-Enchanted Book of Thorns III
-Enchanted Book of Unbreaking I
-Enchanted Book of Unbreaking II
-Enchanted Book of Unbreaking III
-Enchanted Book of Wind Burst I
-Enchanted Book of Wind Burst II
-Enchanted Book of Wind Burst III
-Enchanted Golden Apple
-Enchanting Table
-End Crystal
-End Rod
-End Stone
-End Stone Brick Slab
-End Stone Brick Stairs
-End Stone Brick Wall
-End Stone Bricks
-Ender Chest
-Ender Pearl
-Explorer Pottery Sherd
-Eye Armor Trim Smithing Template
-Eye of Ender
-Feather
-Fermented Spider Eye
-Fern
-Field Masoned Banner Pattern
-Filled Map
-Fire Charge
-Fire Coral
-Fire Coral Block
-Fire Coral Fan
-Firework Rocket
-Firework Star
-Fishing Rod
-Fletching Table
-Flint
-Flint And Steel
-Flow Armor Trim Smithing Template
-Flow Banner Pattern
-Flow Pottery Sherd
-Flower Charge Banner Pattern
-Flower Pot
-Flowering Azalea
-Flowering Azalea Leaves
-Friend Pottery Sherd
-Furnace
-Ghast Tear
-Gilded Blackstone
-Glass
-Glass Bottle
-Glass Pane
-Glistering Melon Slice
-Globe Banner Pattern
-Glow Berries
-Glow Ink Sac
-Glow Item Frame
-Glow Lichen
-Glowstone
-Glowstone Dust
-Goat Horn (Admire)
-Goat Horn (Call)
-Goat Horn (Dream)
-Goat Horn (Feel)
-Goat Horn (Ponder)
-Goat Horn (Seek)
-Goat Horn (Sing)
-Goat Horn (Yearn)
-Gold Ingot
-Gold Nugget
-Gold Ore
-Golden Apple
-Golden Axe
-Golden Boots
-Golden Carrot
-Golden Chestplate
-Golden Helmet
-Golden Hoe
-Golden Horse Armor
-Golden Leggings
-Golden Pickaxe
-Golden Shovel
-Golden Sword
-Granite
-Granite Slab
-Granite Stairs
-Granite Wall
-Grass Block
-Gravel
-Gray Banner
-Gray Bed
-Gray Bundle
-Gray Candle
-Gray Carpet
-Gray Concrete
-Gray Concrete Powder
-Gray Dye
-Gray Glazed Terracotta
-Gray Shulker Box
-Gray Stained Glass
-Gray Stained Glass Pane
-Gray Terracotta
-Gray Wool
-Green Banner
-Green Bed
-Green Bundle
-Green Candle
-Green Carpet
-Green Concrete
-Green Concrete Powder
-Green Dye
-Green Glazed Terracotta
-Green Shulker Box
-Green Stained Glass
-Green Stained Glass Pane
-Green Terracotta
-Green Wool
-Grindstone
-Gunpowder
-Guster Banner Pattern
-Guster Pottery Sherd
-Hanging Roots
-Hay Bale
-Heart Of The Sea
-Heart Pottery Sherd
-Heartbreak Pottery Sherd
-Heavy Core
-Heavy Weighted Pressure Plate
-Honey Block
-Honey Bottle
-Honeycomb
-Honeycomb Block
-Hopper
-Horn Coral
-Horn Coral Block
-Horn Coral Fan
-Host Armor Trim Smithing Template
-Howl Pottery Sherd
-Ice
-Ink Sac
-Iron Axe
-Iron Bars
-Iron Boots
-Iron Chestplate
-Iron Door
-Iron Helmet
-Iron Hoe
-Iron Horse Armor
-Iron Ingot
-Iron Leggings
-Iron Nugget
-Iron Ore
-Iron Pickaxe
-Iron Shovel
-Iron Sword
-Iron Trapdoor
-Item Frame
-Jack o'Lantern
-Jukebox
-Jungle Boat
-Jungle Boat with Chest
-Jungle Button
-Jungle Door
-Jungle Fence
-Jungle Fence Gate
-Jungle Hanging Sign
-Jungle Leaves
-Jungle Log
-Jungle Planks
-Jungle Pressure Plate
-Jungle Sapling
-Jungle Sign
-Jungle Slab
-Jungle Stairs
-Jungle Trapdoor
-Jungle Wood
-Kelp
-Ladder
-Lantern
-Lapis Lazuli
-Lapis Ore
-Large Amethyst Bud
-Large Fern
-Lava Bucket
-Lead
-Leather
-Leather Boots
-Leather Chestplate
-Leather Helmet
-Leather Horse Armor
-Leather Leggings
-Lectern
-Lever
-Light Blue Banner
-Light Blue Bed
-Light Blue Bundle
-Light Blue Candle
-Light Blue Carpet
-Light Blue Concrete
-Light Blue Concrete Powder
-Light Blue Dye
-Light Blue Glazed Terracotta
-Light Blue Shulker Box
-Light Blue Stained Glass
-Light Blue Stained Glass Pane
-Light Blue Terracotta
-Light Blue Wool
-Light Gray Banner
-Light Gray Bed
-Light Gray Bundle
-Light Gray Candle
-Light Gray Carpet
-Light Gray Concrete
-Light Gray Concrete Powder
-Light Gray Dye
-Light Gray Glazed Terracotta
-Light Gray Shulker Box
-Light Gray Stained Glass
-Light Gray Stained Glass Pane
-Light Gray Terracotta
-Light Gray Wool
-Light Weighted Pressure Plate
-Lightning Rod
-Lilac
-Lily Of The Valley
-Lily Pad
-Lime Banner
-Lime Bed
-Lime Bundle
-Lime Candle
-Lime Carpet
-Lime Concrete
-Lime Concrete Powder
-Lime Dye
-Lime Glazed Terracotta
-Lime Shulker Box
-Lime Stained Glass
-Lime Stained Glass Pane
-Lime Terracotta
-Lime Wool
-Lingering Potion of Fire Resistance (00:45)
-Lingering Potion of Fire Resistance (02:00)
-Lingering Potion of Harming (Instant Damage II)
-Lingering Potion of Harming (Instant Damage)
-Lingering Potion of Healing (Instant Health II)
-Lingering Potion of Healing (Instant Health)
-Lingering Potion of Infestation (Infested 00:45)
-Lingering Potion of Invisibility (00:45)
-Lingering Potion of Invisibility (02:00)
-Lingering Potion of Leaping (Jump Boost 00:45)
-Lingering Potion of Leaping (Jump Boost 02:00)
-Lingering Potion of Leaping (Jump Boost II 00:22)
-Lingering Potion of Night Vision (00:45)
-Lingering Potion of Night Vision (02:00)
-Lingering Potion of Oozing (00:45)
-Lingering Potion of Poison (00:11)
-Lingering Potion of Poison (00:22)
-Lingering Potion of Poison (Poison II 00:05)
-Lingering Potion of Regeneration (00:11)
-Lingering Potion of Regeneration (00:22)
-Lingering Potion of Regeneration (Regeneration II 00:05)
-Lingering Potion of Slow Falling (00:22)
-Lingering Potion of Slow Falling (01:00)
-Lingering Potion of Slowness (00:22)
-Lingering Potion of Slowness (01:00)
-Lingering Potion of Slowness (Slowness IV 00:05)
-Lingering Potion of Strength (00:45)
-Lingering Potion of Strength (02:00)
-Lingering Potion of Strength (Strength II 00:22)
-Lingering Potion of Swiftness (Speed 00:45)
-Lingering Potion of Swiftness (Speed 02:00)
-Lingering Potion of Swiftness (Speed II 00:22)
-Lingering Potion of Water Breathing (00:45)
-Lingering Potion of Water Breathing (02:00)
-Lingering Potion of Weakness (00:22)
-Lingering Potion of Weakness (01:00)
-Lingering Potion of Weaving (00:45)
-Lingering Potion of Wind Charging (Wind Charged 00:45)
-Lingering Potion of the Turtle Master (Slowness IV & Resistance III 00:05)
-Lingering Potion of the Turtle Master (Slowness IV & Resistance III 00:10)
-Lingering Potion of the Turtle Master (Slowness VI & Resistance IV 00:05)
-Lingering Water Bottle
-Lodestone
-Loom
-Mace
-Magenta Banner
-Magenta Bed
-Magenta Bundle
-Magenta Candle
-Magenta Carpet
-Magenta Concrete
-Magenta Concrete Powder
-Magenta Dye
-Magenta Glazed Terracotta
-Magenta Shulker Box
-Magenta Stained Glass
-Magenta Stained Glass Pane
-Magenta Terracotta
-Magenta Wool
-Magma Block
-Magma Cream
-Mangrove Boat
-Mangrove Boat with Chest
-Mangrove Button
-Mangrove Door
-Mangrove Fence
-Mangrove Fence Gate
-Mangrove Hanging Sign
-Mangrove Leaves
-Mangrove Log
-Mangrove Planks
-Mangrove Pressure Plate
-Mangrove Propagule
-Mangrove Roots
-Mangrove Sign
-Mangrove Slab
-Mangrove Stairs
-Mangrove Trapdoor
-Mangrove Wood
-Medium Amethyst Bud
-Melon
-Melon Seeds
-Melon Slice
-Milk Bucket
-Minecart
-Minecart with Chest
-Minecart with Furnace
-Minecart with Hopper
-Minecart with TNT
-Miner Pottery Sherd
-Moss Block
-Moss Carpet
-Mossy Cobblestone
-Mossy Cobblestone Slab
-Mossy Cobblestone Stairs
-Mossy Cobblestone Wall
-Mossy Stone Brick Slab
-Mossy Stone Brick Stairs
-Mossy Stone Brick Wall
-Mossy Stone Bricks
-Mourner Pottery Sherd
-Mud
-Mud Brick Slab
-Mud Brick Stairs
-Mud Brick Wall
-Mud Bricks
-Muddy Mangrove Roots
-Mundane Lingering Potion
-Mundane Potion
-Mundane Splash Potion
-Mushroom Stem
-Mushroom Stew
-Music Disc 11
-Music Disc 13
-Music Disc 5
-Music Disc Blocks
-Music Disc Cat
-Music Disc Chirp
-Music Disc Creator
-Music Disc Creator Music Box
-Music Disc Far
-Music Disc Mall
-Music Disc Mellohi
-Music Disc Otherside
-Music Disc Pigstep
-Music Disc Precipice
-Music Disc Relic
-Music Disc Stal
-Music Disc Strad
-Music Disc Wait
-Music Disc Ward
-Mycelium
-Name Tag
-Nautilus Shell
-Nether Brick
-Nether Brick Fence
-Nether Brick Slab
-Nether Brick Stairs
-Nether Brick Wall
-Nether Bricks
-Nether Gold Ore
-Nether Quartz Ore
-Nether Sprouts
-Nether Star
-Nether Wart
-Nether Wart Block
-Netherite Axe
-Netherite Boots
-Netherite Chestplate
-Netherite Helmet
-Netherite Hoe
-Netherite Ingot
-Netherite Leggings
-Netherite Pickaxe
-Netherite Scrap
-Netherite Shovel
-Netherite Sword
-Netherite Upgrade Smithing Template
-Netherrack
-Note Block
-Oak Boat
-Oak Boat with Chest
-Oak Button
-Oak Door
-Oak Fence
-Oak Fence Gate
-Oak Hanging Sign
-Oak Leaves
-Oak Log
-Oak Planks
-Oak Pressure Plate
-Oak Sapling
-Oak Sign
-Oak Slab
-Oak Stairs
-Oak Trapdoor
-Oak Wood
-Observer
-Obsidian
-Ochre Froglight
-Ominous Bottle (Bad Omen 01:40:00)
-Ominous Bottle (Bad Omen II 01:40:00)
-Ominous Bottle (Bad Omen III 01:40:00)
-Ominous Bottle (Bad Omen IV 01:40:00)
-Ominous Bottle (Bad Omen V 01:40:00)
-Ominous Trial Key
-Open Eyeblossom
-Orange Banner
-Orange Bed
-Orange Bundle
-Orange Candle
-Orange Carpet
-Orange Concrete
-Orange Concrete Powder
-Orange Dye
-Orange Glazed Terracotta
-Orange Shulker Box
-Orange Stained Glass
-Orange Stained Glass Pane
-Orange Terracotta
-Orange Tulip
-Orange Wool
-Oxeye Daisy
-Packed Ice
-Packed Mud
-Painting
-Pale Hanging Moss
-Pale Moss Block
-Pale Moss Carpet
-Pale Oak Boat
-Pale Oak Boat with Chest
-Pale Oak Button
-Pale Oak Door
-Pale Oak Fence
-Pale Oak Fence Gate
-Pale Oak Hanging Sign
-Pale Oak Leaves
-Pale Oak Log
-Pale Oak Planks
-Pale Oak Pressure Plate
-Pale Oak Sapling
-Pale Oak Sign
-Pale Oak Slab
-Pale Oak Stairs
-Pale Oak Trapdoor
-Pale Oak Wood
-Paper
-Pearlescent Froglight
-Peony
-Phantom Membrane
-Piglin Banner Pattern
-Piglin Head
-Pink Banner
-Pink Bed
-Pink Bundle
-Pink Candle
-Pink Carpet
-Pink Concrete
-Pink Concrete Powder
-Pink Dye
-Pink Glazed Terracotta
-Pink Petals
-Pink Shulker Box
-Pink Stained Glass
-Pink Stained Glass Pane
-Pink Terracotta
-Pink Tulip
-Pink Wool
-Piston
-Pitcher Plant
-Pitcher Pod
-Plenty Pottery Sherd
-Podzol
-Pointed Dripstone
-Poisonous Potato
-Polished Andesite
-Polished Andesite Slab
-Polished Andesite Stairs
-Polished Basalt
-Polished Blackstone
-Polished Blackstone Brick Slab
-Polished Blackstone Brick Stairs
-Polished Blackstone Brick Wall
-Polished Blackstone Bricks
-Polished Blackstone Button
-Polished Blackstone Pressure Plate
-Polished Blackstone Slab
-Polished Blackstone Stairs
-Polished Blackstone Wall
-Polished Deepslate
-Polished Deepslate Slab
-Polished Deepslate Stairs
-Polished Deepslate Wall
-Polished Diorite
-Polished Diorite Slab
-Polished Diorite Stairs
-Polished Granite
-Polished Granite Slab
-Polished Granite Stairs
-Polished Tuff
-Polished Tuff Slab
-Polished Tuff Stairs
-Polished Tuff Wall
-Popped Chorus Fruit
-Poppy
-Potato
-Potion of Fire Resistance (03:00)
-Potion of Fire Resistance (08:00)
-Potion of Harming (Instant Damage II)
-Potion of Harming (Instant Damage)
-Potion of Healing (Instant Health II)
-Potion of Healing (Instant Health)
-Potion of Infestation (Infested 03:00)
-Potion of Invisibility (03:00)
-Potion of Invisibility (08:00)
-Potion of Leaping (Jump Boost 03:00)
-Potion of Leaping (Jump Boost 08:00)
-Potion of Leaping (Jump Boost II 01:30)
-Potion of Night Vision (03:00)
-Potion of Night Vision (08:00)
-Potion of Oozing (03:00)
-Potion of Poison (00:45)
-Potion of Poison (01:30)
-Potion of Poison (Poison II 00:21)
-Potion of Regeneration (00:45)
-Potion of Regeneration (01:30)
-Potion of Regeneration (Regeneration II 00:22)
-Potion of Slow Falling (01:30)
-Potion of Slow Falling (04:00)
-Potion of Slowness (01:30)
-Potion of Slowness (04:00)
-Potion of Slowness (Slowness IV 00:20)
-Potion of Strength (03:00)
-Potion of Strength (08:00)
-Potion of Strength (Strength II 01:30)
-Potion of Swiftness (Speed 03:00)
-Potion of Swiftness (Speed 08:00)
-Potion of Swiftness (Speed II 01:30)
-Potion of Water Breathing (03:00)
-Potion of Water Breathing (08:00)
-Potion of Weakness (01:30)
-Potion of Weakness (04:00)
-Potion of Weaving (03:00)
-Potion of Wind Charging (Wind Charged 03:00)
-Potion of the Turtle Master (Slowness IV & Resistance III 00:20)
-Potion of the Turtle Master (Slowness IV & Resistance III 00:40)
-Potion of the Turtle Master (Slowness VI & Resistance IV 00:20)
-Powder Snow Bucket
-Powered Rail
-Prismarine
-Prismarine Brick Slab
-Prismarine Brick Stairs
-Prismarine Bricks
-Prismarine Crystals
-Prismarine Shard
-Prismarine Slab
-Prismarine Stairs
-Prismarine Wall
-Prize Pottery Sherd
-Pufferfish
-Pufferfish Bucket
-Pumpkin
-Pumpkin Pie
-Pumpkin Seeds
-Purple Banner
-Purple Bed
-Purple Bundle
-Purple Candle
-Purple Carpet
-Purple Concrete
-Purple Concrete Powder
-Purple Dye
-Purple Glazed Terracotta
-Purple Shulker Box
-Purple Stained Glass
-Purple Stained Glass Pane
-Purple Terracotta
-Purple Wool
-Purpur Block
-Purpur Pillar
-Purpur Slab
-Purpur Stairs
-Quartz
-Quartz Bricks
-Quartz Pillar
-Quartz Slab
-Quartz Stairs
-Rabbit Hide
-Rabbit Stew
-Rabbit's Foot
-Rail
-Raiser Armor Trim Smithing Template
-Raw Beef
-Raw Chicken
-Raw Cod
-Raw Copper
-Raw Gold
-Raw Iron
-Raw Mutton
-Raw Porkchop
-Raw Rabbit
-Raw Salmon
-Recovery Compass
-Red Banner
-Red Bed
-Red Bundle
-Red Candle
-Red Carpet
-Red Concrete
-Red Concrete Powder
-Red Dye
-Red Glazed Terracotta
-Red Mushroom
-Red Mushroom Block
-Red Nether Brick Slab
-Red Nether Brick Stairs
-Red Nether Brick Wall
-Red Nether Bricks
-Red Sand
-Red Sandstone
-Red Sandstone Slab
-Red Sandstone Stairs
-Red Sandstone Wall
-Red Shulker Box
-Red Stained Glass
-Red Stained Glass Pane
-Red Terracotta
-Red Tulip
-Red Wool
-Redstone Comparator
-Redstone Dust
-Redstone Lamp
-Redstone Ore
-Redstone Repeater
-Redstone Torch
-Reinforced Deepslate
-Resin Brick
-Resin Brick Slab
-Resin Brick Stairs
-Resin Brick Wall
-Resin Bricks
-Resin Clump
-Respawn Anchor
-Rib Armor Trim Smithing Template
-Rooted Dirt
-Rose Bush
-Rotten Flesh
-Saddle
-Salmon Bucket
-Sand
-Sandstone
-Sandstone Slab
-Sandstone Stairs
-Sandstone Wall
-Scaffolding
-Scrape Pottery Sherd
-Sculk
-Sculk Catalyst
-Sculk Sensor
-Sculk Shrieker
-Sculk Vein
-Sea Lantern
-Sea Pickle
-Seagrass
-Sentry Armor Trim Smithing Template
-Shaper Armor Trim Smithing Template
-Sheaf Pottery Sherd
-Shears
-Shelter Pottery Sherd
-Shield
-Short Grass
-Shroomlight
-Shulker Box
-Shulker Shell
-Silence Armor Trim Smithing Template
-Skeleton Skull
-Skull Charge Banner Pattern
-Skull Pottery Sherd
-Slime Ball
-Slime Block
-Small Amethyst Bud
-Small Dripleaf
-Smithing Table
-Smoker
-Smooth Basalt
-Smooth Quartz Block
-Smooth Quartz Slab
-Smooth Quartz Stairs
-Smooth Red Sandstone
-Smooth Red Sandstone Slab
-Smooth Red Sandstone Stairs
-Smooth Sandstone
-Smooth Sandstone Slab
-Smooth Sandstone Stairs
-Smooth Stone
-Smooth Stone Slab
-Sniffer Egg
-Snort Pottery Sherd
-Snout Armor Trim Smithing Template
-Snow
-Snow Block
-Snowball
-Soul Campfire
-Soul Lantern
-Soul Sand
-Soul Soil
-Soul Torch
-Spectral Arrow
-Spider Eye
-Spire Armor Trim Smithing Template
-Splash Potion of Fire Resistance (03:00)
-Splash Potion of Fire Resistance (08:00)
-Splash Potion of Harming (Instant Damage II)
-Splash Potion of Harming (Instant Damage)
-Splash Potion of Healing (Instant Health II)
-Splash Potion of Healing (Instant Health)
-Splash Potion of Infestation (Infested 03:00)
-Splash Potion of Invisibility (03:00)
-Splash Potion of Invisibility (08:00)
-Splash Potion of Leaping (Jump Boost 03:00)
-Splash Potion of Leaping (Jump Boost 08:00)
-Splash Potion of Leaping (Jump Boost II 01:30)
-Splash Potion of Night Vision (03:00)
-Splash Potion of Night Vision (08:00)
-Splash Potion of Oozing (03:00)
-Splash Potion of Poison (00:45)
-Splash Potion of Poison (01:30)
-Splash Potion of Poison (Poison II 00:21)
-Splash Potion of Regeneration (00:45)
-Splash Potion of Regeneration (01:30)
-Splash Potion of Regeneration (Regeneration II 00:22)
-Splash Potion of Slow Falling (01:30)
-Splash Potion of Slow Falling (04:00)
-Splash Potion of Slowness (01:30)
-Splash Potion of Slowness (04:00)
-Splash Potion of Slowness (Slowness IV 00:20)
-Splash Potion of Strength (03:00)
-Splash Potion of Strength (08:00)
-Splash Potion of Strength (Strength II 01:30)
-Splash Potion of Swiftness (Speed 03:00)
-Splash Potion of Swiftness (Speed 08:00)
-Splash Potion of Swiftness (Speed II 01:30)
-Splash Potion of Water Breathing (03:00)
-Splash Potion of Water Breathing (08:00)
-Splash Potion of Weakness (01:30)
-Splash Potion of Weakness (04:00)
-Splash Potion of Weaving (03:00)
-Splash Potion of Wind Charging (Wind Charged 03:00)
-Splash Potion of the Turtle Master (Slowness IV & Resistance III 00:20)
-Splash Potion of the Turtle Master (Slowness IV & Resistance III 00:40)
-Splash Potion of the Turtle Master (Slowness VI & Resistance IV 00:20)
-Splash Water Bottle
-Sponge
-Spore Blossom
-Spruce Boat
-Spruce Boat with Chest
-Spruce Button
-Spruce Door
-Spruce Fence
-Spruce Fence Gate
-Spruce Hanging Sign
-Spruce Leaves
-Spruce Log
-Spruce Planks
-Spruce Pressure Plate
-Spruce Sapling
-Spruce Sign
-Spruce Slab
-Spruce Stairs
-Spruce Trapdoor
-Spruce Wood
-Spyglass
-Steak
-Stick
-Sticky Piston
-Stone
-Stone Axe
-Stone Brick Slab
-Stone Brick Stairs
-Stone Brick Wall
-Stone Bricks
-Stone Button
-Stone Hoe
-Stone Pickaxe
-Stone Pressure Plate
-Stone Shovel
-Stone Slab
-Stone Stairs
-Stone Sword
-Stonecutter
-String
-Stripped Acacia Log
-Stripped Acacia Wood
-Stripped Birch Log
-Stripped Birch Wood
-Stripped Cherry Log
-Stripped Cherry Wood
-Stripped Crimson Hyphae
-Stripped Crimson Stem
-Stripped Dark Oak Log
-Stripped Dark Oak Wood
-Stripped Jungle Log
-Stripped Jungle Wood
-Stripped Mangrove Log
-Stripped Mangrove Wood
-Stripped Oak Log
-Stripped Oak Wood
-Stripped Pale Oak Log
-Stripped Pale Oak Wood
-Stripped Spruce Log
-Stripped Spruce Wood
-Stripped Warped Hyphae
-Stripped Warped Stem
-Sugar
-Sugar Cane
-Sunflower
-Suspicious Gravel
-Suspicious Sand
-Suspicious Stew
-Sweet Berries
-TNT
-Tadpole Bucket
-Tall Grass
-Target
-Terracotta
-Thick Lingering Potion
-Thick Potion
-Thick Splash Potion
-Thing Banner Pattern
-Tide Armor Trim Smithing Template
-Tinted Glass
-Tipped Arrow
-Torch
-Torchflower
-Torchflower Seeds
-Totem Of Undying
-Trapped Chest
-Trial Key
-Trident
-Tripwire Hook
-Tropical Fish
-Tropical Fish Bucket
-Tube Coral
-Tube Coral Block
-Tube Coral Fan
-Tuff
-Tuff Brick Slab
-Tuff Brick Stairs
-Tuff Brick Wall
-Tuff Bricks
-Tuff Slab
-Tuff Stairs
-Tuff Wall
-Turtle Egg
-Turtle Scute
-Turtle Shell
-Twisting Vines
-Unwaxed Block of Copper
-Unwaxed Chiseled Copper
-Unwaxed Copper Bulb
-Unwaxed Copper Door
-Unwaxed Copper Grate
-Unwaxed Copper Trapdoor
-Unwaxed Cut Copper
-Unwaxed Cut Copper Slab
-Unwaxed Cut Copper Stairs
-Unwaxed Exposed Chiseled Copper
-Unwaxed Exposed Copper
-Unwaxed Exposed Copper Bulb
-Unwaxed Exposed Copper Door
-Unwaxed Exposed Copper Grate
-Unwaxed Exposed Copper Trapdoor
-Unwaxed Exposed Cut Copper
-Unwaxed Exposed Cut Copper Slab
-Unwaxed Exposed Cut Copper Stairs
-Unwaxed Oxidized Chiseled Copper
-Unwaxed Oxidized Copper
-Unwaxed Oxidized Copper Bulb
-Unwaxed Oxidized Copper Door
-Unwaxed Oxidized Copper Grate
-Unwaxed Oxidized Copper Trapdoor
-Unwaxed Oxidized Cut Copper
-Unwaxed Oxidized Cut Copper Slab
-Unwaxed Oxidized Cut Copper Stairs
-Unwaxed Weathered Chiseled Copper
-Unwaxed Weathered Copper
-Unwaxed Weathered Copper Bulb
-Unwaxed Weathered Copper Door
-Unwaxed Weathered Copper Grate
-Unwaxed Weathered Copper Trapdoor
-Unwaxed Weathered Cut Copper
-Unwaxed Weathered Cut Copper Slab
-Unwaxed Weathered Cut Copper Stairs
-Verdant Froglight
-Vex Armor Trim Smithing Template
-Vine
-Ward Armor Trim Smithing Template
-Warped Button
-Warped Door
-Warped Fence
-Warped Fence Gate
-Warped Fungus
-Warped Fungus On A Stick
-Warped Hanging Sign
-Warped Hyphae
-Warped Nylium
-Warped Planks
-Warped Pressure Plate
-Warped Roots
-Warped Sign
-Warped Slab
-Warped Stairs
-Warped Stem
-Warped Trapdoor
-Warped Wart Block
-Water Bottle
-Water Bucket
-Waxed Block of Copper
-Waxed Chiseled Copper
-Waxed Copper Bulb
-Waxed Copper Door
-Waxed Copper Grate
-Waxed Copper Trapdoor
-Waxed Cut Copper
-Waxed Cut Copper Slab
-Waxed Cut Copper Stairs
-Waxed Exposed Chiseled Copper
-Waxed Exposed Copper
-Waxed Exposed Copper Bulb
-Waxed Exposed Copper Door
-Waxed Exposed Copper Grate
-Waxed Exposed Copper Trapdoor
-Waxed Exposed Cut Copper
-Waxed Exposed Cut Copper Slab
-Waxed Exposed Cut Copper Stairs
-Waxed Oxidized Chiseled Copper
-Waxed Oxidized Copper
-Waxed Oxidized Copper Bulb
-Waxed Oxidized Copper Door
-Waxed Oxidized Copper Grate
-Waxed Oxidized Copper Trapdoor
-Waxed Oxidized Cut Copper
-Waxed Oxidized Cut Copper Slab
-Waxed Oxidized Cut Copper Stairs
-Waxed Weathered Chiseled Copper
-Waxed Weathered Copper
-Waxed Weathered Copper Bulb
-Waxed Weathered Copper Door
-Waxed Weathered Copper Grate
-Waxed Weathered Copper Trapdoor
-Waxed Weathered Cut Copper
-Waxed Weathered Cut Copper Slab
-Waxed Weathered Cut Copper Stairs
-Wayfinder Armor Trim Smithing Template
-Weeping Vines
-Wet Sponge
-Wheat
-Wheat Seeds
-White Banner
-White Bed
-White Bundle
-White Candle
-White Carpet
-White Concrete
-White Concrete Powder
-White Dye
-White Glazed Terracotta
-White Shulker Box
-White Stained Glass
-White Stained Glass Pane
-White Terracotta
-White Tulip
-White Wool
-Wild Armor Trim Smithing Template
-Wind Charge
-Wither Rose
-Wither Skeleton Skull
-Wolf Armor
-Wooden Axe
-Wooden Hoe
-Wooden Pickaxe
-Wooden Shovel
-Wooden Sword
-Written Book
-Yellow Banner
-Yellow Bed
-Yellow Bundle
-Yellow Candle
-Yellow Carpet
-Yellow Concrete
-Yellow Concrete Powder
-Yellow Dye
-Yellow Glazed Terracotta
-Yellow Shulker Box
-Yellow Stained Glass
-Yellow Stained Glass Pane
-Yellow Terracotta
-Yellow Wool
-Zombie Head
+acacia_boat
+acacia_button
+acacia_chest_boat
+acacia_door
+acacia_fence_gate
+acacia_fence
+acacia_hanging_sign
+acacia_leaves
+acacia_log
+acacia_planks
+acacia_pressure_plate
+acacia_sapling
+acacia_sign
+acacia_slab
+acacia_stairs
+acacia_trapdoor
+acacia_wood
+activator_rail
+air
+allay_spawn_egg
+allium
+amethyst_block
+amethyst_cluster
+amethyst_shard
+ancient_debris
+andesite
+andesite_slab
+andesite_stairs
+andesite_wall
+angler_pottery_sherd
+anvil
+apple
+archer_pottery_sherd
+armadillo_scute
+armadillo_spawn_egg
+armor_stand
+arms_up_pottery_sherd
+arrow
+axolotl_bucket
+axolotl_spawn_egg
+azalea_leaves
+azalea
+azure_bluet
+baked_potato
+bamboo_block
+bamboo_button
+bamboo_chest_raft
+bamboo_door
+bamboo_fence_gate
+bamboo_fence
+bamboo_hanging_sign
+bamboo_mosaic
+bamboo_mosaic_slab
+bamboo_mosaic_stairs
+bamboo_planks
+bamboo
+bamboo_pressure_plate
+bamboo_raft
+bamboo_sign
+bamboo_slab
+bamboo_stairs
+bamboo_trapdoor
+barrel
+barrier
+basalt
+bat_spawn_egg
+beacon
+bedrock
+beef
+beehive
+bee_nest
+bee_spawn_egg
+beetroot
+beetroot_seeds
+beetroot_soup
+bell
+big_dripleaf
+birch_boat
+birch_button
+birch_chest_boat
+birch_door
+birch_fence_gate
+birch_fence
+birch_hanging_sign
+birch_leaves
+birch_log
+birch_planks
+birch_pressure_plate
+birch_sapling
+birch_sign
+birch_slab
+birch_stairs
+birch_trapdoor
+birch_wood
+black_banner
+black_bed
+black_bundle
+black_candle
+black_carpet
+black_concrete
+black_concrete_powder
+black_dye
+black_glazed_terracotta
+black_harness
+black_shulker_box
+black_stained_glass_pane
+black_stained_glass
+blackstone
+blackstone_slab
+blackstone_stairs
+blackstone_wall
+black_terracotta
+black_wool
+blade_pottery_sherd
+blast_furnace
+blaze_powder
+blaze_rod
+blaze_spawn_egg
+blue_banner
+blue_bed
+blue_bundle
+blue_candle
+blue_carpet
+blue_concrete
+blue_concrete_powder
+blue_dye
+blue_egg
+blue_glazed_terracotta
+blue_harness
+blue_ice
+blue_orchid
+blue_shulker_box
+blue_stained_glass_pane
+blue_stained_glass
+blue_terracotta
+blue_wool
+bogged_spawn_egg
+bolt_armor_trim_smithing_template
+bone_block
+bone_meal
+bone
+book
+bookshelf
+bordure_indented_banner_pattern
+bowl
+bow
+brain_coral_block
+brain_coral_fan
+brain_coral
+bread
+breeze_rod
+breeze_spawn_egg
+brewer_pottery_sherd
+brewing_stand
+brick
+brick_slab
+bricks
+brick_stairs
+brick_wall
+brown_banner
+brown_bed
+brown_bundle
+brown_candle
+brown_carpet
+brown_concrete
+brown_concrete_powder
+brown_dye
+brown_egg
+brown_glazed_terracotta
+brown_harness
+brown_mushroom_block
+brown_mushroom
+brown_shulker_box
+brown_stained_glass_pane
+brown_stained_glass
+brown_terracotta
+brown_wool
+brush
+bubble_coral_block
+bubble_coral_fan
+bubble_coral
+bucket
+budding_amethyst
+bundle
+burn_pottery_sherd
+bush
+cactus_flower
+cactus
+cake
+calcite
+calibrated_sculk_sensor
+camel_spawn_egg
+campfire
+candle
+carrot_on_a_stick
+carrot
+cartography_table
+carved_pumpkin
+cat_spawn_egg
+cauldron
+cave_spider_spawn_egg
+chain_command_block
+chainmail_boots
+chainmail_chestplate
+chainmail_helmet
+chainmail_leggings
+chain
+charcoal
+cherry_boat
+cherry_button
+cherry_chest_boat
+cherry_door
+cherry_fence_gate
+cherry_fence
+cherry_hanging_sign
+cherry_leaves
+cherry_log
+cherry_planks
+cherry_pressure_plate
+cherry_sapling
+cherry_sign
+cherry_slab
+cherry_stairs
+cherry_trapdoor
+cherry_wood
+chest_minecart
+chest
+chicken
+chicken_spawn_egg
+chipped_anvil
+chiseled_bookshelf
+chiseled_copper
+chiseled_deepslate
+chiseled_nether_bricks
+chiseled_polished_blackstone
+chiseled_quartz_block
+chiseled_red_sandstone
+chiseled_resin_bricks
+chiseled_sandstone
+chiseled_stone_bricks
+chiseled_tuff_bricks
+chiseled_tuff
+chorus_flower
+chorus_fruit
+chorus_plant
+clay_ball
+clay
+clock
+closed_eyeblossom
+coal_block
+coal_ore
+coal
+coarse_dirt
+coast_armor_trim_smithing_template
+cobbled_deepslate
+cobbled_deepslate_slab
+cobbled_deepslate_stairs
+cobbled_deepslate_wall
+cobblestone
+cobblestone_slab
+cobblestone_stairs
+cobblestone_wall
+cobweb
+cocoa_beans
+cod_bucket
+cod
+cod_spawn_egg
+command_block_minecart
+command_block
+comparator
+compass
+composter
+conduit
+cooked_beef
+cooked_chicken
+cooked_cod
+cooked_mutton
+cooked_porkchop
+cooked_rabbit
+cooked_salmon
+cookie
+copper_block
+copper_bulb
+copper_door
+copper_grate
+copper_ingot
+copper_ore
+copper_trapdoor
+cornflower
+cow_spawn_egg
+cracked_deepslate_bricks
+cracked_deepslate_tiles
+cracked_nether_bricks
+cracked_polished_blackstone_bricks
+cracked_stone_bricks
+crafter
+crafting_table
+creaking_heart
+creaking_spawn_egg
+creeper_banner_pattern
+creeper_head
+creeper_spawn_egg
+crimson_button
+crimson_door
+crimson_fence_gate
+crimson_fence
+crimson_fungus
+crimson_hanging_sign
+crimson_hyphae
+crimson_nylium
+crimson_planks
+crimson_pressure_plate
+crimson_roots
+crimson_sign
+crimson_slab
+crimson_stairs
+crimson_stem
+crimson_trapdoor
+crossbow
+crying_obsidian
+cut_copper
+cut_copper_slab
+cut_copper_stairs
+cut_red_sandstone
+cut_red_sandstone_slab
+cut_sandstone
+cut_sandstone_slab
+cyan_banner
+cyan_bed
+cyan_bundle
+cyan_candle
+cyan_carpet
+cyan_concrete
+cyan_concrete_powder
+cyan_dye
+cyan_glazed_terracotta
+cyan_harness
+cyan_shulker_box
+cyan_stained_glass_pane
+cyan_stained_glass
+cyan_terracotta
+cyan_wool
+damaged_anvil
+dandelion
+danger_pottery_sherd
+dark_oak_boat
+dark_oak_button
+dark_oak_chest_boat
+dark_oak_door
+dark_oak_fence_gate
+dark_oak_fence
+dark_oak_hanging_sign
+dark_oak_leaves
+dark_oak_log
+dark_oak_planks
+dark_oak_pressure_plate
+dark_oak_sapling
+dark_oak_sign
+dark_oak_slab
+dark_oak_stairs
+dark_oak_trapdoor
+dark_oak_wood
+dark_prismarine
+dark_prismarine_slab
+dark_prismarine_stairs
+daylight_detector
+dead_brain_coral_block
+dead_brain_coral_fan
+dead_brain_coral
+dead_bubble_coral_block
+dead_bubble_coral_fan
+dead_bubble_coral
+dead_bush
+dead_fire_coral_block
+dead_fire_coral_fan
+dead_fire_coral
+dead_horn_coral_block
+dead_horn_coral_fan
+dead_horn_coral
+dead_tube_coral_block
+dead_tube_coral_fan
+dead_tube_coral
+debug_stick
+decorated_pot
+deepslate_brick_slab
+deepslate_bricks
+deepslate_brick_stairs
+deepslate_brick_wall
+deepslate_coal_ore
+deepslate_copper_ore
+deepslate_diamond_ore
+deepslate_emerald_ore
+deepslate_gold_ore
+deepslate_iron_ore
+deepslate_lapis_ore
+deepslate
+deepslate_redstone_ore
+deepslate_tile_slab
+deepslate_tiles
+deepslate_tile_stairs
+deepslate_tile_wall
+detector_rail
+diamond_axe
+diamond_block
+diamond_boots
+diamond_chestplate
+diamond_helmet
+diamond_hoe
+diamond_horse_armor
+diamond_leggings
+diamond_ore
+diamond_pickaxe
+diamond
+diamond_shovel
+diamond_sword
+diorite
+diorite_slab
+diorite_stairs
+diorite_wall
+dirt_path
+dirt
+disc_fragment_5
+dispenser
+dolphin_spawn_egg
+donkey_spawn_egg
+dragon_breath
+dragon_egg
+dragon_head
+dried_ghast
+dried_kelp_block
+dried_kelp
+dripstone_block
+dropper
+drowned_spawn_egg
+dune_armor_trim_smithing_template
+echo_shard
+egg
+elder_guardian_spawn_egg
+elytra
+emerald_block
+emerald_ore
+emerald
+enchanted_book
+enchanted_golden_apple
+enchanting_table
+end_crystal
+ender_chest
+ender_dragon_spawn_egg
+ender_eye
+enderman_spawn_egg
+endermite_spawn_egg
+ender_pearl
+end_portal_frame
+end_rod
+end_stone_brick_slab
+end_stone_bricks
+end_stone_brick_stairs
+end_stone_brick_wall
+end_stone
+evoker_spawn_egg
+experience_bottle
+explorer_pottery_sherd
+exposed_chiseled_copper
+exposed_copper_bulb
+exposed_copper_door
+exposed_copper_grate
+exposed_copper
+exposed_copper_trapdoor
+exposed_cut_copper
+exposed_cut_copper_slab
+exposed_cut_copper_stairs
+eye_armor_trim_smithing_template
+farmland
+feather
+fermented_spider_eye
+fern
+field_masoned_banner_pattern
+filled_map
+fire_charge
+fire_coral_block
+fire_coral_fan
+fire_coral
+firefly_bush
+firework_rocket
+firework_star
+fishing_rod
+fletching_table
+flint_and_steel
+flint
+flow_armor_trim_smithing_template
+flow_banner_pattern
+flower_banner_pattern
+flowering_azalea_leaves
+flowering_azalea
+flower_pot
+flow_pottery_sherd
+fox_spawn_egg
+friend_pottery_sherd
+frog_spawn_egg
+frogspawn
+furnace_minecart
+furnace
+ghast_spawn_egg
+ghast_tear
+gilded_blackstone
+glass_bottle
+glass_pane
+glass
+glistering_melon_slice
+globe_banner_pattern
+glow_berries
+glow_ink_sac
+glow_item_frame
+glow_lichen
+glow_squid_spawn_egg
+glowstone_dust
+glowstone
+goat_horn
+goat_spawn_egg
+gold_block
+golden_apple
+golden_axe
+golden_boots
+golden_carrot
+golden_chestplate
+golden_helmet
+golden_hoe
+golden_horse_armor
+golden_leggings
+golden_pickaxe
+golden_shovel
+golden_sword
+gold_ingot
+gold_nugget
+gold_ore
+granite
+granite_slab
+granite_stairs
+granite_wall
+grass_block
+gravel
+gray_banner
+gray_bed
+gray_bundle
+gray_candle
+gray_carpet
+gray_concrete
+gray_concrete_powder
+gray_dye
+gray_glazed_terracotta
+gray_harness
+gray_shulker_box
+gray_stained_glass_pane
+gray_stained_glass
+gray_terracotta
+gray_wool
+green_banner
+green_bed
+green_bundle
+green_candle
+green_carpet
+green_concrete
+green_concrete_powder
+green_dye
+green_glazed_terracotta
+green_harness
+green_shulker_box
+green_stained_glass_pane
+green_stained_glass
+green_terracotta
+green_wool
+grindstone
+guardian_spawn_egg
+gunpowder
+guster_banner_pattern
+guster_pottery_sherd
+hanging_roots
+happy_ghast_spawn_egg
+hay_block
+heartbreak_pottery_sherd
+heart_of_the_sea
+heart_pottery_sherd
+heavy_core
+heavy_weighted_pressure_plate
+hoglin_spawn_egg
+honey_block
+honey_bottle
+honeycomb_block
+honeycomb
+hopper_minecart
+hopper
+horn_coral_block
+horn_coral_fan
+horn_coral
+horse_spawn_egg
+host_armor_trim_smithing_template
+howl_pottery_sherd
+husk_spawn_egg
+ice
+infested_chiseled_stone_bricks
+infested_cobblestone
+infested_cracked_stone_bricks
+infested_deepslate
+infested_mossy_stone_bricks
+infested_stone_bricks
+infested_stone
+ink_sac
+iron_axe
+iron_bars
+iron_block
+iron_boots
+iron_chestplate
+iron_door
+iron_golem_spawn_egg
+iron_helmet
+iron_hoe
+iron_horse_armor
+iron_ingot
+iron_leggings
+iron_nugget
+iron_ore
+iron_pickaxe
+iron_shovel
+iron_sword
+iron_trapdoor
+item_frame
+jack_o_lantern
+jigsaw
+jukebox
+jungle_boat
+jungle_button
+jungle_chest_boat
+jungle_door
+jungle_fence_gate
+jungle_fence
+jungle_hanging_sign
+jungle_leaves
+jungle_log
+jungle_planks
+jungle_pressure_plate
+jungle_sapling
+jungle_sign
+jungle_slab
+jungle_stairs
+jungle_trapdoor
+jungle_wood
+kelp
+knowledge_book
+ladder
+lantern
+lapis_block
+lapis_lazuli
+lapis_ore
+large_amethyst_bud
+large_fern
+lava_bucket
+lead
+leaf_litter
+leather_boots
+leather_chestplate
+leather_helmet
+leather_horse_armor
+leather_leggings
+leather
+lectern
+lever
+light_blue_banner
+light_blue_bed
+light_blue_bundle
+light_blue_candle
+light_blue_carpet
+light_blue_concrete
+light_blue_concrete_powder
+light_blue_dye
+light_blue_glazed_terracotta
+light_blue_harness
+light_blue_shulker_box
+light_blue_stained_glass_pane
+light_blue_stained_glass
+light_blue_terracotta
+light_blue_wool
+light_gray_banner
+light_gray_bed
+light_gray_bundle
+light_gray_candle
+light_gray_carpet
+light_gray_concrete
+light_gray_concrete_powder
+light_gray_dye
+light_gray_glazed_terracotta
+light_gray_harness
+light_gray_shulker_box
+light_gray_stained_glass_pane
+light_gray_stained_glass
+light_gray_terracotta
+light_gray_wool
+lightning_rod
+light
+light_weighted_pressure_plate
+lilac
+lily_of_the_valley
+lily_pad
+lime_banner
+lime_bed
+lime_bundle
+lime_candle
+lime_carpet
+lime_concrete
+lime_concrete_powder
+lime_dye
+lime_glazed_terracotta
+lime_harness
+lime_shulker_box
+lime_stained_glass_pane
+lime_stained_glass
+lime_terracotta
+lime_wool
+lingering_potion
+llama_spawn_egg
+lodestone
+loom
+mace
+magenta_banner
+magenta_bed
+magenta_bundle
+magenta_candle
+magenta_carpet
+magenta_concrete
+magenta_concrete_powder
+magenta_dye
+magenta_glazed_terracotta
+magenta_harness
+magenta_shulker_box
+magenta_stained_glass_pane
+magenta_stained_glass
+magenta_terracotta
+magenta_wool
+magma_block
+magma_cream
+magma_cube_spawn_egg
+mangrove_boat
+mangrove_button
+mangrove_chest_boat
+mangrove_door
+mangrove_fence_gate
+mangrove_fence
+mangrove_hanging_sign
+mangrove_leaves
+mangrove_log
+mangrove_planks
+mangrove_pressure_plate
+mangrove_propagule
+mangrove_roots
+mangrove_sign
+mangrove_slab
+mangrove_stairs
+mangrove_trapdoor
+mangrove_wood
+map
+medium_amethyst_bud
+melon
+melon_seeds
+melon_slice
+milk_bucket
+minecart
+miner_pottery_sherd
+mojang_banner_pattern
+mooshroom_spawn_egg
+moss_block
+moss_carpet
+mossy_cobblestone
+mossy_cobblestone_slab
+mossy_cobblestone_stairs
+mossy_cobblestone_wall
+mossy_stone_brick_slab
+mossy_stone_bricks
+mossy_stone_brick_stairs
+mossy_stone_brick_wall
+mourner_pottery_sherd
+mud_brick_slab
+mud_bricks
+mud_brick_stairs
+mud_brick_wall
+muddy_mangrove_roots
+mud
+mule_spawn_egg
+mushroom_stem
+mushroom_stew
+music_disc_11
+music_disc_13
+music_disc_5
+music_disc_blocks
+music_disc_cat
+music_disc_chirp
+music_disc_creator_music_box
+music_disc_creator
+music_disc_far
+music_disc_mall
+music_disc_mellohi
+music_disc_otherside
+music_disc_pigstep
+music_disc_precipice
+music_disc_relic
+music_disc_stal
+music_disc_strad
+music_disc_tears
+music_disc_wait
+music_disc_ward
+mutton
+mycelium
+name_tag
+nautilus_shell
+nether_brick_fence
+nether_brick
+nether_brick_slab
+nether_bricks
+nether_brick_stairs
+nether_brick_wall
+nether_gold_ore
+netherite_axe
+netherite_block
+netherite_boots
+netherite_chestplate
+netherite_helmet
+netherite_hoe
+netherite_ingot
+netherite_leggings
+netherite_pickaxe
+netherite_scrap
+netherite_shovel
+netherite_sword
+netherite_upgrade_smithing_template
+nether_quartz_ore
+netherrack
+nether_sprouts
+nether_star
+nether_wart_block
+nether_wart
+note_block
+oak_boat
+oak_button
+oak_chest_boat
+oak_door
+oak_fence_gate
+oak_fence
+oak_hanging_sign
+oak_leaves
+oak_log
+oak_planks
+oak_pressure_plate
+oak_sapling
+oak_sign
+oak_slab
+oak_stairs
+oak_trapdoor
+oak_wood
+observer
+obsidian
+ocelot_spawn_egg
+ochre_froglight
+ominous_bottle
+ominous_trial_key
+open_eyeblossom
+orange_banner
+orange_bed
+orange_bundle
+orange_candle
+orange_carpet
+orange_concrete
+orange_concrete_powder
+orange_dye
+orange_glazed_terracotta
+orange_harness
+orange_shulker_box
+orange_stained_glass_pane
+orange_stained_glass
+orange_terracotta
+orange_tulip
+orange_wool
+oxeye_daisy
+oxidized_chiseled_copper
+oxidized_copper_bulb
+oxidized_copper_door
+oxidized_copper_grate
+oxidized_copper
+oxidized_copper_trapdoor
+oxidized_cut_copper
+oxidized_cut_copper_slab
+oxidized_cut_copper_stairs
+packed_ice
+packed_mud
+painting
+pale_hanging_moss
+pale_moss_block
+pale_moss_carpet
+pale_oak_boat
+pale_oak_button
+pale_oak_chest_boat
+pale_oak_door
+pale_oak_fence_gate
+pale_oak_fence
+pale_oak_hanging_sign
+pale_oak_leaves
+pale_oak_log
+pale_oak_planks
+pale_oak_pressure_plate
+pale_oak_sapling
+pale_oak_sign
+pale_oak_slab
+pale_oak_stairs
+pale_oak_trapdoor
+pale_oak_wood
+panda_spawn_egg
+paper
+parrot_spawn_egg
+pearlescent_froglight
+peony
+petrified_oak_slab
+phantom_membrane
+phantom_spawn_egg
+piglin_banner_pattern
+piglin_brute_spawn_egg
+piglin_head
+piglin_spawn_egg
+pig_spawn_egg
+pillager_spawn_egg
+pink_banner
+pink_bed
+pink_bundle
+pink_candle
+pink_carpet
+pink_concrete
+pink_concrete_powder
+pink_dye
+pink_glazed_terracotta
+pink_harness
+pink_petals
+pink_shulker_box
+pink_stained_glass_pane
+pink_stained_glass
+pink_terracotta
+pink_tulip
+pink_wool
+piston
+pitcher_plant
+pitcher_pod
+player_head
+plenty_pottery_sherd
+podzol
+pointed_dripstone
+poisonous_potato
+polar_bear_spawn_egg
+polished_andesite
+polished_andesite_slab
+polished_andesite_stairs
+polished_basalt
+polished_blackstone_brick_slab
+polished_blackstone_bricks
+polished_blackstone_brick_stairs
+polished_blackstone_brick_wall
+polished_blackstone_button
+polished_blackstone
+polished_blackstone_pressure_plate
+polished_blackstone_slab
+polished_blackstone_stairs
+polished_blackstone_wall
+polished_deepslate
+polished_deepslate_slab
+polished_deepslate_stairs
+polished_deepslate_wall
+polished_diorite
+polished_diorite_slab
+polished_diorite_stairs
+polished_granite
+polished_granite_slab
+polished_granite_stairs
+polished_tuff
+polished_tuff_slab
+polished_tuff_stairs
+polished_tuff_wall
+popped_chorus_fruit
+poppy
+porkchop
+potato
+potion
+powder_snow_bucket
+powered_rail
+prismarine_brick_slab
+prismarine_bricks
+prismarine_brick_stairs
+prismarine_crystals
+prismarine
+prismarine_shard
+prismarine_slab
+prismarine_stairs
+prismarine_wall
+prize_pottery_sherd
+pufferfish_bucket
+pufferfish
+pufferfish_spawn_egg
+pumpkin_pie
+pumpkin
+pumpkin_seeds
+purple_banner
+purple_bed
+purple_bundle
+purple_candle
+purple_carpet
+purple_concrete
+purple_concrete_powder
+purple_dye
+purple_glazed_terracotta
+purple_harness
+purple_shulker_box
+purple_stained_glass_pane
+purple_stained_glass
+purple_terracotta
+purple_wool
+purpur_block
+purpur_pillar
+purpur_slab
+purpur_stairs
+quartz_block
+quartz_bricks
+quartz_pillar
+quartz
+quartz_slab
+quartz_stairs
+rabbit_foot
+rabbit_hide
+rabbit
+rabbit_spawn_egg
+rabbit_stew
+rail
+raiser_armor_trim_smithing_template
+ravager_spawn_egg
+raw_copper_block
+raw_copper
+raw_gold_block
+raw_gold
+raw_iron_block
+raw_iron
+recovery_compass
+red_banner
+red_bed
+red_bundle
+red_candle
+red_carpet
+red_concrete
+red_concrete_powder
+red_dye
+red_glazed_terracotta
+red_harness
+red_mushroom_block
+red_mushroom
+red_nether_brick_slab
+red_nether_bricks
+red_nether_brick_stairs
+red_nether_brick_wall
+red_sand
+red_sandstone
+red_sandstone_slab
+red_sandstone_stairs
+red_sandstone_wall
+red_shulker_box
+red_stained_glass_pane
+red_stained_glass
+redstone_block
+redstone_lamp
+redstone_ore
+redstone
+redstone_torch
+red_terracotta
+red_tulip
+red_wool
+reinforced_deepslate
+repeater
+repeating_command_block
+resin_block
+resin_brick
+resin_brick_slab
+resin_bricks
+resin_brick_stairs
+resin_brick_wall
+resin_clump
+respawn_anchor
+rib_armor_trim_smithing_template
+rooted_dirt
+rose_bush
+rotten_flesh
+saddle
+salmon_bucket
+salmon
+salmon_spawn_egg
+sand
+sandstone
+sandstone_slab
+sandstone_stairs
+sandstone_wall
+scaffolding
+scrape_pottery_sherd
+sculk_catalyst
+sculk
+sculk_sensor
+sculk_shrieker
+sculk_vein
+seagrass
+sea_lantern
+sea_pickle
+sentry_armor_trim_smithing_template
+shaper_armor_trim_smithing_template
+sheaf_pottery_sherd
+shears
+sheep_spawn_egg
+shelter_pottery_sherd
+shield
+short_dry_grass
+short_grass
+shroomlight
+shulker_box
+shulker_shell
+shulker_spawn_egg
+silence_armor_trim_smithing_template
+silverfish_spawn_egg
+skeleton_horse_spawn_egg
+skeleton_skull
+skeleton_spawn_egg
+skull_banner_pattern
+skull_pottery_sherd
+slime_ball
+slime_block
+slime_spawn_egg
+small_amethyst_bud
+small_dripleaf
+smithing_table
+smoker
+smooth_basalt
+smooth_quartz
+smooth_quartz_slab
+smooth_quartz_stairs
+smooth_red_sandstone
+smooth_red_sandstone_slab
+smooth_red_sandstone_stairs
+smooth_sandstone
+smooth_sandstone_slab
+smooth_sandstone_stairs
+smooth_stone
+smooth_stone_slab
+sniffer_egg
+sniffer_spawn_egg
+snort_pottery_sherd
+snout_armor_trim_smithing_template
+snowball
+snow_block
+snow_golem_spawn_egg
+snow
+soul_campfire
+soul_lantern
+soul_sand
+soul_soil
+soul_torch
+spawner
+spectral_arrow
+spider_eye
+spider_spawn_egg
+spire_armor_trim_smithing_template
+splash_potion
+sponge
+spore_blossom
+spruce_boat
+spruce_button
+spruce_chest_boat
+spruce_door
+spruce_fence_gate
+spruce_fence
+spruce_hanging_sign
+spruce_leaves
+spruce_log
+spruce_planks
+spruce_pressure_plate
+spruce_sapling
+spruce_sign
+spruce_slab
+spruce_stairs
+spruce_trapdoor
+spruce_wood
+spyglass
+squid_spawn_egg
+stick
+sticky_piston
+stone_axe
+stone_brick_slab
+stone_bricks
+stone_brick_stairs
+stone_brick_wall
+stone_button
+stonecutter
+stone_hoe
+stone_pickaxe
+stone
+stone_pressure_plate
+stone_shovel
+stone_slab
+stone_stairs
+stone_sword
+stray_spawn_egg
+strider_spawn_egg
+string
+stripped_acacia_log
+stripped_acacia_wood
+stripped_bamboo_block
+stripped_birch_log
+stripped_birch_wood
+stripped_cherry_log
+stripped_cherry_wood
+stripped_crimson_hyphae
+stripped_crimson_stem
+stripped_dark_oak_log
+stripped_dark_oak_wood
+stripped_jungle_log
+stripped_jungle_wood
+stripped_mangrove_log
+stripped_mangrove_wood
+stripped_oak_log
+stripped_oak_wood
+stripped_pale_oak_log
+stripped_pale_oak_wood
+stripped_spruce_log
+stripped_spruce_wood
+stripped_warped_hyphae
+stripped_warped_stem
+structure_block
+structure_void
+sugar_cane
+sugar
+sunflower
+suspicious_gravel
+suspicious_sand
+suspicious_stew
+sweet_berries
+tadpole_bucket
+tadpole_spawn_egg
+tall_dry_grass
+tall_grass
+target
+terracotta
+test_block
+test_instance_block
+tide_armor_trim_smithing_template
+tinted_glass
+tipped_arrow
+tnt_minecart
+tnt
+torchflower
+torchflower_seeds
+torch
+totem_of_undying
+trader_llama_spawn_egg
+trapped_chest
+trial_key
+trial_spawner
+trident
+tripwire_hook
+tropical_fish_bucket
+tropical_fish
+tropical_fish_spawn_egg
+tube_coral_block
+tube_coral_fan
+tube_coral
+tuff_brick_slab
+tuff_bricks
+tuff_brick_stairs
+tuff_brick_wall
+tuff
+tuff_slab
+tuff_stairs
+tuff_wall
+turtle_egg
+turtle_helmet
+turtle_scute
+turtle_spawn_egg
+twisting_vines
+vault
+verdant_froglight
+vex_armor_trim_smithing_template
+vex_spawn_egg
+villager_spawn_egg
+vindicator_spawn_egg
+vine
+wandering_trader_spawn_egg
+ward_armor_trim_smithing_template
+warden_spawn_egg
+warped_button
+warped_door
+warped_fence_gate
+warped_fence
+warped_fungus_on_a_stick
+warped_fungus
+warped_hanging_sign
+warped_hyphae
+warped_nylium
+warped_planks
+warped_pressure_plate
+warped_roots
+warped_sign
+warped_slab
+warped_stairs
+warped_stem
+warped_trapdoor
+warped_wart_block
+water_bucket
+waxed_chiseled_copper
+waxed_copper_block
+waxed_copper_bulb
+waxed_copper_door
+waxed_copper_grate
+waxed_copper_trapdoor
+waxed_cut_copper
+waxed_cut_copper_slab
+waxed_cut_copper_stairs
+waxed_exposed_chiseled_copper
+waxed_exposed_copper_bulb
+waxed_exposed_copper_door
+waxed_exposed_copper_grate
+waxed_exposed_copper
+waxed_exposed_copper_trapdoor
+waxed_exposed_cut_copper
+waxed_exposed_cut_copper_slab
+waxed_exposed_cut_copper_stairs
+waxed_oxidized_chiseled_copper
+waxed_oxidized_copper_bulb
+waxed_oxidized_copper_door
+waxed_oxidized_copper_grate
+waxed_oxidized_copper
+waxed_oxidized_copper_trapdoor
+waxed_oxidized_cut_copper
+waxed_oxidized_cut_copper_slab
+waxed_oxidized_cut_copper_stairs
+waxed_weathered_chiseled_copper
+waxed_weathered_copper_bulb
+waxed_weathered_copper_door
+waxed_weathered_copper_grate
+waxed_weathered_copper
+waxed_weathered_copper_trapdoor
+waxed_weathered_cut_copper
+waxed_weathered_cut_copper_slab
+waxed_weathered_cut_copper_stairs
+wayfinder_armor_trim_smithing_template
+weathered_chiseled_copper
+weathered_copper_bulb
+weathered_copper_door
+weathered_copper_grate
+weathered_copper
+weathered_copper_trapdoor
+weathered_cut_copper
+weathered_cut_copper_slab
+weathered_cut_copper_stairs
+weeping_vines
+wet_sponge
+wheat
+wheat_seeds
+white_banner
+white_bed
+white_bundle
+white_candle
+white_carpet
+white_concrete
+white_concrete_powder
+white_dye
+white_glazed_terracotta
+white_harness
+white_shulker_box
+white_stained_glass_pane
+white_stained_glass
+white_terracotta
+white_tulip
+white_wool
+wild_armor_trim_smithing_template
+wildflowers
+wind_charge
+witch_spawn_egg
+wither_rose
+wither_skeleton_skull
+wither_skeleton_spawn_egg
+wither_spawn_egg
+wolf_armor
+wolf_spawn_egg
+wooden_axe
+wooden_hoe
+wooden_pickaxe
+wooden_shovel
+wooden_sword
+writable_book
+written_book
+yellow_banner
+yellow_bed
+yellow_bundle
+yellow_candle
+yellow_carpet
+yellow_concrete
+yellow_concrete_powder
+yellow_dye
+yellow_glazed_terracotta
+yellow_harness
+yellow_shulker_box
+yellow_stained_glass_pane
+yellow_stained_glass
+yellow_terracotta
+yellow_wool
+zoglin_spawn_egg
+zombie_head
+zombie_horse_spawn_egg
+zombie_spawn_egg
+zombie_villager_spawn_egg
+zombified_piglin_spawn_egg

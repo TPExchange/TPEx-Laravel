@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Validation\ValidationException;
 use TPEx\TPEx\TokenLevel;
+use TPEx\TPEx\Remote;
 
 use function TPEx\TPEx\create_token;
 
@@ -43,7 +44,12 @@ class SessionController extends Controller
         }
 
         // Update Admin Status On Login
-        // TO-DO
+        $remote = new \TPEx\TPEx\Remote(env("TPEX_URL"), Auth::user()->access_token); // Create connection
+        $state = $remote->fastsync();
+        $bankers = $state->bankers();
+
+        $isAdmin = in_array(Auth::user()->username, $bankers);
+        Auth::user()->update(["admin"=>$isAdmin]);
 
         // Redirect
         return redirect("/");

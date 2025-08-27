@@ -25,7 +25,7 @@ class RegisteredUserController extends Controller
             "password" => ["required", Password::min(5)->letters()->numbers(), "confirmed"]
         ]);
 
-        $remote = new \TPEx\TPEx\Remote(env("TPEX_URL"), "3H/xEZPV2FTRHrWtkUpIKA"); // Create connection
+        $remote = new \TPEx\TPEx\Remote(env("TPEX_URL"), env("TPEX_TOKEN")); // Create connection
         $validatedAttributes["access_token"] = $remote->create_token($validatedAttributes["username"], TokenLevel::ProxyOne);
         // Create User
         $user = User::create(

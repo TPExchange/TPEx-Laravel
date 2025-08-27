@@ -38,6 +38,8 @@
         @endforeach
 
         <div class="border-b border-neutral-300 px-2 py-1 w-fit">RAW TRANSACTION JSON: {{ $transaction }}</div>
+
+        <button class="bg-red-300 w-fit m-auto px-3 py-1 rounded-full hover:bg-red-400 duration-300 cursor-pointer" onclick="return confirm('Are you sure you want to do this?')">Reverse this transaction</button>
     </div>
 
 
