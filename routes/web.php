@@ -29,8 +29,16 @@ Route::get('/', function () {
 
 Route::get('/items', [ItemController::class, "index"])->middleware("auth");
 Route::get("/items/search", [SearchController::class, "items"])->middleware("auth");
-Route::get("/items/{game_id}/buy", [ItemController::class, "buy"])->middleware("auth");
+Route::get("/items/buy", function () {
+    $items = explode("\n", file_get_contents("../database/items.txt"));
+    return view("items.buy-order-form", ["items"=>$items]);
+})->middleware("auth");
+Route::get("/items/{game_id}/buy", function ($game_id) {
+    $items = explode("\n", file_get_contents("../database/items.txt"));
+    return view("items.buy-order-form", ["items"=>$items, "item"=>$game_id]);
+})->middleware("auth");
 Route::get("/items/{game_id}/sell", [ItemController::class, "sell"])->middleware("auth");
+Route::post("/items/{game_id}/sell", [ItemController::class, "sellPost"])->middleware("auth");
 
 Route::get("/inventory", function () {
     $username = Auth::user()->username;
@@ -63,8 +71,9 @@ Route::post("/withdraw", function () {
             "player"=>Auth::user()->username,
             "assets"=>$assets
         ]);
-    } catch (Exception $e) {
-        throw ValidationException::withMessages(['field_name' => $e->getMessage()]);
+    } catch (\TPEx\TPEx\Error $e) {
+        $tpexError = json_decode($e->tpex_error)->error;
+        throw ValidationException::withMessages(['field_name' => $tpexError]);
     }
 
     $items = explode("\n", file_get_contents("../database/items.txt"));

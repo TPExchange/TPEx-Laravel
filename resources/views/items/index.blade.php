@@ -3,35 +3,14 @@
 
     <x-search action="/items/search"></x-search>
 
-    <div class="bg-neutral-100 rounded-lg my-10">
-        <x-section-header>
-            @if (request("q"))
-                Buy Orders Matching: "{{ htmlspecialchars(request("q")) }}"
-            @else
-                Buy Orders
-            @endif
-        </x-section-header>
-
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-3 mb-2">
-        @foreach (array_keys($buy_orders) as $name)
-            @php
-                $nicename = ucwords(str_replace("_", " ", $name));
-                $count = 100;
-                $game_id = "minecraft_" . $name;
-                // $item_id = $item->id;
-            @endphp
-            {{-- <x-item-panel item_name="{{ $name }}" count="{{ $count }}" game_id="{{ $game_id }}" item_id="{{ $item_id }}" for_sale="{{ $for_sale }}"></x-item-panel> --}}
-            <x-item-panel item_name="{{ $nicename }}" game_id="{{ $game_id }}" count="{{ $count }}"/>
-        @endforeach
-        </div>
-    </div>
+    <a href="/items/buy" class="m-auto text-center w-fit bg-blue-300 hover:bg-blue-400 duration-300 px-3 py-1 rounded-full text-lg cursor-pointer">Place Buy Order</a>
 
     <div class="bg-neutral-100 rounded-lg my-10">
         <x-section-header>
             @if (request("q"))
-                Sell Order Matching: "{{ htmlspecialchars(request("q")) }}"
+                Items For Sale Matching: "{{ htmlspecialchars(request("q")) }}"
             @else
-                Sell Orders
+                Items For Sale
             @endif
         </x-section-header>
 
@@ -40,13 +19,32 @@
             @php
                 $nicename = ucwords(str_replace("_", " ", $name));
                 $count = 100;
-                $game_id = "minecraft_" . $name;
-                // $item_id = $item->id;
             @endphp
-            {{-- <x-item-panel item_name="{{ $name }}" count="{{ $count }}" game_id="{{ $game_id }}" item_id="{{ $item_id }}" for_sale="{{ $for_sale }}"></x-item-panel> --}}
-            <x-item-panel item_name="{{ $nicename }}" game_id="{{ $game_id }}" count="{{ $count }}"/>
+            <x-item-panel item_name="{{ $nicename }}" name="{{ $name }}" count="{{ $count }}"/>
         @endforeach
         </div>
     </div>
+
+    <div class="bg-neutral-100 rounded-lg my-10">
+        <x-section-header>
+            @if (request("q"))
+                Items In Demand Matching: "{{ htmlspecialchars(request("q")) }}"
+            @else
+                Items In Demand
+            @endif
+        </x-section-header>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-3 mb-2">
+        @foreach (array_keys($buy_orders) as $name)
+            @php
+                $nicename = ucwords(str_replace("_", " ", $name));
+                $count = 100;
+            @endphp
+            <x-item-panel item_name="{{ $nicename }}" name="{{ $name }}" count="{{ $count }}"/>
+        @endforeach
+        </div>
+    </div>
+
+
 
 </x-layout>

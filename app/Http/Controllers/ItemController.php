@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Validation\ValidationException;
 
 class ItemController extends Controller
 {
@@ -55,5 +56,28 @@ class ItemController extends Controller
 
 
         return view('items.sell-item', ["orders"=>$orders, "name"=>$name]);
+    }
+
+    public function sellPost($game_id) {
+        $quantity = request("quantity");
+        $price = request("price");
+
+        
+
+        try {
+            $remote = new \TPEx\TPEx\Remote(env("TPEX_URL"), Auth::user()->access_token); // Create connection
+            $remote->apply("SellOrder", [
+                "player"=>Auth::user()->username,
+                "asset"=>$game_id,
+                "count"=>(int)$quantity,
+                "coins_per"=>$price
+            ]);
+
+        } catch (\TPEx\TPEx\Error $e) {
+            $tpexError = json_decode($e->tpex_error)->error;
+            throw ValidationException::withMessages(['field_name' => $tpexError]);
+        }
+
+        return redirect("/inventory");
     }
 }

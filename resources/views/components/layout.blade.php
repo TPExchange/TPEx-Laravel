@@ -22,12 +22,12 @@
         <nav class="sticky top-0 bg-white justify-center flex px-5 items-center border-b border-black/10 mb-10 flex-col lg:flex-row md:h-25 lg:text-lg xl:text-xl">
             <div class="md:absolute md:top-0 md:left-0">
                 <a href="/">
-                    <img src="{{ Vite::asset('resources/images/TPEx.png') }}" class="w-25" alt="" />
+                    <img src="/images/TPEx.png" class="w-25" alt="" />
                 </a>
             </div>
 
             <div class="font-bold md:space-x-6 flex flex-col md:flex-row text-center">
-                <a href="/items" class="px-3 py-1 rounded-lg hover:bg-neutral-100 transition-colors duration-300">Browse Items</a>
+                <a href="/items" class="px-3 py-1 rounded-lg hover:bg-neutral-100 transition-colors duration-300">Buy Items</a>
                 <a href="/inventory" class="px-3 py-1 rounded-lg hover:bg-neutral-100 transition-colors duration-300">My Inventory</a>
                 <a href="/orders" class="px-3 py-1 rounded-lg hover:bg-neutral-100 transition-colors duration-300">Manage Orders</a>
             </div>

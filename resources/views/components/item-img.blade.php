@@ -1,2 +1,2 @@
 @props(["item"])
-<img src="{{  Vite::asset('resources/images/items/' . $item . '.png') }}" />
+<img src="{{  '/images/items/' . $item . '.png' }}" onerror="this.src = '/images/TPEx.png'" class="w-16"/>
