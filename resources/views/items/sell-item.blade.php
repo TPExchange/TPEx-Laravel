@@ -7,11 +7,19 @@
         <form method="POST" action="" class="flex flex-col rounded-lg w-2xl m-auto py-3 px-10 gap-5 text-lg">
             @csrf
 
+            @if ($errors->any())
+                <div class="bg-red-300 px-3 py-1 rounded-sm flex flex-col">
+                    @foreach ($errors->all() as $error)
+                        <div>{{ $error }}</div>
+                    @endforeach
+                </div>
+            @endif
+
             <h2 class="text-2xl px-3 py-2 bg-neutral-200 rounded-sm">Place a sell order</h2>
 
             <div class="flex gap-5 justify-between">
-                <label for="quantity" class="px-3">Item</label>
-                <input name="quantity" id="quantity" type="number" class="px-1 border border-neutral-200 w-sm rounded-sm"/>
+                <label for="item" class="px-3">Item</label>
+                <input name="item" id="item" class="px-1 border border-neutral-200 w-sm rounded-sm" value="{{ $item }}"/>
             </div>
 
             <div class="flex gap-5 justify-between">
@@ -25,7 +33,7 @@
             </div>
 
             <div class="flex justify-center gap-5 mt-2">
-                <button id="submitt" name="submit" type="submit" class="bg-green-300 hover:bg-green-400 duration-300 rounded-full px-3 py-1 cursor-pointer">Place Order</button>
+                <button id="submit" name="submit" type="submit" class="bg-green-300 hover:bg-green-400 duration-300 rounded-full px-3 py-1 cursor-pointer">Place Order</button>
             </div>
 
         </form>

@@ -55,7 +55,7 @@ class ItemController extends Controller
         }
 
 
-        return view('items.sell-item', ["orders"=>$orders, "name"=>$name]);
+        return view('items.sell-item', ["orders"=>$orders, "name"=>$name, "item"=>$game_id]);
     }
 
     public function sellPost($game_id) {

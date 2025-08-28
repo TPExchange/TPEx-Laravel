@@ -29,6 +29,8 @@ Route::get('/', function () {
 
 Route::get('/items', [ItemController::class, "index"])->middleware("auth");
 Route::get("/items/search", [SearchController::class, "items"])->middleware("auth");
+
+// Buy orders
 Route::get("/items/buy", function () {
     $items = explode("\n", file_get_contents("../database/items.txt"));
     return view("items.buy-order-form", ["items"=>$items]);
@@ -37,6 +39,29 @@ Route::get("/items/{game_id}/buy", function ($game_id) {
     $items = explode("\n", file_get_contents("../database/items.txt"));
     return view("items.buy-order-form", ["items"=>$items, "item"=>$game_id]);
 })->middleware("auth");
+Route::post("/items/buy", function () {
+    $item = request("item");
+    $quantity = request("quantity");
+    $price = request("price");
+
+    try {
+        $remote = new \TPEx\TPEx\Remote(env("TPEX_URL"), Auth::user()->access_token); // Create connection
+        $remote->apply("BuyOrder", [
+            "player"=>Auth::user()->username,
+            "asset"=>$item,
+            "count"=>(int)$quantity,
+            "coins_per"=>$price
+        ]);
+
+    } catch (\TPEx\TPEx\Error $e) {
+        $tpexError = json_decode($e->tpex_error)->error;
+        throw ValidationException::withMessages(['field_name' => $tpexError]);
+    }
+
+    return redirect("/inventory");
+})->middleware("auth");
+
+// Sell orders
 Route::get("/items/{game_id}/sell", [ItemController::class, "sell"])->middleware("auth");
 Route::post("/items/{game_id}/sell", [ItemController::class, "sellPost"])->middleware("auth");
 

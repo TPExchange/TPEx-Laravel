@@ -6,8 +6,16 @@
 
 
     <section class="mt-5">
-        <form method="POST" action="" class="flex flex-col rounded-lg w-2xl m-auto py-3 px-10 gap-5 text-lg">
+        <form method="POST" action="/items/buy" class="flex flex-col rounded-lg w-2xl m-auto py-3 px-10 gap-5 text-lg">
             @csrf
+
+            @if ($errors->any())
+                <div class="bg-red-300 px-3 py-1 rounded-sm flex flex-col">
+                    @foreach ($errors->all() as $error)
+                        <div>{{ $error }}</div>
+                    @endforeach
+                </div>
+            @endif
 
             <h2 class="text-2xl px-3 py-2 bg-neutral-200 rounded-sm">Place a buy order</h2>
 
@@ -21,14 +29,28 @@
                 </datalist>
             </div>
 
+            <script>
+                function updateTotal() {
+                    amount = $("#quantity").val();
+                    price = $("#price").val();
+                    total = amount * price;
+                    $("#totalprice").text(total);
+                }
+            </script>
+
             <div class="flex gap-5 justify-between">
                 <label for="quantity" class="px-3">Amount</label>
-                <input name="quantity" id="quantity" type="number" class="px-1 border border-neutral-200 w-sm rounded-sm"/>
+                <input name="quantity" id="quantity" type="number" class="px-1 border border-neutral-200 w-sm rounded-sm" oninput="updateTotal();"/>
             </div>
 
             <div class="flex gap-5 justify-between">
                 <label for="price" class="px-3">Price per item (TPEx coins)</label>
-                <input name="price" id="price" type="number" class="px-1 border border-neutral-200 w-sm rounded-sm flex-shrink-0"/>
+                <input name="price" id="price" type="number" class="px-1 border border-neutral-200 w-sm rounded-sm flex-shrink-0" oninput="updateTotal();"/>
+            </div>
+
+            <div class="flex gap-5 justify-between">
+                <label for="price" class="px-3">Total cost (TPEx coins)</label>
+                <span id="totalprice" type="number" class="px-1 border border-neutral-200 w-sm rounded-sm flex-shrink-0 content-center"></span>
             </div>
 
             <div class="flex justify-center gap-5 mt-2">
