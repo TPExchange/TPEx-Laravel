@@ -106,6 +106,53 @@ Route::post("/withdraw", function () {
 
 })->middleware("auth");
 
+
+// Coins //
+
+Route::get("/exchange-coins", function () {
+    $remote = new \TPEx\TPEx\Remote(env("TPEX_URL"), Auth::user()->access_token); // Create connection
+    $state = $remote->fastsync(); // Fetch state
+    $rates = $state->rates();
+    $sellRate = $rates["coins_sell_ppm"]/10000; // As percentage
+    $buyRate = $rates["coins_buy_ppm"]/10000; // As percentage
+
+    return view("coins-conversion", ["buyRate"=>$buyRate, "sellRate"=>$sellRate]);
+})->middleware("auth");
+
+Route::post("/exchange-coins", function() {
+    try {
+        $remote = new \TPEx\TPEx\Remote(env("TPEX_URL"), Auth::user()->access_token); // Create connection
+        $state = $remote->fastsync(); // Fetch state
+        $rates = $state->rates();
+        $sellRate = $rates["coins_sell_ppm"]/1000000; // As multiplier
+        $buyRate = $rates["coins_buy_ppm"]/1000000; // As multiplier
+
+        $params = request()->all();
+        if ($params["direction"] == "diamondsToCoins") {
+            $diamonds = $params["diamonds"];
+            $remote->apply("BuyCoins", [
+                "player"=>Auth::user()->username,
+                "n_diamonds"=>(int)$diamonds
+            ]);
+        } else {
+            $diamonds = $params["diamonds"];
+            $remote->apply("SellCoins", [
+                "player"=>Auth::user()->username,
+                "n_diamonds"=>(int)$diamonds
+            ]);
+        }
+    } catch (\TPEx\TPEx\Error $e) {
+        $tpexError = json_decode($e->tpex_error)->error;
+        throw ValidationException::withMessages(['field_name' => $tpexError]);
+    }
+
+    // Convert back to percentages
+    $buyRate = $buyRate * 100;
+    $sellRate = $sellRate * 100;
+
+    return view("coins-conversion", ["buyRate"=>$buyRate, "sellRate"=>$sellRate, "success"=>1]);
+})->middleware("auth");
+
 // ========== //
 //   Orders   //
 // ========== //
