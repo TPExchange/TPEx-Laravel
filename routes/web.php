@@ -203,6 +203,14 @@ Route::post("/orders/cancel/{id}", function ($id) {
     return redirect("/orders");
 })->middleware("auth");
 
+
+Route::get("/orders/depth", function() {
+    $remote = new \TPEx\TPEx\Remote(env("TPEX_URL"), Auth::user()->access_token); // Create connection
+    $data = $remote->fastsync();
+    $asset = request("asset") ?? throw ValidationException::withMessages(["Missing asset name"]);
+    return view("orders.depth", ["buy"=>$data->buy_orders()[$asset] ?? [], "sell"=>$data->sell_orders()[$asset] ?? [],"asset"=>$asset]);
+})->middleware("auth");
+
 // ======== //
 //   Auth   //
 // ======== //
