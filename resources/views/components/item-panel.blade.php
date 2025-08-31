@@ -1,4 +1,4 @@
-@props(["item_name"=>"Item Name", "count"=>"0", "name"=>"minecraft_cobblestone", "sys_id"=>"cobblestone", "price"=>"N/A", "for_sale"=>"N/A"])
+@props(["item_name"=>"Item Name", "count"=>"0", "name"=>"minecraft_cobblestone", "sys_id"=>"cobblestone", "price"=>"N/A"])
 @php
         $img_id = "minecraft_" . $name;
 @endphp
@@ -7,8 +7,7 @@
                 <h3 class="font-bold text-xl mb-2">{{ $item_name }}</h3>
 
                 <div class="text-md">
-                        <p>Total Count: {{ $count }}</p>
-                        <p>For Sale: {{ $for_sale }}</p>
+                        <p>Amount: {{ $count }}</p>
                         <p>Price: {{ $price }}</p>
                 </div>
 

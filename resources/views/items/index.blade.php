@@ -15,12 +15,18 @@
         </x-section-header>
 
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-3 mb-2">
-        @foreach (array_keys($sell_orders) as $name)
+        @foreach ($sell_orders as $name => $prices)
             @php
                 $nicename = ucwords(str_replace("_", " ", $name));
-                $count = 100;
+                $count = 0;
+                $price = array_keys($prices)[0];
+                foreach ($prices as $price=>$orders) {
+                    foreach ($orders as $order) {
+                        $count += $order["amount_remaining"];
+                    }
+                }
             @endphp
-            <x-item-panel item_name="{{ $nicename }}" name="{{ $name }}" count="{{ $count }}"/>
+            <x-item-panel item_name="{{ $nicename }}" name="{{ $name }}" count="{{ $count }}" price="{{ $price }}"/>
         @endforeach
         </div>
     </div>
@@ -35,12 +41,18 @@
         </x-section-header>
 
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-3 mb-2">
-        @foreach (array_keys($buy_orders) as $name)
+        @foreach ($buy_orders as $name => $prices)
             @php
                 $nicename = ucwords(str_replace("_", " ", $name));
-                $count = 100;
+                $count = 0;
+                $price = array_keys($prices)[0];
+                foreach ($prices as $price=>$orders) {
+                    foreach ($orders as $order) {
+                        $count += $order["amount_remaining"];
+                    }
+                }
             @endphp
-            <x-item-panel item_name="{{ $nicename }}" name="{{ $name }}" count="{{ $count }}"/>
+            <x-item-panel item_name="{{ $nicename }}" name="{{ $name }}" count="{{ $count }}" price="{{ $price }}"/>
         @endforeach
         </div>
     </div>
