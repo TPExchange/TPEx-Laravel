@@ -1,4 +1,4 @@
-@props(["item_name"=>"Item Name", "count"=>"0", "name"=>"minecraft_cobblestone", "sys_id"=>"cobblestone", "price"=>"N/A"])
+@props(["item_name"=>"Item Name", "count"=>"0", "name"=>"minecraft_cobblestone", "sys_id"=>"cobblestone", "price"=>"N/A", "id"=>"-1"])
 @php
         $img_id = "minecraft_" . $name;
 @endphp
@@ -17,8 +17,10 @@
                 
         </div>
 
-        <div class="mt-3 text-lg font-bold flex flex-col justify-between h-full">
-                <a href="/items/{{ $name }}/buy" class="bg-green-300 px-3 py-1 rounded-lg hover:bg-green-400">Buy</a>
-                <a href="/items/{{ $name }}/sell" class="bg-red-300 px-3 py-1 rounded-lg hover:bg-red-400">Sell</a>
+        <div class="mt-3 text-lg font-bold flex flex-col justify-center h-full">
+            <form action="/orders/cancel/{{ $id }}" method="post">
+                @csrf
+                <button href="/items/{{ $name }}/buy" class="bg-red-300 px-3 py-1 rounded-lg hover:bg-red-400 cursor-pointer">Cancel</button>
+            </form>
         </div>
 </x-panel>

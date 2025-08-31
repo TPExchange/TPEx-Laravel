@@ -14,17 +14,17 @@
             @endif
         </x-section-header>
 
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-3 mb-2">
+        <div class="flex gap-3 mb-2">
         @foreach ($sell_orders as $name => $prices)
             @php
                 $nicename = ucwords(str_replace("_", " ", $name));
                 $count = 0;
-                $price = array_keys($prices)[0];
                 foreach ($prices as $price=>$orders) {
                     foreach ($orders as $order) {
                         $count += $order["amount_remaining"];
                     }
                 }
+                $price = array_keys($prices)[0];
             @endphp
             <x-item-panel item_name="{{ $nicename }}" name="{{ $name }}" count="{{ $count }}" price="{{ $price }}"/>
         @endforeach
@@ -40,12 +40,11 @@
             @endif
         </x-section-header>
 
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-3 mb-2">
+        <div class="flex gap-3 mb-2">
         @foreach ($buy_orders as $name => $prices)
             @php
                 $nicename = ucwords(str_replace("_", " ", $name));
                 $count = 0;
-                $price = array_keys($prices)[0];
                 foreach ($prices as $price=>$orders) {
                     foreach ($orders as $order) {
                         $count += $order["amount_remaining"];

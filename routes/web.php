@@ -158,7 +158,26 @@ Route::post("/exchange-coins", function() {
 // ========== //
 
 Route::get("/orders", function() {
-    return view("orders.index");
+    $remote = new \TPEx\TPEx\Remote(env("TPEX_URL"), Auth::user()->access_token); // Create connection
+    $state = $remote->fastsync(); // Get state
+    $user = Auth::user()->username;
+    $buy_orders = $state->buy_orders($user);
+    $sell_orders = $state->sell_orders($user);
+
+    return view("orders.index", ["buy_orders"=>$buy_orders, "sell_orders"=>$sell_orders]);
+})->middleware("auth");
+
+Route::post("/orders/cancel/{id}", function ($id) {
+    try {
+        $remote = new \TPEx\TPEx\Remote(env("TPEX_URL"), Auth::user()->access_token); // Create connection
+        $remote->apply("CancelOrder", [
+            "target"=>(int)$id
+        ]);
+    } catch (Exception $e) {
+        throw ValidationException::withMessages(['field_name' => $e->getMessage()]);
+    }
+
+    return redirect("/orders");
 })->middleware("auth");
 
 // ======== //
