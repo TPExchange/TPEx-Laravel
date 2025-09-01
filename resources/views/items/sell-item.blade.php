@@ -37,17 +37,17 @@
 
             <div class="flex gap-5 justify-between">
                 <label for="item" class="px-3">Item</label>
-                <input name="item" id="item" class="px-1 border border-neutral-200 w-sm rounded-sm" value="{{ $item }}" oninput="checkRestricted();"/>
+                <input name="item" id="item" class="px-1 border border-neutral-200 w-sm rounded-sm" value="{{ $item }}" oninput="checkRestricted();" required />
             </div>
 
             <div class="flex gap-5 justify-between">
                 <label for="quantity" class="px-3">Amount</label>
-                <input name="quantity" id="quantity" type="number" class="px-1 border border-neutral-200 w-sm rounded-sm"/>
+                <input name="quantity" id="quantity" type="number" class="px-1 border border-neutral-200 w-sm rounded-sm" required />
             </div>
 
             <div class="flex gap-5 justify-between">
                 <label for="price" class="px-3">Price per item (TPEx coins)</label>
-                <input name="price" id="price" type="number" class="px-1 border border-neutral-200 w-sm rounded-sm flex-shrink-0"/>
+                <input name="price" id="price" type="number" class="px-1 border border-neutral-200 w-sm rounded-sm flex-shrink-0" required />
             </div>
 
             <div class="flex justify-center gap-5 mt-2">
@@ -58,7 +58,7 @@
 
 
     </section>
-    
+
     <script>checkRestricted();</script>
 
 </x-layout>

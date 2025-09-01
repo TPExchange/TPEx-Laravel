@@ -20,7 +20,7 @@
             </div>
         @endif
 
-        <datalist id="items-list-data">
+        <datalist id="items-list-data" autocomplete="off">
             @foreach ($items as $item)
                 <option value="{{ $item }}">{{ ucwords(str_replace("_", " ", $item)) }}</option>
             @endforeach
@@ -29,8 +29,8 @@
         <script>
             let inputField = `
                 <div class="flex flex-row border border-neutral-200 bg-neutral-200">
-                    <input class="flex-1 bg-neutral-50 duration-300 border-r border-neutral-200 px-2" placeholder="Item Name" list="items-list-data" name="items[]"/>
-                    <input class="flex-1 bg-neutral-50 duration-300 border-r border-neutral-200 px-2" placeholder="Count" name="counts[]"/>
+                    <input class="flex-1 bg-neutral-50 duration-300 border-r border-neutral-200 px-2" placeholder="Item Name" list="items-list-data" name="items[]" required />
+                    <input class="flex-1 bg-neutral-50 duration-300 border-r border-neutral-200 px-2" placeholder="Count" name="counts[]" required />
                     <div class="text-center cursor-pointer bg-neutral-200 w-7 text-neutral-600 hover:text-black duration-300" onclick="this.parentElement.remove();"><i class="fa fa-xmark"></i></div>
                 </div>`;
         </script>
@@ -39,16 +39,12 @@
             <div class="flex flex-row">
                 <div class="flex-1 duration-300 border-r border-transparent px-2">Item Name</div>
                 <div class="flex-1 duration-300 border-r border-transparent px-2">Count</div>
-                <div class="text-center cursor-pointer w-7 text-neutral-600 hover:text-black duration-300" onclick="$('#items-list').append(inputField);
-                "><i class="fa fa-plus"></i></div>
-            </div>
-            <div class="flex flex-row border border-neutral-200 bg-neutral-200">
-                <input class="flex-1 bg-neutral-50 duration-300 border-r border-neutral-200 px-2" placeholder="Item Name" list="items-list-data" name="items[]"/>
-                <input class="flex-1 bg-neutral-50 duration-300 border-r border-neutral-200 px-2" placeholder="Count" name="counts[]"/>
-                <div class="text-center cursor-pointer bg-neutral-200 w-7 text-neutral-600 hover:text-black duration-300" onclick="this.parentElement.remove();"><i class="fa fa-xmark"></i></div>
+                <div class="text-center cursor-pointer w-7 text-neutral-600 hover:text-black duration-300" onclick="$('#items-list').append(inputField);">
+                    <i class="fa fa-plus"></i>
+                </div>
             </div>
         </div>
-
+        <script>$('#items-list').append(inputField);</script>
         <button class="block mt-5 m-auto w-fit bg-green-300 hover:bg-green-400 transition-bg duration-300 px-3 py-1 rounded-full cursor-pointer" onclick="return confirm('Are you sure you want to do this?')">Withdraw Items</button>
     </form>
 </x-layout>

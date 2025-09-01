@@ -14,7 +14,7 @@
 
         </select>
 
-        <input type="hidden" name="new_password" value="{{ str()->random(); }}"/>
+        <input type="hidden" name="new_password" value="{{ str()->random(); }}" required />
 
         <button type="submit" class="cursor-pointer bg-red-300 hover:bg-red-500 w-fit px-3 py-1 rounded-full duration-300" onclick="return confirm('Are you sure you want to do this?')">Reset Password</button>
     </form>

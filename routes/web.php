@@ -52,7 +52,7 @@ Route::post("/items/buy", function () {
     $items = explode("\n", file_get_contents("../database/items.txt"));
 
     if (!in_array($item, $items)) {
-        throw ValidationException::withMessages(['field_name' => 'Invalid asset for buy order']);
+        throw ValidationException::withMessages(['field_name' => 'Invalid item name. Try selecting from the drop-down box.']);
     }
 
     try {

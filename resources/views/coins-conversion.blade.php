@@ -62,7 +62,7 @@
                 rate = baseRate * mult; // Find coins:diamonds ratio
                 coins = diamonds * rate; // Find the number of diamonds
 
-                
+
 
                 if (direction == "diamondsToCoins") {
                     result = "Convert " + diamonds + " diamonds into " + coins + " coins";
@@ -77,7 +77,7 @@
             function calculateDiamonds () {
                 direction = $("#direction").val(); // Find the direction of trade to apply the appropriate fees
                 coins = $("#coins").val(); // Find the number of coins
-                
+
 
                 if (direction == "diamondsToCoins") {
                     // Converting diamonds into coins - use buying fee
@@ -125,16 +125,16 @@
                         <span class="text-neutral-500 border-r border-neutral-200 px-2">To</span>
                         <span class="px-2" id="to">Coins</span>
                     </span>
-                    <input type="hidden" name="direction" value="diamondsToCoins" id="direction"/>
+                    <input type="hidden" name="direction" value="diamondsToCoins" id="direction" required />
                 </div>
 
                 <div class="flex text-center m-auto bg-neutral-50 border border-neutral-200 rounded-md w-60 py-1">
-                    <input id="diamonds" name="diamonds" type="number" class="bg-neutral-50 border-r border-neutral-200 rounded-l-md w-30 px-2" value=0 oninput="$('#coins').val(calculateCoins()); updateResult();"/>
+                    <input id="diamonds" name="diamonds" type="number" class="bg-neutral-50 border-r border-neutral-200 rounded-l-md w-30 px-2" value=0 oninput="$('#coins').val(calculateCoins()); updateResult();" required/>
                     <label for="diamonds" class="px-2 text-right">Diamonds</label>
                 </div>
 
-                <div class="flex text-center m-auto bg-neutral-50 border border-neutral-200 rounded-md w-60 py-1">     
-                    <input id="coins" name="coins" type="number" class="bg-neutral-50 border-r border-neutral-200 rounded-l-md w-30 px-2" value=0 oninput="$('#diamonds').val(calculateDiamonds()); updateResult();"/>
+                <div class="flex text-center m-auto bg-neutral-50 border border-neutral-200 rounded-md w-60 py-1">
+                    <input id="coins" name="coins" type="number" class="bg-neutral-50 border-r border-neutral-200 rounded-l-md w-30 px-2" value=0 oninput="$('#diamonds').val(calculateDiamonds()); updateResult();" required/>
                     <label for="coins" class="px-2 text-right">Coins</label>
                 </div>
 
