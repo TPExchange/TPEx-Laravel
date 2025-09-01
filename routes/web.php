@@ -49,6 +49,11 @@ Route::post("/items/buy", function () {
     $item = request("item");
     $quantity = request("quantity");
     $price = request("price");
+    $items = explode("\n", file_get_contents("../database/items.txt"));
+
+    if (!in_array($item, $items)) {
+        throw ValidationException::withMessages(['field_name' => 'Invalid asset for buy order']);
+    }
 
     try {
         $remote = new \TPEx\TPEx\Remote(env("TPEX_URL"), Auth::user()->access_token); // Create connection
