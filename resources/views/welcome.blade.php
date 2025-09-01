@@ -22,7 +22,7 @@
                 View Inventory
             </x-dashboard-tile>
 
-            <x-dashboard-tile colour="green" href="/account" icon="clipboard">
+            <x-dashboard-tile colour="green" href="/orders" icon="clipboard">
                 Manage Orders
             </x-dashboard-tile>
 
