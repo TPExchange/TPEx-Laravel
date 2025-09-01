@@ -15,11 +15,29 @@
                 </div>
             @endif
 
+            <div class="bg-red-300 px-3 py-1 rounded-sm flex flex-col hidden" id="restricted">
+                <div>This item is <span class="font-bold">restricted.</span> There may be limitations on how and when it can be withdrawn or sold.</div>
+            </div>
+
+
+            <script>
+                restricted = '{{ implode(",", $restricted) }}'.split(","); // Restricted array
+
+                function checkRestricted() {
+                    item = $("#item").val();
+                    if (restricted.includes(item)) {
+                        $("#restricted").removeClass("hidden");
+                    } else {
+                        $("#restricted").addClass("hidden");
+                    }
+                }
+            </script>
+
             <h2 class="text-2xl px-3 py-2 bg-neutral-200 rounded-sm">Place a sell order</h2>
 
             <div class="flex gap-5 justify-between">
                 <label for="item" class="px-3">Item</label>
-                <input name="item" id="item" class="px-1 border border-neutral-200 w-sm rounded-sm" value="{{ $item }}"/>
+                <input name="item" id="item" class="px-1 border border-neutral-200 w-sm rounded-sm" value="{{ $item }}" oninput="checkRestricted();"/>
             </div>
 
             <div class="flex gap-5 justify-between">
@@ -41,17 +59,6 @@
 
     </section>
     
+    <script>checkRestricted();</script>
 
-    {{-- <section class="mt-6">
-        <h3 class="text-center text-xl font-bold">Existing Buy Orders</h3>
-        <div class="grid lg:grid-cols-3 mt-5">
-            @foreach ($orders as $order)
-                <x-panel class="text-center w-60 h-full m-auto flex flex-col content-start">
-                    <h3 class="text-lg font-bold">{{ $order["player"] }}</h3>
-                    <h3 class="text-lg">Selling {{ $order["amount_remaining"] }} {{ $name }}(s)</h3>
-                    <h3 class="text-lg">At {{ $order["price"] }} per item</h3>
-                </x-panel>
-            @endforeach
-        </div>
-    </section> --}}
 </x-layout>

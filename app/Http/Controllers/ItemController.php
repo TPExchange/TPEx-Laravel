@@ -13,8 +13,9 @@ class ItemController extends Controller
         $state = $remote->fastsync(); // Get state
         $buy_orders = $state->buy_orders();
         $sell_orders = $state->sell_orders();
+        $restricted = $state->restricted_items();
 
-        return view('items.index', ["buy_orders"=>$buy_orders, "sell_orders"=>$sell_orders]);
+        return view('items.index', ["buy_orders"=>$buy_orders, "sell_orders"=>$sell_orders, "restricted"=>$restricted]);
     }
 
     public function buy($game_id) {
@@ -45,6 +46,7 @@ class ItemController extends Controller
         $orders = $state->raw["order"];
         $buy_orders = $orders["buy_orders"];
         $item_orders = $buy_orders[$game_id] ?? [];
+        $restricted = $state->restricted_items();
 
         $orders = [];
         foreach ($item_orders as $price => $value) {
@@ -55,7 +57,7 @@ class ItemController extends Controller
         }
 
 
-        return view('items.sell-item', ["orders"=>$orders, "name"=>$name, "item"=>$game_id]);
+        return view('items.sell-item', ["orders"=>$orders, "name"=>$name, "item"=>$game_id, "restricted"=>$restricted]);
     }
 
     public function sellPost($game_id) {

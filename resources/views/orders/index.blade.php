@@ -29,7 +29,7 @@
                 $count = $order["amount_remaining"];
                 $price = $order["coins"];
             @endphp
-            <x-order-panel item_name="{{ $nicename }}" name="{{ $name }}" count="{{ $count }}" price="{{ $price }}" id="{{ $id }}"/>
+            <x-order-panel item_name="{{ $nicename }}" name="{{ $name }}" count="{{ $count }}" price="{{ $price }}" id="{{ $id }}" :$restricted/>
         @endforeach
         </div>
     </div>
@@ -51,7 +51,7 @@
                 $count = $order["amount_remaining"];
                 $price = $order["coins"];
             @endphp
-            <x-order-panel item_name="{{ $nicename }}" name="{{ $name }}" count="{{ $count }}" price="{{ $price }}" id="{{ $id }}"/>
+            <x-order-panel item_name="{{ $nicename }}" name="{{ $name }}" count="{{ $count }}" price="{{ $price }}" id="{{ $id }}" :$restricted/>
         @endforeach
         </div>
     </div>

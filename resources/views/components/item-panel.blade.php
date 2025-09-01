@@ -1,24 +1,35 @@
-@props(["item_name"=>"Item Name", "count"=>"0", "name"=>"minecraft_cobblestone", "sys_id"=>"cobblestone", "price"=>"N/A"])
+@props(["item_name"=>"Item Name", "count"=>"0", "name"=>"minecraft_cobblestone", "sys_id"=>"cobblestone", "price"=>"N/A", "restricted"])
 @php
         $img_id = "minecraft_" . $name;
 @endphp
-<x-panel class="flex items-center gap-5 flex-col sm:flex-row w-fit">
-        <div class="collapse sm:visible h-0 sm:h-auto">
-                <img src="{{'/images/items/' . $img_id . '.png'}}" class="w-20" alt="" />
-        </div>
-        <div class="flex flex-col items-center sm:items-start">
-                <h3 class="font-bold text-xl mb-2">{{ $item_name }}</h3>
 
-                <div class="text-md">
-                        <p>Amount: {{ $count }}</p>
-                        <p>Price: {{ $price }}</p>
+@if (in_array($name, $restricted))
+<div class="w-100 bg-red-300 p-2 rounded-md">
+@else
+<div class="w-100 bg-neutral-300 p-2 rounded-md">
+@endif
+        <div class="flex gap-5">
+                <x-item-img item="minecraft_{{ $name }}"/>
+                <div class="flex flex-col flex-1 items-center sm:items-start">
+                        <h3 class="font-bold text-xl mb-2">{{ $item_name }}</h3>
+
+                        <div class="text-md">
+                                <p>Amount: {{ $count }}</p>
+                                <p>Price: {{ $price }}</p>
+                        </div>
+
+                        
                 </div>
 
-                
+                <div class="text-lg font-bold flex flex-col justify-between">
+                        <a href="/items/{{ $name }}/buy" class="self-center justify-self-end bg-neutral-200 px-2 py-1 rounded-full hover:bg-neutral-100 duration-300 cursor-pointer font-bold">Buy</a>
+                        <a href="/items/{{ $name }}/sell" class="self-center justify-self-end bg-neutral-200 px-2 py-1 rounded-full hover:bg-neutral-100 duration-300 cursor-pointer font-bold">Sell</a>
+                </div>
         </div>
+</div>
 
-        <div class="mt-3 text-lg font-bold flex flex-col justify-between h-full">
-                <a href="/items/{{ $name }}/buy" class="bg-green-300 px-3 py-1 rounded-lg hover:bg-green-400">Buy</a>
-                <a href="/items/{{ $name }}/sell" class="bg-red-300 px-3 py-1 rounded-lg hover:bg-red-400">Sell</a>
-        </div>
-</x-panel>
+
+
+                            
+
+

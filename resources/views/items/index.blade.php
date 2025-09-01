@@ -14,7 +14,7 @@
             @endif
         </x-section-header>
 
-        <div class="flex gap-3 mb-2">
+        <div class="flex gap-3 mb-2 p-5">
         @foreach ($sell_orders as $name => $prices)
             @php
                 $nicename = ucwords(str_replace("_", " ", $name));
@@ -26,7 +26,9 @@
                 }
                 $price = array_keys($prices)[0];
             @endphp
-            <x-item-panel item_name="{{ $nicename }}" name="{{ $name }}" count="{{ $count }}" price="{{ $price }}"/>
+            @if ($count > 0)
+                <x-item-panel item_name="{{ $nicename }}" name="{{ $name }}" count="{{ $count }}" price="{{ $price }}" :$restricted/>
+            @endif
         @endforeach
         </div>
     </div>
@@ -40,7 +42,7 @@
             @endif
         </x-section-header>
 
-        <div class="flex gap-3 mb-2">
+        <div class="flex gap-3 mb-2 p-5">
         @foreach ($buy_orders as $name => $prices)
             @php
                 $nicename = ucwords(str_replace("_", " ", $name));
@@ -51,7 +53,9 @@
                     }
                 }
             @endphp
-            <x-item-panel item_name="{{ $nicename }}" name="{{ $name }}" count="{{ $count }}" price="{{ $price }}"/>
+            @if ($count > 0)
+                <x-item-panel item_name="{{ $nicename }}" name="{{ $name }}" count="{{ $count }}" price="{{ $price }}" :$restricted/>
+            @endif
         @endforeach
         </div>
     </div>

@@ -1,5 +1,5 @@
 <x-layout>
-    <h3 class="text-center text-4xl mb-10">Your Inventory</h3>
+    <h3 class="text-center text-4xl mb-10">{{ $username }}'s Inventory</h3>
 
     <x-search action="/inventory/search"></x-search>
 
@@ -35,8 +35,6 @@
                                 </h3>
                                 <p>Count: {{ $inventory[$item] }}</p>
                             </div>
-
-                            <a href="/items/{{ $item }}/sell" class="self-center justify-self-end bg-neutral-200 px-2 py-1 rounded-full hover:bg-neutral-100 duration-300 cursor-pointer font-bold">Sell</a>
                         </div>
                     </div>
                 @endforeach

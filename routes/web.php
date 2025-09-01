@@ -32,12 +32,18 @@ Route::get("/items/search", [SearchController::class, "items"])->middleware("aut
 
 // Buy orders
 Route::get("/items/buy", function () {
+    $remote = new \TPEx\TPEx\Remote(env("TPEX_URL"), Auth::user()->access_token); // Create connection
+    $state = $remote->fastsync(); // Fetch state
+    $restricted = $state->restricted_items();
     $items = explode("\n", file_get_contents("../database/items.txt"));
-    return view("items.buy-order-form", ["items"=>$items]);
+    return view("items.buy-order-form", ["items"=>$items, "restricted"=>$restricted]);
 })->middleware("auth");
 Route::get("/items/{game_id}/buy", function ($game_id) {
+    $remote = new \TPEx\TPEx\Remote(env("TPEX_URL"), Auth::user()->access_token); // Create connection
+    $state = $remote->fastsync(); // Fetch state
+    $restricted = $state->restricted_items();
     $items = explode("\n", file_get_contents("../database/items.txt"));
-    return view("items.buy-order-form", ["items"=>$items, "item"=>$game_id]);
+    return view("items.buy-order-form", ["items"=>$items, "item"=>$game_id, "restricted"=>$restricted]);
 })->middleware("auth");
 Route::post("/items/buy", function () {
     $item = request("item");
@@ -71,7 +77,18 @@ Route::get("/inventory", function () {
     $state = $remote->fastsync(); // Fetch state
     $inventory = $state->player_assets($username);
     $coins = $state->player_balance($username);
-    return view("inventory", ["inventory"=>$inventory, "coins"=>$coins]);
+    $restricted = $state->restricted_items();
+    return view("inventory", ["inventory"=>$inventory, "coins"=>$coins, "restricted"=>$restricted]);
+})->middleware("auth");
+
+Route::get("/inventory/{player}", function ($player) {
+    $username = $player;
+    $remote = new \TPEx\TPEx\Remote(env("TPEX_URL"), Auth::user()->access_token); // Create connection
+    $state = $remote->fastsync(); // Fetch state
+    $inventory = $state->player_assets($username);
+    $coins = $state->player_balance($username);
+    $restricted = $state->restricted_items();
+    return view("inventory-other", ["inventory"=>$inventory, "coins"=>$coins, "username"=>$username, "restricted"=>$restricted]);
 })->middleware("auth");
 
 Route::get("/inventory/search", [SearchController::class, "inventory"])->middleware("auth");
@@ -163,8 +180,9 @@ Route::get("/orders", function() {
     $user = Auth::user()->username;
     $buy_orders = $state->buy_orders($user);
     $sell_orders = $state->sell_orders($user);
+    $restricted = $state->restricted_items();
 
-    return view("orders.index", ["buy_orders"=>$buy_orders, "sell_orders"=>$sell_orders]);
+    return view("orders.index", ["buy_orders"=>$buy_orders, "sell_orders"=>$sell_orders, "restricted"=>$restricted]);
 })->middleware("auth");
 
 Route::post("/orders/cancel/{id}", function ($id) {
