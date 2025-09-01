@@ -19,6 +19,9 @@ class RegisteredUserController extends Controller
     }
 
     public function store() {
+        if (request("psk") != env("TPEX_PSK")) {
+            throw ValidationException::withMessages(['field_name' => 'Invalid PSK']);
+        }
         // Validate
         $validatedAttributes = request()->validate([
             "username" => ["required", "unique:users"],

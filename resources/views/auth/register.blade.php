@@ -19,7 +19,13 @@
             <input name="password_confirmation" id="password_confirmation" class="rounded-lg border border-gray-400 px-3 py-1" type="password" required/>
             <x-form-error name="password_confirmation" />
         </div>
-        
+
+        <div class="flex flex-col gap-2">
+            <label for="psk" class="text-xl">In-game TPEx sign password</label>
+            <input name="psk" id="psk" class="rounded-lg border border-gray-400 px-3 py-1" type="text" required/>
+            <x-form-error name="psk" />
+        </div>
+
 
         <div class="flex justify-center gap-5 mt-3">
             <button type="submit" class="px-3 py-1 rounded-lg bg-green-300 cursor-pointer text-lg hover:bg-green-400 transition-bg duration-300">Register Account</button>
