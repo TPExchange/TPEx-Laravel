@@ -1,7 +1,6 @@
 <x-layout>
     @php
-
-        $remote = new TPEx\TPEx\Remote("https://tpex-staging.cyclic3.dev", Auth::user()->access_token); // Create connection
+        $remote = new TPEx\TPEx\Remote(env("TPEX_URL"), Auth::user()->access_token); // Create connection
         $transactions = $remote->raw_state();
         $transactions = explode("\n", $transactions);
         array_pop($transactions);
@@ -34,7 +33,7 @@
                     {{ strtoupper($detail) . ": " . $contents }}
                 </div>
             @endif
-            
+
         @endforeach
 
         <div class="border-b border-neutral-300 px-2 py-1 w-fit">RAW TRANSACTION JSON: {{ $transaction }}</div>

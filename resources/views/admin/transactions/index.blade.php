@@ -1,6 +1,6 @@
 <x-layout>
     @php
-        $remote = new TPEx\TPEx\Remote("https://tpex-staging.cyclic3.dev", Auth::user()->access_token); // Create connection
+        $remote = new TPEx\TPEx\Remote(env("TPEX_URL"), Auth::user()->access_token); // Create connection
         $transactions = $remote->raw_state();
         $transactions = explode("\n", $transactions);
         array_pop($transactions);
@@ -36,9 +36,9 @@
                 @endif
             </form>
         </div>
-            
 
-        
+
+
         <div class="flex flex-col bg-neutral-100 px-5">
 
             @foreach ($transactions as $object)
@@ -69,7 +69,7 @@
                                         {{ strtoupper($detail) . ": " . $contents }}
                                     </div>
                                 @endif
-                                
+
                             @endforeach
                         </a>
                     </x-panel>
