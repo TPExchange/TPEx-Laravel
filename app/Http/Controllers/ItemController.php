@@ -56,15 +56,16 @@ class ItemController extends Controller
             }
         }
 
+        $items = explode("\n", file_get_contents("../database/items.txt"));
 
-        return view('items.sell-item', ["orders"=>$orders, "name"=>$name, "item"=>$game_id, "restricted"=>$restricted]);
+        return view('items.sell-item', ["orders"=>$orders, "name"=>$name, "item"=>$game_id, "restricted"=>$restricted, "items"=>$items]);
     }
 
     public function sellPost($game_id) {
         $quantity = request("quantity");
         $price = request("price");
 
-        
+
 
         try {
             $remote = new \TPEx\TPEx\Remote(env("TPEX_URL"), Auth::user()->access_token); // Create connection

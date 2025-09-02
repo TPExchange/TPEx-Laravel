@@ -9,16 +9,16 @@
 <div class="w-100 bg-neutral-300 p-2 rounded-md">
 @endif
         <div class="flex gap-5">
-                <x-item-img item="minecraft_{{ $name }}"/>
+                <x-item-img item="minecraft_{{ $name }}" linkto="/items/info?asset={{ $name }}"/>
                 <div class="flex flex-col flex-1 items-center sm:items-start">
-                        <h3 class="font-bold text-xl mb-2">{{ $item_name }}</h3>
+                        <h3 class="font-bold text-xl mb-2"><a href="/items/info?asset={{ $name }}">{{ $item_name }}</a></h3>
 
                         <div class="text-md">
                                 <p>Amount: {{ $count }}</p>
                                 <p>Price: {{ $price }}</p>
                         </div>
 
-                        
+
                 </div>
 
                 <div class="text-lg font-bold flex flex-col justify-between">
@@ -27,9 +27,3 @@
                 </div>
         </div>
 </div>
-
-
-
-                            
-
-

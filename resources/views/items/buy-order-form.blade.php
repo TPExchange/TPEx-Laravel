@@ -1,5 +1,4 @@
 <x-layout>
-
     <h3 class="text-center text-4xl mb-3">
         {{ isset($item) ? "Buy " . ucwords(str_replace("_", " ", $item)) : "Buy Items" }}
     </h3>
@@ -50,7 +49,7 @@
 
             <div class="flex gap-5 justify-between">
                 <label class="px-3">Item</label>
-                <x-item-selector :$items name="item" required />
+                <x-item-selector :$items name="item" item="{{ $item ?? '' }}" required />
             </div>
 
 
