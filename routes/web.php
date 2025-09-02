@@ -72,6 +72,13 @@ Route::post("/items/buy", function () {
     return redirect("/inventory");
 })->middleware("auth");
 
+Route::get("/items/info", function() {
+    $remote = new \TPEx\TPEx\Remote(env("TPEX_URL"), Auth::user()->access_token); // Create connection
+    $data = $remote->fastsync();
+    $asset = request("asset") ?? throw ValidationException::withMessages(["Missing asset name"]);
+    return view("items.info", ["buy"=>$data->buy_orders()[$asset] ?? [], "sell"=>$data->sell_orders()[$asset] ?? [],"asset"=>$asset]);
+})->middleware("auth");
+
 // Sell orders
 Route::get("/items/{game_id}/sell", [ItemController::class, "sell"])->middleware("auth");
 Route::post("/items/{game_id}/sell", [ItemController::class, "sellPost"])->middleware("auth");
@@ -202,6 +209,7 @@ Route::post("/orders/cancel/{id}", function ($id) {
 
     return redirect("/orders");
 })->middleware("auth");
+
 
 // ======== //
 //   Auth   //
