@@ -1,4 +1,4 @@
-@props(["item_name"=>"Item Name", "count"=>"0", "name"=>"minecraft_cobblestone", "sys_id"=>"cobblestone", "price"=>"N/A", "restricted"])
+@props(["item_name"=>"Item Name", "count"=>"0", "name"=>"minecraft_cobblestone", "sys_id"=>"cobblestone", "price"=>null, "restricted"])
 @php
         $img_id = "minecraft_" . $name;
 @endphp
@@ -15,7 +15,9 @@
 
                         <div class="text-md">
                                 <p>Amount: {{ $count }}</p>
+                                @if (!is_null($price))
                                 <p>Price: {{ $price }}</p>
+                                @endif
                         </div>
 
 
