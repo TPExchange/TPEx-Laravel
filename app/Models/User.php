@@ -21,7 +21,7 @@ class User extends Authenticatable
         'username',
         'password',
         "access_token",
-        "admin" => false
+        "admin"
     ];
 
     protected $guarded = [];

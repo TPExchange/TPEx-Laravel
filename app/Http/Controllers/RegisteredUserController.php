@@ -33,7 +33,7 @@ class RegisteredUserController extends Controller
         $validatedAttributes["access_token"] = $remote->create_token($validatedAttributes["username"], TokenLevel::ProxyOne);
         // Create User
         $user = User::create(
-            $validatedAttributes
+            array_merge($validatedAttributes, ["admin"=>false])
         );
 
         // Login
