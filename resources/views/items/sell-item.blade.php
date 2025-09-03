@@ -31,6 +31,13 @@
                         $("#restricted").addClass("hidden");
                     }
                 }
+
+                function updateTotal() {
+                    amount = $("#quantity").val();
+                    price = $("#price").val();
+                    total = amount * price;
+                    $("#totalprice").text(total.toFixed(3).replace(/\.?0*$/,""));
+                }
             </script>
 
             <h2 class="text-2xl px-3 py-2 bg-neutral-200 rounded-sm">Place a sell order</h2>
@@ -44,12 +51,17 @@
 
             <div class="flex gap-5 justify-between">
                 <label for="quantity" class="px-3">Amount</label>
-                <input name="quantity" id="quantity" type="number" class="px-1 border border-neutral-200 w-sm rounded-sm" required />
+                <input name="quantity" id="quantity" type="number" class="px-1 border border-neutral-200 w-sm rounded-sm"  oninput="updateTotal();" required />
             </div>
 
             <div class="flex gap-5 justify-between">
                 <label for="price" class="px-3">Price per item (TPEx coins)</label>
-                <input name="price" id="price" type="number" class="px-1 border border-neutral-200 w-sm rounded-sm flex-shrink-0" required />
+                <input name="price" id="price" type="number" step="0.001" class="px-1 border border-neutral-200 w-sm rounded-sm flex-shrink-0" oninput="updateTotal();" required />
+            </div>
+
+            <div class="flex gap-5 justify-between">
+                <label for="price" class="px-3">Total profit (TPEx coins)</label>
+                <span id="totalprice" type="number" class="px-1 border border-neutral-200 w-sm rounded-sm flex-shrink-0 content-center"></span>
             </div>
 
             <div class="flex justify-center gap-5 mt-2">

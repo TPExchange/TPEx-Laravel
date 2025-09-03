@@ -28,7 +28,7 @@
                     amount = $("#quantity").val();
                     price = $("#price").val();
                     total = amount * price;
-                    $("#totalprice").text(total);
+                    $("#totalprice").text(total.toFixed(3).replace(/\.?0*$/,""));
                 }
 
                 restricted = '{{ implode(",", $restricted) }}'.split(","); // Restricted array
@@ -61,7 +61,7 @@
 
             <div class="flex gap-5 justify-between">
                 <label for="price" class="px-3">Price per item (TPEx coins)</label>
-                <input name="price" id="price" type="number" class="px-1 border border-neutral-200 w-sm rounded-sm flex-shrink-0" oninput="updateTotal();" required />
+                <input name="price" id="price" type="number" step="0.001" class="px-1 border border-neutral-200 w-sm rounded-sm flex-shrink-0" oninput="updateTotal();" required />
             </div>
 
             <div class="flex gap-5 justify-between">
