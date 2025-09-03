@@ -27,8 +27,39 @@ Route::get('/', function () {
 //   Items   //
 // ========= //
 
-Route::get('/items', [ItemController::class, "index"])->middleware("auth");
-Route::get("/items/search", [SearchController::class, "items"])->middleware("auth");
+Route::get('/items', function () {
+    $remote = new \TPEx\TPEx\Remote(env("TPEX_URL"), Auth::user()->access_token); // Create connection
+    $state = $remote->fastsync(); // Get state
+    $buy_orders = $state->buy_orders();
+    $sell_orders = $state->sell_orders();
+    $restricted = $state->restricted_items();
+
+    return view('items.index', ["buy_orders"=>$buy_orders, "sell_orders"=>$sell_orders, "restricted"=>$restricted]);
+})->middleware("auth");
+
+Route::get("/items/search", function () {
+    // UPDATE THIS
+    $search_term = request("q");
+    $remote = new \TPEx\TPEx\Remote(env("TPEX_URL"), Auth::user()->access_token); // Create connection
+    $state = $remote->fastsync(); // Get state
+    
+    $orders = $state["order"];
+    $buy_orders = $orders["buy_orders"];
+    $sell_orders = $orders["sell_orders"];
+
+
+
+
+    if ($search_term) {
+        $buy_orders = $this->search($buy_orders, $search_term);
+        $sell_orders = $this->search($sell_orders, $search_term);
+    } else {
+        return redirect("/items");
+    }
+
+
+    return view("items.index", ["search" => $search_term,"buy_orders" => $buy_orders, "sell_orders" => $sell_orders]);
+})->middleware("auth");
 
 // Buy orders
 Route::get("/items/buy", function () {
@@ -38,6 +69,7 @@ Route::get("/items/buy", function () {
     $items = explode("\n", file_get_contents("../database/items.txt"));
     return view("items.buy-order-form", ["items"=>$items, "restricted"=>$restricted]);
 })->middleware("auth");
+
 Route::get("/items/{game_id}/buy", function ($game_id) {
     $remote = new \TPEx\TPEx\Remote(env("TPEX_URL"), Auth::user()->access_token); // Create connection
     $state = $remote->fastsync(); // Fetch state
@@ -45,6 +77,7 @@ Route::get("/items/{game_id}/buy", function ($game_id) {
     $items = explode("\n", file_get_contents("../database/items.txt"));
     return view("items.buy-order-form", ["items"=>$items, "item"=>$game_id, "restricted"=>$restricted]);
 })->middleware("auth");
+
 Route::post("/items/buy", function () {
     $item = request("item");
     $quantity = request("quantity");
@@ -80,8 +113,47 @@ Route::get("/items/info", function() {
 })->middleware("auth");
 
 // Sell orders
-Route::get("/items/{game_id}/sell", [ItemController::class, "sell"])->middleware("auth");
-Route::post("/items/{game_id}/sell", [ItemController::class, "sellPost"])->middleware("auth");
+Route::get("/items/{game_id}/sell", function ($game_id) {
+    $remote = new \TPEx\TPEx\Remote(env("TPEX_URL"), Auth::user()->access_token); // Create connection
+    $state = $remote->fastsync(); // Get state
+    $name = ucwords(str_replace("_", " ", $game_id));
+    $orders = $state->raw["order"];
+    $buy_orders = $orders["buy_orders"];
+    $item_orders = $buy_orders[$game_id] ?? [];
+    $restricted = $state->restricted_items();
+
+    $orders = [];
+    foreach ($item_orders as $price => $value) {
+        foreach ($value as $order) {
+            $order["price"] = $price;
+            array_push($orders, $order);
+        }
+    }
+
+    $items = explode("\n", file_get_contents("../database/items.txt"));
+
+    return view('items.sell-item', ["orders"=>$orders, "name"=>$name, "item"=>$game_id, "restricted"=>$restricted, "items"=>$items]);
+})->middleware("auth");
+Route::post("/items/{game_id}/sell", function ($game_id) {
+    $quantity = request("quantity");
+    $price = request("price");
+
+    try {
+        $remote = new \TPEx\TPEx\Remote(env("TPEX_URL"), Auth::user()->access_token); // Create connection
+        $remote->apply("SellOrder", [
+            "player"=>Auth::user()->username,
+            "asset"=>$game_id,
+            "count"=>(int)$quantity,
+            "coins_per"=>$price
+        ]);
+
+    } catch (\TPEx\TPEx\Error $e) {
+        $tpexError = json_decode($e->tpex_error)->error;
+        throw ValidationException::withMessages(['field_name' => $tpexError]);
+    }
+
+    return redirect("/inventory");
+})->middleware("auth");
 
 Route::get("/inventory", function () {
     $username = Auth::user()->username;
@@ -103,7 +175,23 @@ Route::get("/inventory/{player}", function ($player) {
     return view("inventory-other", ["inventory"=>$inventory, "coins"=>$coins, "username"=>$username, "restricted"=>$restricted]);
 })->middleware("auth");
 
-Route::get("/inventory/search", [SearchController::class, "inventory"])->middleware("auth");
+Route::get("/inventory/search", function () {
+    // UPDATE THIS
+    $search_term = request("q");
+    $username = Auth::user()->username;
+    $remote = new \TPEx\TPEx\Remote(env("TPEX_URL"), Auth::user()->access_token); // Create connection
+    $state = $remote->fastsync(); // Fetch state
+    $inventory = $state->player_assets($username);
+    $coins = $state->player_balance($username);
+
+    if ($search_term) {
+        $inventory = $this->search($inventory, $search_term);
+    } else {
+        return redirect("/inventory");
+    }
+    arsort($inventory); // Sort descending
+    return view("inventory", ["inventory"=>$inventory, "coins"=>$coins]);
+})->middleware("auth");
 
 // Withdraw
 Route::get("/withdraw", function () {
