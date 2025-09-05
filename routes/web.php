@@ -1,14 +1,14 @@
 <?php
 
-use App\Http\Controllers\ItemController;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\BuyOrderController;
+use App\Http\Controllers\InventoryController;
 use Illuminate\Support\Facades\Route;
 use \App\Http\Controllers\RegisteredUserController;
-use App\Http\Controllers\SearchController;
+use App\Http\Controllers\SellOrderController;
 use \App\Http\Controllers\SessionController;
 use App\Http\Controllers\TransactionController;
-use App\Models\InventoryItem;
-use App\Models\Item;
-use App\Models\SellOrder;
+use App\Models\BuyOrder;
 use App\Models\User;
 use \Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -27,6 +27,7 @@ Route::get('/', function () {
 //   Items   //
 // ========= //
 
+// Display all items listed
 Route::get('/items', function () {
     $remote = new \TPEx\TPEx\Remote(env("TPEX_URL"), Auth::user()->access_token); // Create connection
     $state = $remote->fastsync(); // Get state
@@ -37,6 +38,7 @@ Route::get('/items', function () {
     return view('items.index', ["buy_orders"=>$buy_orders, "sell_orders"=>$sell_orders, "restricted"=>$restricted]);
 })->middleware("auth");
 
+// Search all items listed
 Route::get("/items/search", function () {
     // UPDATE THIS
     $search_term = request("q");
@@ -46,9 +48,6 @@ Route::get("/items/search", function () {
     $orders = $state["order"];
     $buy_orders = $orders["buy_orders"];
     $sell_orders = $orders["sell_orders"];
-
-
-
 
     if ($search_term) {
         $buy_orders = $this->search($buy_orders, $search_term);
@@ -61,144 +60,65 @@ Route::get("/items/search", function () {
     return view("items.index", ["search" => $search_term,"buy_orders" => $buy_orders, "sell_orders" => $sell_orders]);
 })->middleware("auth");
 
-// Buy orders
-Route::get("/items/buy", function () {
-    $remote = new \TPEx\TPEx\Remote(env("TPEX_URL"), Auth::user()->access_token); // Create connection
-    $state = $remote->fastsync(); // Fetch state
-    $restricted = $state->restricted_items();
-    $items = explode("\n", file_get_contents("../database/items.txt"));
-    return view("items.buy-order-form", ["items"=>$items, "restricted"=>$restricted]);
-})->middleware("auth");
 
-Route::get("/items/{game_id}/buy", function ($game_id) {
-    $remote = new \TPEx\TPEx\Remote(env("TPEX_URL"), Auth::user()->access_token); // Create connection
-    $state = $remote->fastsync(); // Fetch state
-    $restricted = $state->restricted_items();
-    $items = explode("\n", file_get_contents("../database/items.txt"));
-    return view("items.buy-order-form", ["items"=>$items, "item"=>$game_id, "restricted"=>$restricted]);
-})->middleware("auth");
 
-Route::post("/items/buy", function () {
-    $item = request("item");
-    $quantity = request("quantity");
-    $price = request("price");
-    $items = explode("\n", file_get_contents("../database/items.txt"));
+// ============== //
+//   Buy Orders   //
+// ============== //
 
-    if (!in_array($item, $items)) {
-        throw ValidationException::withMessages(['field_name' => 'Invalid item name. Try selecting from the drop-down box.']);
-    }
+// Buy orders form
+Route::get("/items/buy", [BuyOrderController::class, "create"])->middleware("auth");
 
-    try {
-        $remote = new \TPEx\TPEx\Remote(env("TPEX_URL"), Auth::user()->access_token); // Create connection
-        $remote->apply("BuyOrder", [
-            "player"=>Auth::user()->username,
-            "asset"=>$item,
-            "count"=>(int)$quantity,
-            "coins_per"=>$price
-        ]);
+// Buy orders form with specific item
+Route::get("/items/{game_id}/buy", [BuyOrderController::class, "create"])->middleware("auth");
 
-    } catch (\TPEx\TPEx\Error $e) {
-        $tpexError = json_decode($e->tpex_error)->error;
-        throw ValidationException::withMessages(['field_name' => $tpexError]);
-    }
+// Buy order submission/execution
+Route::post("/items/buy", [BuyOrderController::class, "store"])->middleware("auth");
 
-    return redirect("/inventory");
-})->middleware("auth");
 
-Route::get("/items/info", function() {
-    $remote = new \TPEx\TPEx\Remote(env("TPEX_URL"), Auth::user()->access_token); // Create connection
-    $data = $remote->fastsync();
-    $asset = request("asset") ?? throw ValidationException::withMessages(["Missing asset name"]);
-    return view("items.info", ["buy"=>$data->buy_orders()[$asset] ?? [], "sell"=>$data->sell_orders()[$asset] ?? [],"asset"=>$asset]);
-})->middleware("auth");
 
-// Sell orders
-Route::get("/items/{game_id}/sell", function ($game_id) {
-    $remote = new \TPEx\TPEx\Remote(env("TPEX_URL"), Auth::user()->access_token); // Create connection
-    $state = $remote->fastsync(); // Get state
-    $name = ucwords(str_replace("_", " ", $game_id));
-    $orders = $state->raw["order"];
-    $buy_orders = $orders["buy_orders"];
-    $item_orders = $buy_orders[$game_id] ?? [];
-    $restricted = $state->restricted_items();
 
-    $orders = [];
-    foreach ($item_orders as $price => $value) {
-        foreach ($value as $order) {
-            $order["price"] = $price;
-            array_push($orders, $order);
-        }
-    }
 
-    $items = explode("\n", file_get_contents("../database/items.txt"));
+// =============== //
+//   Sell Orders   //
+// =============== //
 
-    return view('items.sell-item', ["orders"=>$orders, "name"=>$name, "item"=>$game_id, "restricted"=>$restricted, "items"=>$items]);
-})->middleware("auth");
-Route::post("/items/{game_id}/sell", function ($game_id) {
-    $quantity = request("quantity");
-    $price = request("price");
+// Sell order form with specific item
+Route::get("/items/{game_id}/sell", [SellOrderController::class, "create"])->middleware("auth");
 
-    try {
-        $remote = new \TPEx\TPEx\Remote(env("TPEX_URL"), Auth::user()->access_token); // Create connection
-        $remote->apply("SellOrder", [
-            "player"=>Auth::user()->username,
-            "asset"=>$game_id,
-            "count"=>(int)$quantity,
-            "coins_per"=>$price
-        ]);
+// Sell order submission/execution
+Route::post("/items/{game_id}/sell", [SellOrderController::class, "store"])->middleware("auth");
 
-    } catch (\TPEx\TPEx\Error $e) {
-        $tpexError = json_decode($e->tpex_error)->error;
-        throw ValidationException::withMessages(['field_name' => $tpexError]);
-    }
 
-    return redirect("/inventory");
-})->middleware("auth");
 
-Route::get("/inventory", function () {
-    $username = Auth::user()->username;
-    $remote = new \TPEx\TPEx\Remote(env("TPEX_URL"), Auth::user()->access_token); // Create connection
-    $state = $remote->fastsync(); // Fetch state
-    $inventory = $state->player_assets($username);
-    $coins = $state->player_balance($username);
-    $restricted = $state->restricted_items();
-    return view("inventory", ["inventory"=>$inventory, "coins"=>$coins, "restricted"=>$restricted]);
-})->middleware("auth");
+// ============= //
+//   Inventory   //
+// ============= //
 
-Route::get("/inventory/{player}", function ($player) {
-    $username = $player;
-    $remote = new \TPEx\TPEx\Remote(env("TPEX_URL"), Auth::user()->access_token); // Create connection
-    $state = $remote->fastsync(); // Fetch state
-    $inventory = $state->player_assets($username);
-    $coins = $state->player_balance($username);
-    $restricted = $state->restricted_items();
-    return view("inventory-other", ["inventory"=>$inventory, "coins"=>$coins, "username"=>$username, "restricted"=>$restricted]);
-})->middleware("auth");
+// Display inventory
+Route::get("/inventory", [InventoryController::class, "show"])->middleware("auth");
+// Display other inventory
+Route::get("/inventory/{player}", [InventoryController::class, "show"])->middleware("auth");
 
-Route::get("/inventory/search", function () {
-    // UPDATE THIS
-    $search_term = request("q");
-    $username = Auth::user()->username;
-    $remote = new \TPEx\TPEx\Remote(env("TPEX_URL"), Auth::user()->access_token); // Create connection
-    $state = $remote->fastsync(); // Fetch state
-    $inventory = $state->player_assets($username);
-    $coins = $state->player_balance($username);
+// Search inventory
+Route::get("/inventory/search", [InventoryController::class, "search"])->middleware("auth");
+// Search other inventory - TODO
+Route::get("/inventory/{player}/search", [InventoryController::class, "search"])->middleware("auth");
 
-    if ($search_term) {
-        $inventory = $this->search($inventory, $search_term);
-    } else {
-        return redirect("/inventory");
-    }
-    arsort($inventory); // Sort descending
-    return view("inventory", ["inventory"=>$inventory, "coins"=>$coins]);
-})->middleware("auth");
 
-// Withdraw
+
+
+// =============== //
+//   Withdrawals   //
+// =============== //
+
+// Withdraw form
 Route::get("/withdraw", function () {
     $items = explode("\n", file_get_contents("../database/items.txt"));
     return view("withdraw", ["items"=>$items]);
 })->middleware("auth");
 
+// Withdraw submission
 Route::post("/withdraw", function () {
     $items = request("items");
     $counts = request("counts");
@@ -224,8 +144,11 @@ Route::post("/withdraw", function () {
 })->middleware("auth");
 
 
-// Coins //
+// ========= //
+//   Coins   //
+// ========= //
 
+// Coin exchange form
 Route::get("/exchange-coins", function () {
     $remote = new \TPEx\TPEx\Remote(env("TPEX_URL"), Auth::user()->access_token); // Create connection
     $state = $remote->fastsync(); // Fetch state
@@ -236,6 +159,7 @@ Route::get("/exchange-coins", function () {
     return view("coins-conversion", ["buyRate"=>$buyRate, "sellRate"=>$sellRate]);
 })->middleware("auth");
 
+// Coin exchange submission
 Route::post("/exchange-coins", function() {
     try {
         $remote = new \TPEx\TPEx\Remote(env("TPEX_URL"), Auth::user()->access_token); // Create connection
@@ -270,10 +194,13 @@ Route::post("/exchange-coins", function() {
     return view("coins-conversion", ["buyRate"=>$buyRate, "sellRate"=>$sellRate, "success"=>1]);
 })->middleware("auth");
 
-// ========== //
-//   Orders   //
-// ========== //
 
+
+// =============== //
+//   User Orders   //
+// =============== //
+
+// User orders list
 Route::get("/orders", function() {
     $remote = new \TPEx\TPEx\Remote(env("TPEX_URL"), Auth::user()->access_token); // Create connection
     $state = $remote->fastsync(); // Get state
@@ -285,6 +212,7 @@ Route::get("/orders", function() {
     return view("orders.index", ["buy_orders"=>$buy_orders, "sell_orders"=>$sell_orders, "restricted"=>$restricted]);
 })->middleware("auth");
 
+// User orders cancel
 Route::post("/orders/cancel/{id}", function ($id) {
     try {
         $remote = new \TPEx\TPEx\Remote(env("TPEX_URL"), Auth::user()->access_token); // Create connection
@@ -297,6 +225,7 @@ Route::post("/orders/cancel/{id}", function ($id) {
 
     return redirect("/orders");
 })->middleware("auth");
+
 
 
 // ======== //
@@ -322,35 +251,20 @@ Route::get("/admin", function () {
     }
 })->middleware("auth");
 
-// Admin Transactions
+
+// ========= //
+//   Admin   //
+// ========= //
+
+// Transaction log
 Route::get("/admin/transactions", [TransactionController::class, "index"])->middleware("auth");
 Route::get("/admin/transactions/{id}", [TransactionController::class, "show"])->middleware("auth");
 
-// Password Reset
-Route::get("/admin/manage-users", function () {
-    $user = Auth::user();
-    if ($user->isAdmin()) {
-        return view("admin.reset-password");
-    } else {
-        abort("403");
-    }
-})->middleware("auth");
+// Password reset form
+Route::get("/admin/manage-users", [AdminController::class, "passwordFormGet"])->middleware("auth");
 
-Route::post("/admin/manage-users", function () {
-    $user = Auth::user();
-    if ($user->isAdmin()) {
-        if (request("user")) {
-            $resetUser = User::find(request("user"));
-            $newPassword = request("new_password");
-            $resetUser->update(["password"=>$newPassword]);
-            return view("admin.reset-password-success", ["new_password"=>$newPassword, "reset_user"=>$resetUser]);
-        } else {
-            return view("admin.reset-password");
-        }
-    } else {
-        abort("403");
-    }
-})->middleware("auth");
+// Password reset submission
+Route::post("/admin/manage-users", [AdminController::class, "passwordFormPost"])->middleware("auth");
 
 // Deposits/Withdrawals
 Route::get("/admin/deposits-withdrawals", function () {
@@ -363,8 +277,11 @@ Route::get("/admin/deposits-withdrawals", function () {
 })->middleware("auth");
 
 
-// Deposits Form
+// ============ //
+//   Deposits   //
+// ============ //
 
+// Deposit form
 Route::get("/admin/deposits", function () {
     $user = Auth::user();
     if($user->isAdmin()) {
@@ -376,6 +293,7 @@ Route::get("/admin/deposits", function () {
     }
 })->middleware("auth");
 
+// Deposit submission
 Route::post("/admin/deposits", function () {
     $user = Auth::user();
     if($user->isAdmin()) {
@@ -413,8 +331,12 @@ Route::post("/admin/deposits", function () {
     }
 })->middleware("auth");
 
-// Withdrawals
 
+// =============== //
+//   Withdrawals   //
+// =============== //
+
+// Withdrawals list
 Route::get("/admin/withdrawals", function () {
     $user = Auth::user();
 
@@ -428,6 +350,7 @@ Route::get("/admin/withdrawals", function () {
     }
 })->middleware("auth");
 
+// Withdrawal show
 Route::get("/admin/withdrawals/{id}", function ($id) {
     $user = Auth::user();
 
@@ -441,6 +364,7 @@ Route::get("/admin/withdrawals/{id}", function ($id) {
     }
 })->middleware("auth");
 
+// Withdrawal complete submission
 Route::post("/admin/complete-withdrawal", function () {
     $user = Auth::user();
 
