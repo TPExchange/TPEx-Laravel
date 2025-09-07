@@ -13,7 +13,10 @@
             let best_buy = elem.best_buy ? parseFloat(elem.best_buy.replace(/[,c]/g, '')) : null;
             let best_sell = elem.best_sell ? parseFloat(elem.best_sell.replace(/[,c]/g, '')) : null;
             console.log(best_buy, best_sell);
-            let mid_market = (((best_buy ?? best_sell)) + (best_sell ?? best_buy)) / 2;
+            let mid_market = (((best_buy ?? best_sell + 0)) + (best_sell ?? best_buy + 0)) / 2;
+            if (mid_market == 0) {
+                mid_market = null;
+            }
             y.push(mid_market);
             best_buys.push(best_buy);
             best_sells.push(best_sell);
@@ -48,7 +51,10 @@
                 marker: {
                     size: 8
                 },
-                mode: "lines",
+                marker: {
+                    size: 8
+                },
+                mode: "lines+markers",
             },
             {
                 name: "Best buy price",
@@ -62,7 +68,10 @@
                 marker: {
                     size: 8
                 },
-                mode: "lines",
+                marker: {
+                    size: 8
+                },
+                mode: "lines+markers",
             },
         ];
         var layout = {
