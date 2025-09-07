@@ -44,7 +44,7 @@ Route::get("/items/search", function () {
     $search_term = request("q");
     $remote = new \TPEx\TPEx\Remote(env("TPEX_URL"), Auth::user()->access_token); // Create connection
     $state = $remote->fastsync(); // Get state
-    
+
     $orders = $state["order"];
     $buy_orders = $orders["buy_orders"];
     $sell_orders = $orders["sell_orders"];
@@ -58,6 +58,14 @@ Route::get("/items/search", function () {
 
 
     return view("items.index", ["search" => $search_term,"buy_orders" => $buy_orders, "sell_orders" => $sell_orders]);
+})->middleware("auth");
+
+Route::get("/items/info", function() {
+    $asset = request("asset") ?? throw ValidationException::withMessages(["Missing asset name"]);
+    $remote = new \TPEx\TPEx\Remote(env("TPEX_URL"), Auth::user()->access_token); // Create connection
+    $data = $remote->fastsync();
+    $history = $remote->price_history($asset);
+    return view("items.info", ["buy"=>$data->buy_orders()[$asset] ?? [], "sell"=>$data->sell_orders()[$asset] ?? [],"asset"=>$asset, "history"=>$history]);
 })->middleware("auth");
 
 

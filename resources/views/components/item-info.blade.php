@@ -1,12 +1,12 @@
 @props(["asset", "buy", "sell"])
 <div class="text-center">Mid-market price is <b id="midmarket">Loading price...</b></div>
-    <script src="https://cdn.plot.ly/plotly-3.1.0.min.js" charset="utf-8"></script>
-    <div id="target"></div>
+<script src="https://cdn.plot.ly/plotly-3.1.0.min.js" charset="utf-8"></script>
+<div id="market-plot"></div>
 
-    <script>
+<script>
+    {
         const buy = @json($buy);
         const sell = @json($sell);
-        console.log(buy, sell);
         let buy_x = [];
         let buy_y = [];
 
@@ -116,5 +116,6 @@
             },
             showlegend: true
         }
-        Plotly.newPlot('target', data, layout);
-    </script>
+        Plotly.newPlot('market-plot', data, layout);
+    }
+</script>
