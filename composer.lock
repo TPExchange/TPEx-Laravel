@@ -5815,12 +5815,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/TPExchange/tpex-php.git",
-                "reference": "0f51fa4da79ead2b7b1825471425592aac3d7db1"
+                "reference": "cdfc049e44e190176afc6fb68a53375e8f1a0fdd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/TPExchange/tpex-php/zipball/0f51fa4da79ead2b7b1825471425592aac3d7db1",
-                "reference": "0f51fa4da79ead2b7b1825471425592aac3d7db1",
+                "url": "https://api.github.com/repos/TPExchange/tpex-php/zipball/cdfc049e44e190176afc6fb68a53375e8f1a0fdd",
+                "reference": "cdfc049e44e190176afc6fb68a53375e8f1a0fdd",
                 "shasum": ""
             },
             "default-branch": true,
@@ -5838,7 +5838,7 @@
                 "source": "https://github.com/TPExchange/tpex-php/tree/master",
                 "issues": "https://github.com/TPExchange/tpex-php/issues"
             },
-            "time": "2025-09-07T12:44:45+00:00"
+            "time": "2025-09-10T22:42:53+00:00"
         },
         {
             "name": "vlucas/phpdotenv",

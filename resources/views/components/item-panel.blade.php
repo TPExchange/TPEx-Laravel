@@ -16,7 +16,7 @@
                         <div class="text-md">
                                 <p>Amount: {{ $count }}</p>
                                 @if (!is_null($price))
-                                <p>Price: {{ $price }}</p>
+                                <p>Price: {{ new \TPEx\TPEx\Coins($price)->pretty() }}</p>
                                 @endif
                         </div>
 
