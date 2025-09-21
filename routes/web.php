@@ -61,11 +61,11 @@ Route::get("/items/search", function () {
 })->middleware("auth");
 
 Route::get("/items/info", function() {
-    $asset = request("asset") ?? throw ValidationException::withMessages(["Missing asset name"]);
+    $item = request("item") ?? throw ValidationException::withMessages(["Missing item name"]);
     $remote = new \TPEx\TPEx\Remote(env("TPEX_URL"), Auth::user()->access_token); // Create connection
     $data = $remote->fastsync();
-    $history = $remote->price_history($asset);
-    return view("items.info", ["buy"=>$data->buy_orders()[$asset] ?? [], "sell"=>$data->sell_orders()[$asset] ?? [],"asset"=>$asset, "history"=>$history]);
+    $history = $remote->price_history($item);
+    return view("items.info", ["buy"=>$data->buy_orders()[$item] ?? [], "sell"=>$data->sell_orders()[$item] ?? [],"item"=>$item, "history"=>$history]);
 })->middleware("auth");
 
 

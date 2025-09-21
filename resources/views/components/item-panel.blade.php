@@ -9,9 +9,9 @@
 <div class="w-100 bg-neutral-300 p-2 rounded-md">
 @endif
         <div class="flex gap-5">
-                <x-item-img item="minecraft_{{ $name }}" linkto="/items/info?asset={{ $name }}"/>
+                <x-item-img item="minecraft_{{ $name }}" linkto="/items/info?item={{ $name }}"/>
                 <div class="flex flex-col flex-1 items-center sm:items-start">
-                        <h3 class="font-bold text-xl mb-2"><a href="/items/info?asset={{ $name }}">{{ $item_name }}</a></h3>
+                        <h3 class="font-bold text-xl mb-2"><a href="/items/info?item={{ $name }}">{{ $item_name }}</a></h3>
 
                         <div class="text-md">
                                 <p>Amount: {{ $count }}</p>

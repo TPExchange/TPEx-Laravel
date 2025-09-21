@@ -1,4 +1,4 @@
-@props(["asset", "buy", "sell"])
+@props(["item", "buy", "sell"])
 <div class="text-center">Mid-market price is <b id="midmarket">Loading price...</b></div>
 <script src="https://cdn.plot.ly/plotly-3.1.0.min.js" charset="utf-8"></script>
 <div id="market-plot"></div>
