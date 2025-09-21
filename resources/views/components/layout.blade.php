@@ -23,7 +23,6 @@
             <div class="md:absolute md:top-0 md:left-0">
                 <a href="/">
                     <img src="/images/TPEx.png" class="w-25" alt="" />
-                    dev
                 </a>
             </div>
 
