@@ -9,6 +9,9 @@ use Illuminate\Validation\ValidationException;
 class SellOrderController extends Controller
 {
     public function create($item) {
+        if ($item == "diamond") {
+            return redirect("/exchange-coins?mode=sell");
+        }
         $remote = new \TPEx\TPEx\Remote(env("TPEX_URL"), Auth::user()->access_token); // Create connection
         $state = $remote->fastsync(); // Get state
         $name = ucwords(str_replace("_", " ", $item));

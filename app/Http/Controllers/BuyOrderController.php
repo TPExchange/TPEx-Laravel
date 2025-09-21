@@ -9,6 +9,9 @@ use Illuminate\Validation\ValidationException;
 class BuyOrderController extends Controller
 {
     public function create($item = null) {
+        if ($item == "diamond") {
+            return redirect("/exchange-coins?mode=buy");
+        }
         $remote = new \TPEx\TPEx\Remote(env("TPEX_URL"), Auth::user()->access_token); // Create connection
         $state = $remote->fastsync(); // Fetch state
         $restricted = $state->restricted_items();

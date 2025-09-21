@@ -86,7 +86,6 @@ Route::post("/items/buy", [BuyOrderController::class, "store"])->middleware("aut
 
 
 
-
 // =============== //
 //   Sell Orders   //
 // =============== //
@@ -95,7 +94,8 @@ Route::post("/items/buy", [BuyOrderController::class, "store"])->middleware("aut
 Route::get("/items/{game_id}/sell", [SellOrderController::class, "create"])->middleware("auth");
 
 // Sell order submission/execution
-Route::post("/items/{game_id}/sell", [SellOrderController::class, "store"])->middleware("auth");
+Route::get("/items/sell", [SellOrderController::class, "create"])->middleware("auth");
+
 
 
 
