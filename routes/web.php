@@ -105,6 +105,9 @@ Route::get("/items/{game_id}/sell", [SellOrderController::class, "create"])->mid
 // Sell order submission/execution
 Route::get("/items/sell", [SellOrderController::class, "create"])->middleware("auth");
 
+// Sell order submission/execution
+Route::post("/items/sell", [SellOrderController::class, "store"])->middleware("auth");
+
 
 
 

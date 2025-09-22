@@ -4,7 +4,7 @@
 
 
     <section class="mt-5">
-        <form method="POST" action="" class="flex flex-col rounded-lg w-2xl m-auto py-3 px-10 gap-5 text-lg">
+        <form method="POST" action="/items/sell" class="flex flex-col rounded-lg w-2xl m-auto py-3 px-10 gap-5 text-lg">
             @csrf
 
             @if ($errors->any())
