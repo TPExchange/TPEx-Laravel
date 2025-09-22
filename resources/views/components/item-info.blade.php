@@ -1,5 +1,4 @@
 @props(["item", "buy", "sell"])
-<div class="text-center">Mid-market price is <b id="midmarket">Loading price...</b></div>
 <script src="https://cdn.plot.ly/plotly-3.1.0.min.js" charset="utf-8"></script>
 <div id="market-plot"></div>
 
@@ -38,22 +37,6 @@
 
         let min_buy = buy_x.at(-1) ?? 0;
         let max_sell = sell_x.at(-1) ?? 0;
-
-        let mid_market = ((buy_x.at(0) ?? sell_x.at(0)) + (sell_x.at(0) ?? buy_x.at(0))) / 2;
-
-        // switch ([buy_x.length > 0, sell_x.length > 0]) {
-        //     case [false, false]: break;
-        //     case [false, true]: {
-        //         mid_market = sell_x.at(0);
-        //     } break;
-        //     case [true, false]: {
-        //         mid_market = buy_x.at(0);
-        //     } break;
-        //     case [true, true]: {
-        //         mid_market = (sell_x.at(0) + buy_x.at(0)) / 2;
-        //     } break;
-        // }
-        document.getElementById("midmarket").innerText = `${mid_market}c`;
 
         let width = max_sell - min_buy;
         let margin = width / 10;
