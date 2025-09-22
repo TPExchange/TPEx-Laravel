@@ -45,19 +45,28 @@ Route::get("/items/search", function () {
     $remote = new \TPEx\TPEx\Remote(env("TPEX_URL"), Auth::user()->access_token); // Create connection
     $state = $remote->fastsync(); // Get state
 
-    $orders = $state["order"];
-    $buy_orders = $orders["buy_orders"];
-    $sell_orders = $orders["sell_orders"];
+    $buy_orders = $state->buy_orders();
+    $sell_orders = $state->sell_orders();
+    $restricted = $state->restricted_items();
 
     if ($search_term) {
-        $buy_orders = $this->search($buy_orders, $search_term);
-        $sell_orders = $this->search($sell_orders, $search_term);
+        $search_term = strtolower($search_term);
+        $buy_orders = array_filter(
+            $buy_orders,
+            function($item) use ($search_term) { return str_contains(strtolower($item), $search_term); },
+            ARRAY_FILTER_USE_KEY
+        );
+        $sell_orders = array_filter(
+            $sell_orders,
+            function($item) use ($search_term) { return str_contains(strtolower($item), $search_term); },
+            ARRAY_FILTER_USE_KEY
+        );
     } else {
         return redirect("/items");
     }
 
 
-    return view("items.index", ["search" => $search_term,"buy_orders" => $buy_orders, "sell_orders" => $sell_orders]);
+    return view("items.index", ["search" => $search_term,"buy_orders" => $buy_orders, "sell_orders" => $sell_orders, "restricted"=>$restricted]);
 })->middleware("auth");
 
 Route::get("/items/info", function() {
@@ -105,11 +114,11 @@ Route::get("/items/sell", [SellOrderController::class, "create"])->middleware("a
 
 // Display inventory
 Route::get("/inventory", [InventoryController::class, "show"])->middleware("auth");
-// Display other inventory
-Route::get("/inventory/{player}", [InventoryController::class, "show"])->middleware("auth");
-
 // Search inventory
 Route::get("/inventory/search", [InventoryController::class, "search"])->middleware("auth");
+
+// Display other inventory
+Route::get("/inventory/{player}", [InventoryController::class, "show"])->middleware("auth");
 // Search other inventory - TODO
 Route::get("/inventory/{player}/search", [InventoryController::class, "search"])->middleware("auth");
 

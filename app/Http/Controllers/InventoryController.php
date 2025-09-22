@@ -13,7 +13,7 @@ class InventoryController extends Controller
         } else {
             $username = $player;
         }
-        
+
         $remote = new \TPEx\TPEx\Remote(env("TPEX_URL"), Auth::user()->access_token); // Create connection
         $state = $remote->fastsync(); // Fetch state
         $inventory = $state->player_assets($username);
@@ -24,13 +24,13 @@ class InventoryController extends Controller
             return view("inventory", ["inventory"=>$inventory, "coins"=>$coins, "restricted"=>$restricted]);
         } else {
             return view("inventory-other", ["inventory"=>$inventory, "coins"=>$coins, "username"=>$username, "restricted"=>$restricted]);
-        }    
+        }
     }
 
     public function search($player = null) {
         // UPDATE THIS
         $search_term = request("q");
-        
+
         if (is_null($player)) {
             $username = Auth::user()->username;
         } else {
@@ -41,18 +41,24 @@ class InventoryController extends Controller
         $state = $remote->fastsync(); // Fetch state
         $inventory = $state->player_assets($username);
         $coins = $state->player_balance($username);
+        $restricted = $state->restricted_items();
 
         if ($search_term) {
-            $inventory = $this->search($inventory, $search_term);
+            $search_term = strtolower($search_term);
+            $inventory = array_filter(
+                $inventory,
+                function($item) use ($search_term) { return str_contains(strtolower($item), $search_term); },
+                ARRAY_FILTER_USE_KEY
+            );
         } else {
             return redirect("/inventory");
         }
         arsort($inventory); // Sort descending
-        
+
         if (is_null($player)) {
             return view("inventory", ["inventory"=>$inventory, "coins"=>$coins, "restricted"=>$restricted]);
         } else {
             return view("inventory-other", ["inventory"=>$inventory, "coins"=>$coins, "username"=>$username, "restricted"=>$restricted]);
-        }  
+        }
     }
 }
