@@ -13,7 +13,7 @@ class BuyOrderController extends Controller
             return redirect("/exchange-coins?mode=buy");
         }
         $remote = new \TPEx\TPEx\Remote(env("TPEX_URL"), Auth::user()->access_token); // Create connection
-        $state = $remote->fastsync(); // Fetch state
+        $state = $remote->fastsync(env("TPEX_FASTSYNC_CACHE")); // Fetch state
         $restricted = $state->restricted_items();
         $items = explode("\n", file_get_contents("../database/items.txt"));
 

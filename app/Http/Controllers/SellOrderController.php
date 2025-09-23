@@ -13,7 +13,7 @@ class SellOrderController extends Controller
             return redirect("/exchange-coins?mode=sell");
         }
         $remote = new \TPEx\TPEx\Remote(env("TPEX_URL"), Auth::user()->access_token); // Create connection
-        $state = $remote->fastsync(); // Get state
+        $state = $remote->fastsync(env("TPEX_FASTSYNC_CACHE")); // Get state
         $name = ucwords(str_replace("_", " ", $item));
         $orders = $state->raw["order"];
         $buy_orders = $orders["buy_orders"];

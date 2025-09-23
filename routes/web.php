@@ -30,7 +30,7 @@ Route::get('/', function () {
 // Display all items listed
 Route::get('/items', function () {
     $remote = new \TPEx\TPEx\Remote(env("TPEX_URL"), Auth::user()->access_token); // Create connection
-    $state = $remote->fastsync(); // Get state
+    $state = $remote->fastsync(env("TPEX_FASTSYNC_CACHE")); // Get state
     $buy_orders = $state->buy_orders();
     $sell_orders = $state->sell_orders();
     $restricted = $state->restricted_items();
@@ -43,7 +43,7 @@ Route::get("/items/search", function () {
     // UPDATE THIS
     $search_term = request("q");
     $remote = new \TPEx\TPEx\Remote(env("TPEX_URL"), Auth::user()->access_token); // Create connection
-    $state = $remote->fastsync(); // Get state
+    $state = $remote->fastsync(env("TPEX_FASTSYNC_CACHE")); // Get state
 
     $buy_orders = $state->buy_orders();
     $sell_orders = $state->sell_orders();
@@ -72,7 +72,7 @@ Route::get("/items/search", function () {
 Route::get("/items/info", function() {
     $item = request("item") ?? throw ValidationException::withMessages(["Missing item name"]);
     $remote = new \TPEx\TPEx\Remote(env("TPEX_URL"), Auth::user()->access_token); // Create connection
-    $data = $remote->fastsync();
+    $data = $remote->fastsync(env("TPEX_FASTSYNC_CACHE"));
     $history = $remote->price_history($item);
     return view("items.info", ["buy"=>$data->buy_orders()[$item] ?? [], "sell"=>$data->sell_orders()[$item] ?? [],"item"=>$item, "history"=>$history]);
 })->middleware("auth");
@@ -171,7 +171,7 @@ Route::post("/withdraw", function () {
 // Coin exchange form
 Route::get("/exchange-coins", function () {
     $remote = new \TPEx\TPEx\Remote(env("TPEX_URL"), Auth::user()->access_token); // Create connection
-    $state = $remote->fastsync(); // Fetch state
+    $state = $remote->fastsync(env("TPEX_FASTSYNC_CACHE")); // Fetch state
     $rates = $state->rates();
     $sellRate = $rates["coins_sell_ppm"]/10000; // As percentage
     $buyRate = $rates["coins_buy_ppm"]/10000; // As percentage
@@ -183,7 +183,7 @@ Route::get("/exchange-coins", function () {
 Route::post("/exchange-coins", function() {
     try {
         $remote = new \TPEx\TPEx\Remote(env("TPEX_URL"), Auth::user()->access_token); // Create connection
-        $state = $remote->fastsync(); // Fetch state
+        $state = $remote->fastsync(env("TPEX_FASTSYNC_CACHE")); // Fetch state
         $rates = $state->rates();
         $sellRate = $rates["coins_sell_ppm"]/1000000; // As multiplier
         $buyRate = $rates["coins_buy_ppm"]/1000000; // As multiplier
@@ -223,7 +223,7 @@ Route::post("/exchange-coins", function() {
 // User orders list
 Route::get("/orders", function() {
     $remote = new \TPEx\TPEx\Remote(env("TPEX_URL"), Auth::user()->access_token); // Create connection
-    $state = $remote->fastsync(); // Get state
+    $state = $remote->fastsync(env("TPEX_FASTSYNC_CACHE")); // Get state
     $user = Auth::user()->username;
     $buy_orders = $state->buy_orders($user);
     $sell_orders = $state->sell_orders($user);
@@ -361,7 +361,7 @@ Route::get("/admin/withdrawals", function () {
     $user = Auth::user();
 
     $remote = new \TPEx\TPEx\Remote(env("TPEX_URL"), Auth::user()->access_token); // Create connection
-    $state = $remote->fastsync();
+    $state = $remote->fastsync(env("TPEX_FASTSYNC_CACHE"));
     $withdrawals = $state->pending_withdrawals();
     if ($user->isAdmin()) {
         return view("admin/withdrawals", ["withdrawals"=>$withdrawals]);
@@ -375,7 +375,7 @@ Route::get("/admin/withdrawals/{id}", function ($id) {
     $user = Auth::user();
 
     $remote = new \TPEx\TPEx\Remote(env("TPEX_URL"), Auth::user()->access_token); // Create connection
-    $state = $remote->fastsync();
+    $state = $remote->fastsync(env("TPEX_FASTSYNC_CACHE"));
     $withdrawals = $state->pending_withdrawals();
     if ($user->isAdmin()) {
         return view("admin/withdrawal-show", ["withdrawal"=>$withdrawals[$id],"id"=>$id]);

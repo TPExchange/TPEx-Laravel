@@ -45,7 +45,7 @@ class SessionController extends Controller
 
         // Update Admin Status On Login
         $remote = new \TPEx\TPEx\Remote(env("TPEX_URL"), Auth::user()->access_token); // Create connection
-        $state = $remote->fastsync();
+        $state = $remote->fastsync(env("TPEX_FASTSYNC_CACHE"));
         $bankers = $state->bankers();
 
         $isAdmin = in_array(Auth::user()->username, $bankers);

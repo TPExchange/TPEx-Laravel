@@ -15,7 +15,7 @@ class InventoryController extends Controller
         }
 
         $remote = new \TPEx\TPEx\Remote(env("TPEX_URL"), Auth::user()->access_token); // Create connection
-        $state = $remote->fastsync(); // Fetch state
+        $state = $remote->fastsync(env("TPEX_FASTSYNC_CACHE")); // Fetch state
         $inventory = $state->player_assets($username);
         $coins = $state->player_balance($username);
         $restricted = $state->restricted_items();
@@ -38,7 +38,7 @@ class InventoryController extends Controller
         }
 
         $remote = new \TPEx\TPEx\Remote(env("TPEX_URL"), Auth::user()->access_token); // Create connection
-        $state = $remote->fastsync(); // Fetch state
+        $state = $remote->fastsync(env("TPEX_FASTSYNC_CACHE")); // Fetch state
         $inventory = $state->player_assets($username);
         $coins = $state->player_balance($username);
         $restricted = $state->restricted_items();
