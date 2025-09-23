@@ -7,7 +7,8 @@ use Illuminate\Support\Facades\Auth;
 
 class InventoryController extends Controller
 {
-    public function show($player = null) {
+    public function show() {
+        $player = request("player");
         if (is_null($player)) {
             $username = Auth::user()->username;
         } else {

@@ -8,7 +8,8 @@ use Illuminate\Validation\ValidationException;
 
 class SellOrderController extends Controller
 {
-    public function create($item) {
+    public function create() {
+        $item = request("item");
         if ($item == "diamond") {
             return redirect("/exchange-coins?mode=sell");
         }

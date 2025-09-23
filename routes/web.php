@@ -86,9 +86,6 @@ Route::get("/items/info", function() {
 // Buy orders form
 Route::get("/items/buy", [BuyOrderController::class, "create"])->middleware("auth");
 
-// Buy orders form with specific item
-Route::get("/items/{game_id}/buy", [BuyOrderController::class, "create"])->middleware("auth");
-
 // Buy order submission/execution
 Route::post("/items/buy", [BuyOrderController::class, "store"])->middleware("auth");
 
@@ -98,9 +95,6 @@ Route::post("/items/buy", [BuyOrderController::class, "store"])->middleware("aut
 // =============== //
 //   Sell Orders   //
 // =============== //
-
-// Sell order form with specific item
-Route::get("/items/{game_id}/sell", [SellOrderController::class, "create"])->middleware("auth");
 
 // Sell order submission/execution
 Route::get("/items/sell", [SellOrderController::class, "create"])->middleware("auth");
@@ -119,11 +113,6 @@ Route::post("/items/sell", [SellOrderController::class, "store"])->middleware("a
 Route::get("/inventory", [InventoryController::class, "show"])->middleware("auth");
 // Search inventory
 Route::get("/inventory/search", [InventoryController::class, "search"])->middleware("auth");
-
-// Display other inventory
-Route::get("/inventory/{player}", [InventoryController::class, "show"])->middleware("auth");
-// Search other inventory - TODO
-Route::get("/inventory/{player}/search", [InventoryController::class, "search"])->middleware("auth");
 
 
 
