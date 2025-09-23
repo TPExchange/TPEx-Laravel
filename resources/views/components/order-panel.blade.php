@@ -14,13 +14,13 @@
                         <p>Price: {{ $price }}</p>
                 </div>
 
-                
+
         </div>
 
         <div class="mt-3 text-lg font-bold flex flex-col justify-center h-full">
             <form action="/orders/cancel/{{ $id }}" method="post">
                 @csrf
-                <button href="/items/{{ $name }}/buy" class="bg-red-300 px-3 py-1 rounded-lg hover:bg-red-400 cursor-pointer">Cancel</button>
+                <button class="bg-red-300 px-3 py-1 rounded-lg hover:bg-red-400 cursor-pointer">Cancel</button>
             </form>
         </div>
 </x-panel>
