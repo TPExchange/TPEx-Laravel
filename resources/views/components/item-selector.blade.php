@@ -8,7 +8,7 @@
 ])}}>
     <option value=""></option>
     @foreach ($items as $this_item)
-        <option value="{{ $item }}"
+        <option value="{{ $this_item }}"
             @if ($item == $this_item)
                 selected
             @endif
