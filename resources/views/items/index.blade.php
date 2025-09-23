@@ -42,7 +42,7 @@
             @endif
         </x-section-header>
 
-        <div class="flex gap-3 mb-2 p-5">
+        <div class="flex gap-3 mb-2 p-5 flex-wrap">
         @foreach ($buy_orders as $name => $prices)
             @php
                 $nicename = ucwords(str_replace("_", " ", $name));

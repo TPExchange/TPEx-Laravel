@@ -17,7 +17,7 @@
                     Your Items
                 @endif
             </x-section-header>
-            <div class="flex gap-3 mb-2 p-5">
+            <div class="flex gap-3 mb-2 p-5 flex-wrap">
                 @foreach (array_keys($inventory) as $item)
                     <x-item-panel item_name="{{ ucwords(str_replace('_', ' ', $item)) }}" name="{{ $item }}" count="{{ $inventory[$item] }}" :$restricted/>
                 @endforeach
