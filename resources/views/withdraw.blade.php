@@ -40,14 +40,21 @@
             <div class="flex flex-row">
                 <div class="flex-1 duration-300 border-r border-transparent px-2">Item Name</div>
                 <div class="flex-1 duration-300 border-r border-transparent px-2">Count</div>
-                <div id="add-another" class="text-center cursor-pointer w-7 text-neutral-600 hover:text-black duration-300" onclick="var child = $('#clone-target').clone().removeAttr('style').removeAttr('id').removeAttr('disabled'); $('#items-list').append(child); child.find('.select2').select2();">
+                <div id="add-another" class="text-center cursor-pointer w-7 text-neutral-600 hover:text-black duration-300" onclick="add_another()">
                     <i class="fa fa-plus"></i>
                 </div>
             </div>
 
 
         </div>
-        <script>$("#add-another").click()</script>
+        <script>
+            function add_another() {
+                var child = $('#clone-target').clone().removeAttr('style').removeAttr('id').removeAttr('disabled');
+                $('#items-list').append(child);
+                child.find('.select2').select2();
+            }
+            add_another()
+        </script>
         <button class="block mt-5 m-auto w-fit bg-green-300 hover:bg-green-400 transition-bg duration-300 px-3 py-1 rounded-full cursor-pointer" onclick="return confirm('Are you sure you want to do this?')">Withdraw Items</button>
     </form>
 </x-layout>
