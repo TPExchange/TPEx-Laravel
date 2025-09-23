@@ -46,7 +46,6 @@
                 <label for="item" class="px-3">Item</label>
 
                 <x-item-selector :$item :$items />
-                <!-- <input name="item" id="item" class="px-1 border border-neutral-200 w-sm rounded-sm" value="{{ $item }}" oninput="checkRestricted();" required /> -->
             </div>
 
             <div class="flex gap-5 justify-between">

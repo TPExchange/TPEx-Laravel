@@ -33,7 +33,8 @@ class SellOrderController extends Controller
         return view('items.sell-item', ["orders"=>$orders, "name"=>$name, "item"=>$item, "restricted"=>$restricted, "items"=>$items]);
     }
 
-    public function store($item) {
+    public function store() {
+        $item = request("item");
         $quantity = request("quantity");
         $price = request("price");
 

@@ -3,12 +3,10 @@
 
     <x-search action="/inventory/search"></x-search>
 
-
-
     <section class="relative">
         <div class="absolute -top-10 flex items-center">
             <h3 class="text-xl px-3 py-1 rounded-lg">TPEx coins: <span class="font-bold">{{ new \TPEx\TPEx\Coins($coins)->pretty() }}</span></h3>
-            <a href="/exchange-coins" class="text-xl border border-transparent text-green-700 hover:text-green-900 rounded-full transition-all duration-300"><i class="fa fa-money-bill-transfer"></i></a>
+            <a href="/exchange-coins" class="text-xl border border-transparent text-green-700 hover:text-green-900 rounded-full transition-all duration-300"><i class="fa fa-money-bill-transfer"></i> Convert</a>
         </div>
         <a href="/withdraw" class="absolute -top-10 flex items-center text-xl py-1 right-0 bg-blue-400 hover:bg-blue-500 text-white transition-bg duration-300 px-3 rounded-full cursor-pointer">Withdraw Items</a>
         <div class="bg-neutral-100 rounded-lg pb-5">
