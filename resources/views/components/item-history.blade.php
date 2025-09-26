@@ -17,6 +17,9 @@
             if (mid_market == 0) {
                 mid_market = null;
             }
+            if (mid_market === null) {
+                continue;
+            }
             y.push(mid_market);
             best_buys.push(best_buy);
             best_sells.push(best_sell);
