@@ -16,9 +16,9 @@
     @endforeach
 </select>
 
-@if(!$defer)
-    <script>
-        $(".select2").select2({
+<script>
+    function make_select2(elem) {
+        elem.select2({
             sorter: (data) => {
                 data.sort((a, b) => a.id.length >= b.id.length);
                 return data.slice(0, 10);
@@ -28,5 +28,9 @@
                 return $(ret);
             },
         });
-    </script>
+    }
+</script>
+
+@if(!$defer)
+    <script>make_select2($(".select2"));</script>
 @endif

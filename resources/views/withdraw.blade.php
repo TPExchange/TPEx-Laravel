@@ -51,7 +51,7 @@
             function add_another() {
                 var child = $('#clone-target').clone().removeAttr('style').removeAttr('id').removeAttr('disabled');
                 $('#items-list').append(child);
-                child.find('.select2').select2();
+                make_select2(child.find('.select2'));
             }
             add_another()
         </script>
