@@ -18,24 +18,9 @@
                     Player's Items
                 @endif
             </x-section-header>
-            <div class="flex flex-wrap gap-5 px-5">
+            <div class="flex gap-3 mb-2 p-5 flex-wrap">
                 @foreach (array_keys($inventory) as $item)
-                    @if (in_array($item, $restricted))
-                        <div class="w-100 bg-red-300 p-2 rounded-md">
-                    @else
-                        <div class="w-100 bg-neutral-300 p-2 rounded-md">
-                    @endif
-                        <div class="flex gap-5">
-                            <x-item-img item="minecraft_{{ $item }}"/>
-
-                            <div class="flex flex-col justify-center flex-1 w-50">
-                                <h3 class="font-bold text-xl text-nowrap overflow-hidden text-ellipsis">
-                                    {{ ucwords(str_replace("_", " ", $item)) }}
-                                </h3>
-                                <p>Count: {{ $inventory[$item] }}</p>
-                            </div>
-                        </div>
-                    </div>
+                    <x-item-panel item_name="{{ ucwords(str_replace('_', ' ', $item)) }}" name="{{ $item }}" count="{{ $inventory[$item] }}" :$restricted/>
                 @endforeach
             </div>
         </div>
