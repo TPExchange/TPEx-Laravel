@@ -17,5 +17,16 @@
 </select>
 
 @if(!$defer)
-    <script>$(".select2").select2();</script>
+    <script>
+        $(".select2").select2({
+            sorter: (data) => {
+                data.sort((a, b) => a.id.length >= b.id.length);
+                return data.slice(0, 10);
+            },
+            templateResult: (state) => {
+                let ret = `<div style="display:flex;align-items: center"><img style="display: inline-block;width: 2em; height: 2em;margin-right: 1em" src="/images/items/minecraft_${state.id}.png" onerror="this.style.display='none'">${state.text}</span>`;
+                return $(ret);
+            },
+        });
+    </script>
 @endif
