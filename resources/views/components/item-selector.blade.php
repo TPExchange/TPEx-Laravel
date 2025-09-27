@@ -20,7 +20,7 @@
     function make_select2(elem) {
         elem.select2({
             sorter: (data) => {
-                data.sort((a, b) => a.id.length >= b.id.length);
+                data.sort((a, b) => a.id.length - b.id.length);
                 return data.slice(0, 10);
             },
             templateResult: (state) => {
