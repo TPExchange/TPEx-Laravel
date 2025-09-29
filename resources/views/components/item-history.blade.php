@@ -6,24 +6,31 @@
     {
         let x = [];
         let y = [];
-        let best_buys = [];
-        let best_sells = [];
+        let best_buy_y = [];
+        let best_buy_x = [];
+        let best_sell_x = [];
+        let best_sell_y = [];
 
         for (elem of @json($history)) {
             let best_buy = elem.best_buy ? parseFloat(elem.best_buy.replace(/[,c]/g, '')) : null;
             let best_sell = elem.best_sell ? parseFloat(elem.best_sell.replace(/[,c]/g, '')) : null;
-            console.log(best_buy, best_sell);
             let mid_market = (((best_buy ?? best_sell + 0)) + (best_sell ?? best_buy + 0)) / 2;
             if (mid_market == 0) {
                 mid_market = null;
             }
-            if (mid_market === null) {
-                continue;
+            if (best_buy !== null) {
+                console.log(elem);
+                best_buy_y.push(best_buy);
+                best_buy_x.push(elem.time);
             }
-            y.push(mid_market);
-            best_buys.push(best_buy);
-            best_sells.push(best_sell);
-            x.push(elem.time);
+            if (best_sell !== null) {
+                best_sell_y.push(best_sell);
+                best_sell_x.push(elem.time);
+            }
+            if (mid_market !== null) {
+                y.push(mid_market);
+                x.push(elem.time);
+            }
         }
 
         var data = [
@@ -44,8 +51,8 @@
 
             {
                 name: "Best sell price",
-                x: x,
-                y: best_sells,
+                x: best_sell_x,
+                y: best_sell_y,
                 visible: "legendonly",
                 type: 'scatter',
                 line: {
@@ -61,8 +68,8 @@
             },
             {
                 name: "Best buy price",
-                x: x,
-                y: best_buys,
+                x: best_buy_x,
+                y: best_buy_y,
                 visible: "legendonly",
                 type: 'scatter',
                 line: {
@@ -86,7 +93,8 @@
             yaxis: {
                 title: {
                     text: "Coins"
-                }
+                },
+                rangemode: "tozero"
             },
             showlegend: true
         }
