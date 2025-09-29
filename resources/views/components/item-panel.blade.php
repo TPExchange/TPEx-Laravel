@@ -1,7 +1,7 @@
 @props(["item_name"=>"Item Name", "count"=>"0", "name"=>"minecraft_cobblestone", "sys_id"=>"cobblestone", "price"=>null, "restricted"])
 @php
         $img_id = "minecraft_" . $name;
-        $info_url = ($name == "diamond") ? "/exchange-coins" : "items/info?item=$name";
+        $info_url = ($name == "diamond") ? "/exchange-coins" : "/items/info?item=$name";
 @endphp
 
 @if (in_array($name, $restricted))
