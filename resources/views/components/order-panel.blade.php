@@ -1,6 +1,6 @@
-@props(["item_name"=>"Item Name", "count"=>"0", "name"=>"minecraft_cobblestone", "sys_id"=>"cobblestone", "price"=>"N/A", "id"=>"-1"])
+@props(["item_name"=>"Item Name", "count"=>"0", "name"=>"cobblestone", "sys_id"=>"cobblestone", "price"=>"N/A", "id"=>"-1"])
 @php
-        $img_id = "minecraft_" . $name;
+        $img_id = $name;
 @endphp
 <x-panel class="flex items-center gap-5 flex-col sm:flex-row w-fit">
         <div class="collapse sm:visible h-0 sm:h-auto">

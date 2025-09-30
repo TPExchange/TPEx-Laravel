@@ -24,7 +24,7 @@
                 return data.slice(0, 10);
             },
             templateResult: (state) => {
-                let ret = `<div style="display:flex;align-items: center"><img style="display: inline-block;width: 2em; height: 2em;margin-right: 1em" src="/images/items/minecraft_${state.id}.png" onerror="this.style.display='none'">${state.text}</span>`;
+                let ret = `<div style="display:flex;align-items: center"><img style="display: inline-block;width: 2em; height: 2em;margin-right: 1em" src="/images/items/${state.id}.png" onerror="this.style.display='none'">${state.text}</span>`;
                 return $(ret);
             },
         });
