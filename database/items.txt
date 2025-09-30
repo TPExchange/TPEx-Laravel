@@ -1,3 +1,4 @@
+cutie_coin
 acacia_boat
 acacia_button
 acacia_chest_boat
