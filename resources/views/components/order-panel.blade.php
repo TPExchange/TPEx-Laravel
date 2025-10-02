@@ -1,26 +1,30 @@
-@props(["item_name"=>"Item Name", "count"=>"0", "name"=>"cobblestone", "sys_id"=>"cobblestone", "price"=>"N/A", "id"=>"-1"])
+@props(["item_name"=>"Item Name", "count"=>"0", "name"=>"cobblestone", "sys_id"=>"cobblestone", "price"=>"N/A", "id"=>"-1", "restricted"])
 @php
         $img_id = $name;
+        $info_url = ($name == "diamond") ? "/exchange-coins" : "/items/info?item=$name";
 @endphp
-<x-panel class="flex items-center gap-5 flex-col sm:flex-row w-fit">
-        <div class="collapse sm:visible h-0 sm:h-auto">
-                <img src="{{'/images/items/' . $img_id . '.png'}}" class="w-20" alt="" />
-        </div>
-        <div class="flex flex-col items-center sm:items-start">
-                <h3 class="font-bold text-xl mb-2">{{ $item_name }}</h3>
+<x-panel class="flex items-center gap-5 flex-col sm:flex-row w-fit" :$name :$restricted :$info_url>
+        <div class="flex gap-5 justify-between">
+                <x-item-img item="{{ $name }}" linkto="{{ $info_url }}"/>
+                <div class="flex flex-col flex-1 items-center sm:items-start">
+                        <h3 class="font-bold text-xl mb-2"><a href="/items/info?item={{ $name }}">{{ $item_name }}</a></h3>
 
-                <div class="text-md">
-                        <p>Amount: {{ $count }}</p>
-                        <p>Price: {{ $price }}</p>
+                        <div class="text-md">
+                                <p>Amount: {{ $count }}</p>
+                                @if (!is_null($price))
+                                <p>Price: {{ new \TPEx\TPEx\Coins($price)->pretty() }}</p>
+                                @endif
+                        </div>
+
+
                 </div>
 
-
-        </div>
-
-        <div class="mt-3 text-lg font-bold flex flex-col justify-center h-full">
-            <form action="/orders/cancel/{{ $id }}" method="post">
-                @csrf
-                <button class="bg-red-300 px-3 py-1 rounded-lg hover:bg-red-400 cursor-pointer">Cancel</button>
-            </form>
+                <div class="text-lg font-bold flex flex-col justify-between">
+                        <a href="/order/cancel/{{ $id }}" class="self-center my-auto bg-neutral-700 text-white px-2 py-1 rounded-md hover:bg-neutral-500 duration-300 cursor-pointer font-bold">Cancel</a>
+                </div>
         </div>
 </x-panel>
+
+
+
+

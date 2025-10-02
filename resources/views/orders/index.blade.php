@@ -20,7 +20,7 @@
             @endif
         </x-section-header>
 
-        <div class="flex flex-wrap gap-3 mb-2">
+        <div class="flex gap-3 mb-2 p-5 flex-wrap">
         @foreach ($buy_orders as $id=>$order)
             @php
                 $name = $order["asset"];
@@ -43,7 +43,7 @@
             @endif
         </x-section-header>
 
-        <div class="flex flex-wrap gap-3 mb-2">
+        <div class="flex gap-3 mb-2 p-5 flex-wrap">
         @foreach ($sell_orders as $id=>$order)
             @php
                 $name = $order["asset"];

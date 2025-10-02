@@ -4,13 +4,10 @@
         $info_url = ($name == "diamond") ? "/exchange-coins" : "/items/info?item=$name";
 @endphp
 
-@if (in_array($name, $restricted))
-<div class="w-100 bg-red-300 p-2 rounded-md">
-@else
-<div class="w-100 bg-neutral-300 p-2 rounded-md">
-@endif
-        <div class="flex gap-5">
+<x-panel :$name :$restricted>
+        <div class="flex gap-5 min-h-20">
                 <x-item-img item="{{ $name }}" linkto="{{ $info_url }}"/>
+
                 <div class="flex flex-col flex-1 items-center sm:items-start">
                         <h3 class="font-bold text-xl mb-2"><a href="/items/info?item={{ $name }}">{{ $item_name }}</a></h3>
 
@@ -21,12 +18,16 @@
                                 @endif
                         </div>
 
-
                 </div>
 
                 <div class="text-lg font-bold flex flex-col justify-between">
-                        <a href="/items/buy?item={{ $name }}" class="self-center justify-self-end bg-neutral-200 px-2 py-1 rounded-full hover:bg-neutral-100 duration-300 cursor-pointer font-bold">Buy</a>
-                        <a href="/items/sell?item={{ $name }}" class="self-center justify-self-end bg-neutral-200 px-2 py-1 rounded-full hover:bg-neutral-100 duration-300 cursor-pointer font-bold">Sell</a>
+                        @if (in_array($name, $restricted))
+                        <a href="/items/buy?item={{ $name }}" class="self-center bg-red-100 px-2 py-1 rounded-md hover:bg-red-200 duration-300 cursor-pointer font-bold">Buy</a>
+                        <a href="/items/sell?item={{ $name }}" class="self-center bg-red-100 px-2 py-1 rounded-md hover:bg-red-200 duration-300 cursor-pointer font-bold">Sell</a>
+                        @else
+                        <a href="/items/buy?item={{ $name }}" class="self-center bg-neutral-700 text-white px-2 py-1 rounded-md hover:bg-neutral-500 duration-300 cursor-pointer font-bold">Buy</a>
+                        <a href="/items/sell?item={{ $name }}" class="self-center bg-neutral-700 text-white px-2 py-1 rounded-md hover:bg-neutral-500 duration-300 cursor-pointer font-bold">Sell</a>
+                        @endif
                 </div>
         </div>
-</div>
+</x-panel>

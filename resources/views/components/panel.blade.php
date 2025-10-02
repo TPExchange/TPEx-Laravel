@@ -1,3 +1,8 @@
-<div {{ $attributes->merge(["class"=>"bg-neutral-100 hover:bg-neutral-50 rounded-t-lg px-2 py-1 pb-3 mx-5 mb-2 border-b border-transparent hover:border-blue-400 transition-border duration-300"]) }}>
+@props(["name", "restricted"])
+@if (in_array($name, $restricted))
+<div class="w-100 bg-red-300 p-2 rounded-sm border border-red-500">
+@else
+<div class="w-100 bg-white p-2 rounded-sm border border-neutral-700">
+@endif
     {{ $slot }}
 </div>
