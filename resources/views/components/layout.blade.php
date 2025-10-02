@@ -27,7 +27,7 @@
             </div>
 
             <div class="font-bold md:space-x-6 flex flex-col md:flex-row text-center">
-                <a href="/items" class="px-3 py-1 rounded-lg hover:bg-neutral-100 transition-colors duration-300">Buy Items</a>
+                <a href="/items" class="px-3 py-1 rounded-lg hover:bg-neutral-100 transition-colors duration-300">Trade Items</a>
                 <a href="/inventory" class="px-3 py-1 rounded-lg hover:bg-neutral-100 transition-colors duration-300">My Inventory</a>
                 <a href="/orders" class="px-3 py-1 rounded-lg hover:bg-neutral-100 transition-colors duration-300">Manage Orders</a>
             </div>

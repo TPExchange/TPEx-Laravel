@@ -1,5 +1,5 @@
 <x-layout>
-    <h3 class="text-center text-4xl mb-10">All Items</h3>
+    <h3 class="text-center text-4xl mb-10">Trade Items</h3>
 
     <x-search action="/items/search"></x-search>
 
