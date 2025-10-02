@@ -20,7 +20,10 @@
                 </div>
 
                 <div class="text-lg font-bold flex flex-col justify-between">
-                        <a href="/order/cancel/{{ $id }}" class="self-center my-auto bg-neutral-700 text-white px-2 py-1 rounded-md hover:bg-neutral-500 duration-300 cursor-pointer font-bold">Cancel</a>
+                        <form action="/orders/cancel/{{ $id }}" method="POST" class="my-auto">
+                                @csrf
+                                <button type="submit" href="/orders/cancel/{{ $id }}" class="self-center bg-neutral-700 text-white px-2 py-1 rounded-md hover:bg-neutral-500 duration-300 cursor-pointer font-bold">Cancel</button>
+                        </form>
                 </div>
         </div>
 </x-panel>
