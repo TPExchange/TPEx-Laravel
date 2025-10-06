@@ -55,6 +55,6 @@
             }
             add_another()
         </script>
-        <button class="block mt-5 m-auto w-fit bg-green-300 hover:bg-green-400 transition-bg duration-300 px-3 py-1 rounded-full cursor-pointer" onclick="return confirm('Are you sure you want to do this?')">Withdraw Items</button>
+        <button class="block px-2 py-1 text-lg bg-neutral-700 text-white rounded-md hover:bg-neutral-500 duration-300 cursor-pointer font-bold m-auto mt-5" onclick="return confirm('Are you sure you want to do this?')">Withdraw Items</button>
     </form>
 </x-layout>

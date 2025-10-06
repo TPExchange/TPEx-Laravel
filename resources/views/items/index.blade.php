@@ -5,7 +5,7 @@
 
     <div class="flex justify-center w-fit m-auto gap-5">
         <a href="/items/buy" class="flex m-auto text-center w-fit text-xl bg-neutral-700 text-white px-2 py-1 rounded-md hover:bg-neutral-500 duration-300 cursor-pointer font-bold">Place Buy Order</a>
-        <a href="/items/buy" class="flex m-auto text-center w-fit text-xl bg-neutral-300 text-neutral-950 px-2 py-1 rounded-md hover:bg-neutral-400 duration-300 cursor-pointer font-bold">Place Sell Order</a>
+        <a href="/items/sell" class="flex m-auto text-center w-fit text-xl bg-neutral-300 text-neutral-950 px-2 py-1 rounded-md hover:bg-neutral-400 duration-300 cursor-pointer font-bold">Place Sell Order</a>
     </div>
 
     <div class="bg-neutral-100 rounded-lg my-10">

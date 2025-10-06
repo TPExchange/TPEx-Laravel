@@ -43,7 +43,7 @@
             <input name="quantityConfirm" type="number" class="px-1 border border-neutral-200 w-sm rounded-sm" required />
         </div>
 
-        <button type="submit" class="px-3 py-2 bg-blue-300 w-fit m-auto rounded-full hover:bg-blue-200 transition-bg duration-300 cursor-pointer">Deposit Items</button>
+        <button type="submit" class="px-2 py-1 text-lg bg-neutral-700 text-white rounded-md hover:bg-neutral-500 duration-300 cursor-pointer font-bold w-fit m-auto">Deposit Items</button>
     </form>
 
 </x-layout>
