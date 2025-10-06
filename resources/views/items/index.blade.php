@@ -3,7 +3,10 @@
 
     <x-search action="/items/search"></x-search>
 
-    <a href="/items/buy" class="flex m-auto text-center w-fit bg-blue-400 hover:bg-blue-500 text-white duration-300 px-3 py-1 rounded-full text-xl cursor-pointer">Place Buy Order</a>
+    <div class="flex justify-center w-fit m-auto gap-5">
+        <a href="/items/buy" class="flex m-auto text-center w-fit text-xl bg-neutral-700 text-white px-2 py-1 rounded-md hover:bg-neutral-500 duration-300 cursor-pointer font-bold">Place Buy Order</a>
+        <a href="/items/buy" class="flex m-auto text-center w-fit text-xl bg-neutral-300 text-neutral-950 px-2 py-1 rounded-md hover:bg-neutral-400 duration-300 cursor-pointer font-bold">Place Sell Order</a>
+    </div>
 
     <div class="bg-neutral-100 rounded-lg my-10">
         <x-section-header>
