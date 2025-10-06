@@ -144,7 +144,7 @@
             </div>
         </div>
 
-        <button class="block mt-5 m-auto w-fit bg-green-300 hover:bg-green-400 transition-bg duration-300 px-3 py-1 rounded-full cursor-pointer" onclick="return confirm('Are you sure you want to do this?')">Convert Currency</button>
+        <button class="block mt-5 m-auto w-fit bg-neutral-700 text-white px-2 py-1 rounded-md hover:bg-neutral-500 duration-300 cursor-pointer font-bold" onclick="return confirm('Are you sure you want to do this?')">Convert Currency</button>
     </form>
     <script>
         // Check to see if this is supposed to be converting coins into diamonds ("buying" diamonds)
