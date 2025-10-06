@@ -26,9 +26,12 @@
             <x-form-error name="psk" />
         </div>
 
+        <div>
+            Already have an account? <a href="/login" class="font-bold hover:underline">Log in.</a>
+        </div>
 
         <div class="flex justify-center gap-5 mt-3">
-            <button type="submit" class="px-3 py-1 rounded-lg bg-green-300 cursor-pointer text-lg hover:bg-green-400 transition-bg duration-300">Register Account</button>
+            <button type="submit" class="px-3 py-1 text-lg bg-neutral-700 text-white px-2 py-1 rounded-md hover:bg-neutral-500 duration-300 cursor-pointer font-bold">Register Account</button>
         </div>
 
 
