@@ -13,16 +13,16 @@
     <section class="mt-10">
         
         <div class="grid lg:grid-cols-3 gap-5 h-60">
-            <x-dashboard-tile colour="red" href="/items" icon="right-left">
+            <x-dashboard-tile class="bg-red-300" href="/items" icon="right-left">
                 Trade Items
             </x-dashboard-tile>
             
 
-            <x-dashboard-tile colour="blue" href="/inventory" icon="list">
+            <x-dashboard-tile class="bg-blue-300" href="/inventory" icon="list">
                 View Inventory
             </x-dashboard-tile>
 
-            <x-dashboard-tile colour="green" href="/orders" icon="clipboard">
+            <x-dashboard-tile class="bg-green-300" href="/orders" icon="clipboard">
                 Manage Orders
             </x-dashboard-tile>
 
