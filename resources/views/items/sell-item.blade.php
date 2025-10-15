@@ -64,7 +64,7 @@
             </div>
 
             <div class="flex justify-center gap-5 mt-2">
-                <button id="submit" name="submit" type="submit" class="bg-green-300 hover:bg-green-400 duration-300 rounded-full px-3 py-1 cursor-pointer">Place Order</button>
+                <button id="submit" name="submit" type="submit" class="px-2 py-1 text-lg bg-neutral-700 text-white rounded-md hover:bg-neutral-500 duration-300 cursor-pointer font-bold">Place Order</button>
             </div>
 
         </form>

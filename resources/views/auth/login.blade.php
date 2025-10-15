@@ -19,8 +19,8 @@
         </div>
 
         <div class="flex justify-center gap-5 mt-3">
-            <button type="reset" class="px-3 py-1 rounded-lg bg-blue-300 cursor-pointer text-lg hover:bg-blue-400 transition-bg duration-300">Clear</button>
-            <button type="submit" class="px-3 py-1 rounded-lg bg-green-300 cursor-pointer text-lg hover:bg-green-400 transition-bg duration-300">Log In</button>
+            <button type="reset" class="px-2 py-1 text-lg bg-neutral-300 text-black rounded-md hover:bg-neutral-400 duration-300 cursor-pointer font-bold">Clear</button>
+            <button type="submit" class="px-2 py-1 text-lg bg-neutral-700 text-white rounded-md hover:bg-neutral-500 duration-300 cursor-pointer font-bold">Log In</button>
         </div>
 
 
