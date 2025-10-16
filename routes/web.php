@@ -353,7 +353,7 @@ Route::get("/admin/withdrawals", function () {
     $state = $remote->fastsync(env("TPEX_FASTSYNC_CACHE"));
     $withdrawals = $state->pending_withdrawals();
     if ($user->isAdmin()) {
-        return view("admin/withdrawals", ["withdrawals"=>$withdrawals]);
+        return view("admin.withdrawals", ["withdrawals"=>$withdrawals]);
     } else {
         abort("403");
     }
@@ -366,8 +366,17 @@ Route::get("/admin/withdrawals/{id}", function ($id) {
     $remote = new \TPEx\TPEx\Remote(env("TPEX_URL"), Auth::user()->access_token); // Create connection
     $state = $remote->fastsync(env("TPEX_FASTSYNC_CACHE"));
     $withdrawals = $state->pending_withdrawals();
+    $withdrawal = $withdrawals[$id];
+    $assets = $withdrawal["assets"];
+    $assetInfo = [];
+    $itemData = json_decode(file_get_contents("../database/data.json"));
+    foreach ($assets as $asset => $quantity) {
+        $assetInfo[$asset] = $itemData->$asset;
+    }
+    
+
     if ($user->isAdmin()) {
-        return view("admin/withdrawal-show", ["withdrawal"=>$withdrawals[$id],"id"=>$id]);
+        return view("admin.withdrawal-show", ["withdrawal"=>$withdrawal,"id"=>$id, "assetInfo"=>$assetInfo]);
     } else {
         abort("403");
     }
