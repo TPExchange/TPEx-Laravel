@@ -20,7 +20,7 @@
 
         <div class="flex gap-5 justify-between">
             <label class="px-3">Player Name</label>
-            <input list="players-list" name="player" class="px-1 border border-neutral-200 w-sm rounded-sm" required />
+            <input list="players-list" name="player" class="px-1 border border-neutral-400 w-sm rounded-sm" required />
             <datalist id="players-list" autocomplete="off">
                 @foreach ($players as $player)
                     <option value="{{ $player->username }}"></option>
@@ -35,12 +35,12 @@
 
         <div class="flex gap-5 justify-between">
             <label class="px-3">Quantity</label>
-            <input name="quantity" type="number" class="px-1 border border-neutral-200 w-sm rounded-sm" required />
+            <input name="quantity" type="number" class="px-1 border border-neutral-400 w-sm rounded-sm" required />
         </div>
 
         <div class="flex gap-5 justify-between">
             <label class="px-3">Confirm Quantity</label>
-            <input name="quantityConfirm" type="number" class="px-1 border border-neutral-200 w-sm rounded-sm" required />
+            <input name="quantityConfirm" type="number" class="px-1 border border-neutral-400 w-sm rounded-sm" required />
         </div>
 
         <button type="submit" class="px-2 py-1 text-lg bg-neutral-700 text-white rounded-md hover:bg-neutral-500 duration-300 cursor-pointer font-bold w-fit m-auto">Deposit Items</button>
