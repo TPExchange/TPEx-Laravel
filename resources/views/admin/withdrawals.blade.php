@@ -1,5 +1,5 @@
 <x-layout>
-    <x-page-title>Deposits/Withdrawals</x-page-title>
+    <x-page-title>Withdrawals</x-page-title>
 
     <h3 class="text-center text-lg">Mark withdrawals as complete</h3>
 
