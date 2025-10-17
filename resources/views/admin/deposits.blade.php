@@ -46,4 +46,6 @@
         <button type="submit" class="px-2 py-1 text-lg bg-neutral-700 text-white rounded-md hover:bg-neutral-500 duration-300 cursor-pointer font-bold w-fit m-auto">Deposit Items</button>
     </form>
 
+    <x-deposit-calculator />
+
 </x-layout>

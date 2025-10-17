@@ -23,5 +23,5 @@
         </form>
     </section>
 
-    <x-calculator />
+    <x-withdrawal-calculator />
 </x-layout>
